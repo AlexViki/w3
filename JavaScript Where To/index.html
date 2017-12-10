@@ -3,19 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <script>
-        function funChangParagraf () {
-            document.getElementById('idP_2').innerHTML = 'Paragraph changed, function is ranning from head of <b>currunt document</b>.';
-        }
-    </script>
+    
+       <script>
+            function funChangParagraf () {
+                document.getElementById('idP_2').innerHTML = 'Paragraph changed, function is ranning from HEAD of <b>currunt document</b>.'};
+        </script>
 </head>
 <body>
+   
+    <hr>
     <h2>JavaScript in Body</h2>
-    <p id="idP_1"></p>
+    <p id="idP_1"></p><br>
+    <hr>
     
     <h2>This JavaScript is running in Head</h2>
-    <p id="idP_2">A Paragraph.</p>
-    <button type="button" onclick="funChangParagraf()">RUN</button>
+    <p id="idP_2">A Paragraph idP_2.</p>
+    <button type="button" onclick="funChangParagraf()">RUN</button><br>
+    <hr>
+    
+    <h1>A web page</h1>
+    <p id="idP_3">A Paragraph idP_3.</p>
+    <button type="button" onclick="funChangParagraf_3()">RUN idP3</button>
+    
+    <script>
+        function funChangParagraf_3 () {
+            document.getElementById('idP_3').innerHTML = 'Paragraph changed, function is ranning from BODY of <b>currunt document</b>'
+        };
+    </script>
     
     <script>
          document.getElementById('idP_1').innerHTML = 'In HTML, JavaScript code must be inserted between tags script';
