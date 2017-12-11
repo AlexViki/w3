@@ -8,8 +8,7 @@
         function funChangParagraf () {
             document.getElementById('idP_2').innerHTML = 'Paragraph changed, ranning from &lt;HEAD&gt; of <b>currunt document</b>.'};
     </script>
-        
-        
+                
 </head>
 <body>
    
@@ -25,26 +24,32 @@
         <button type="button" onclick="funChangParagraf()">RUN idP_2</button><br>
         <hr>
     
-    <h2>A web page - Paragraph chang  - JavaScript is running in &lt;body&gt; in &lt;script&gt;</h2>
+    <h2>A web page - Paragraph chang - JavaScript is running in &lt;body&gt; in &lt;script&gt;</h2>
         <p id="idP_3">A Paragraph idP_3.</p>
         <button type="button" onclick="funChangParagraf_3()">RUN idP_3</button>
     
     <h2>A web page v.2 - Paragraph chang - JavaScript is running in &lt;body&gt; in &lt;button&gt;</h2>
         <p id="idP_4">A Paragraph idP_4.</p>
-        <button type="button" onclick="document.getElementById('idP_4').innerHTML = 'Placing scripts at the bottom of the <b>BODY</b> element improves the display speed, because script compilation slows down the display' ">RUN idP_4</button>
+        <button type="button" onclick="document.getElementById('idP_4').innerHTML = 'Placing scripts at the bottom of the <b>BODY</b> element improves the display speed, because script compilation slows down the display' ">RUN idP_4</button><br><br><hr>
     
     <h1>External JavaScript</h1>
+        <h2>A web page - Paragraph chang - JavaScript is running from external file</h2>
+        <p id="idP_5">A Paragraph idP_5.</p>
+        <button type="button" onclick="funChangParagraf_5()">RUN idP_5</button>
+        
+        <h2>A web page - Paragraph chang - JavaScript is running from External References</h2>
+        <p id="demo">A Paragraph idP_6</p>
+        <p>https://www.w3schools.com/js/myScript.js</p>
+        <button type="button" onclick="myFunction()">RUN idP_6</button>
     
-    
-    
-    
+        
     <!-- script sections -->
     <script>
         function funChangParagraf_3 () {
             document.getElementById('idP_3').innerHTML = 'Paragraph changed, ranning from &lt;BODY&gt; of section &lt;script&gt;'
         };
     </script>
-    
-    
+    <script src="https://www.w3schools.com/js/myScript.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
