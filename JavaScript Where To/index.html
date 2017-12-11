@@ -2,37 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>JavaScript Where To</title>
     
-       <script>
-            function funChangParagraf () {
-                document.getElementById('idP_2').innerHTML = 'Paragraph changed, function is ranning from HEAD of <b>currunt document</b>.'};
-        </script>
+    <script>
+        function funChangParagraf () {
+            document.getElementById('idP_2').innerHTML = 'Paragraph changed, ranning from &lt;HEAD&gt; of <b>currunt document</b>.'};
+    </script>
+        
+        
 </head>
 <body>
    
     <hr>
-    <h2>JavaScript in Body</h2>
-    <p id="idP_1"></p><br>
-    <hr>
+    <h1>JavaScript in &lt;head&gt; or &lt;body&gt;</h1>
     
-    <h2>This JavaScript is running in Head</h2>
-    <p id="idP_2">A Paragraph idP_2.</p>
-    <button type="button" onclick="funChangParagraf()">RUN</button><br>
-    <hr>
+    <h2>A web page - JavaScript is running in &lt;body&gt;</h2>
+        <p id="idP_1"></p><br><hr>
+        <script>document.getElementById('idP_1').innerHTML = 'In HTML, JavaScript code must be inserted between &lt;script&gt;'; </script>
     
-    <h1>A web page</h1>
-    <p id="idP_3">A Paragraph idP_3.</p>
-    <button type="button" onclick="funChangParagraf_3()">RUN idP3</button>
+    <h2>A web page - Paragraph changed - JavaScript is running in &lt;head&gt;</h2>
+        <p id="idP_2">A Paragraph idP_2.</p>
+        <button type="button" onclick="funChangParagraf()">RUN idP_2</button><br>
+        <hr>
     
+    <h2>A web page - Paragraph chang  - JavaScript is running in &lt;body&gt; in &lt;script&gt;</h2>
+        <p id="idP_3">A Paragraph idP_3.</p>
+        <button type="button" onclick="funChangParagraf_3()">RUN idP_3</button>
+    
+    <h2>A web page v.2 - Paragraph chang - JavaScript is running in &lt;body&gt; in &lt;button&gt;</h2>
+        <p id="idP_4">A Paragraph idP_4.</p>
+        <button type="button" onclick="document.getElementById('idP_4').innerHTML = 'Placing scripts at the bottom of the <b>BODY</b> element improves the display speed, because script compilation slows down the display' ">RUN idP_4</button>
+    
+    <h1>External JavaScript</h1>
+    
+    
+    
+    
+    <!-- script sections -->
     <script>
         function funChangParagraf_3 () {
-            document.getElementById('idP_3').innerHTML = 'Paragraph changed, function is ranning from BODY of <b>currunt document</b>'
+            document.getElementById('idP_3').innerHTML = 'Paragraph changed, ranning from &lt;BODY&gt; of section &lt;script&gt;'
         };
     </script>
     
-    <script>
-         document.getElementById('idP_1').innerHTML = 'In HTML, JavaScript code must be inserted between tags script';
-    </script>
+    
 </body>
 </html>
