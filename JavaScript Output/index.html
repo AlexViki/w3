@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Output</title>
+</head>
+<body>
+    <h1>JavaScript Output</h1><hr>
+    
+    <h2>Using innerHTML</h2>
+    <p id="idP_1"></p><hr>
+    
+    <h2>Using document.write()</h2>
+    <p>For testing purposes, it is convenient to use document.write()</p>
+    <script> document.write(50 + 20); </script>
+    
+    <h2>Using document.write() v.2</h2>
+    <p>Using document.write() after an HTML document is fully loaded</p>
+    <button onclick='document.write( 30 + 30 )'>RUN</button><hr>
+            
+    <script>
+        document.getElementById('idP_1').innerHTML = 'The result 10 + 20 = ' + (10 + 20);
+    </script>
+</body>
+</html>
