@@ -36,9 +36,18 @@
     <h2>JavaScript is Case Sensitive</h2>
     <p>The variables <b>lastName</b> and <b>lastname</b>, are two different variables</p>
     <p id="idP_4"></p>
-    <p id="idP_5"></p>
     <button onclick="caseSensitiveA()">lastName</button>
     <button onclick="caseSensitiveB()">lastname</button>
+    
+    <h2>JavaScript and Camel Case</h2>
+    <p> programmers have used different ways of joining multiple words into one variable name</p>
+    <ul>
+        <li>Hyphens: first-name, last-name, master-card. <b>Hyphens are not allowed in JavaScript</b>;
+        </li>
+        <li>Underscore: first_name, last_name, master_card;</li>
+        <li>Upper Camel Case (Pascal Case): FirstName, LastName, MasterCard; <span onclick="showCamelCase()"><b>SHOW</b></span> </li>
+    </ul>
+    <img id="idCamelCase" src="" alt="">
     
     <!-- SCRIPT -------------------------------------------------------------------- -->
     <script>document.getElementById('idP_1').innerHTML = (10.50) + '; ' + (101);</script>
@@ -54,6 +63,12 @@
         function caseSensitiveB() {
             return document.getElementById('idP_4').innerHTML = lastname;
         };
+    </script>
+       
+    <script>
+        function showCamelCase() {
+            return document.getElementById('idCamelCase').src = 'camelcase.jpg';
+        }
     </script>
         
 </body>
