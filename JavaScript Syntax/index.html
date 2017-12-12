@@ -26,12 +26,35 @@
     
     <h2>JavaScript Identifiers</h2>
     <P>In JavaScript, identifiers are used to name variables (and keywords, and functions, and labels).</P>
-    <p>Show the rules for legal names, click <span onclick='document.getElementById("idP_3").innerHTML = " In JavaScript, the first character must be a letter, or an underscore (_), or a dollar sign ($)"'><b>HERE</b></span></p>
-    <p id="idP_3"></p>
+    <p>Show the rules for legal names, click 
+        <span onclick='document.getElementById("idP_3").innerHTML = "In JavaScript, the first character must be a letter, or an underscore (_), or a dollar sign ($). Subsequent characters may be letters, digits, underscores, or dollar signs." '>
+        <b>HERE</b>
+        </span>
+    </p>
+    <p id="idP_3"></p><hr>
     
+    <h2>JavaScript is Case Sensitive</h2>
+    <p>The variables <b>lastName</b> and <b>lastname</b>, are two different variables</p>
+    <p id="idP_4"></p>
+    <p id="idP_5"></p>
+    <button onclick="caseSensitiveA()">lastName</button>
+    <button onclick="caseSensitiveB()">lastname</button>
     
+    <!-- SCRIPT -------------------------------------------------------------------- -->
     <script>document.getElementById('idP_1').innerHTML = (10.50) + '; ' + (101);</script>
     <script>document.getElementById('idP_2').innerHTML = " Some 'text' ";</script>
+    
+    <script>
+        var lastName = 'Alex',
+            lastname = 'alex';
+        
+        function caseSensitiveA() {
+            return document.getElementById('idP_4').innerHTML = lastName;
+        };
+        function caseSensitiveB() {
+            return document.getElementById('idP_4').innerHTML = lastname;
+        };
+    </script>
         
 </body>
 </html>
