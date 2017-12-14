@@ -70,13 +70,24 @@
         </script>
     <hr>
     
-    <h2>The typeof Operator</h2>
+    <h2>The typeof Operator - typeof</h2>
     <p id="idP_7"></p>
         <script>
             var name_7 = 'Alex', age_7 = 30;
             document.getElementById('idP_7').innerHTML = 
             'typeof is: <br>' + typeof(name_7) + 
             '<br>' + typeof(age_7);
+        </script>
+    <hr>
+    
+    <h2>The typeof Operator - instanceof</h2>
+    <p>Returns true if an object is an instance of an object type</p>
+    <p id="idP_8"></p>
+        <script>
+            function A() {};
+            var a = new A();
+            document.getElementById('idP_8').innerHTML = 
+            'instanceof: ' + (a instanceof A);
         </script>
     <hr>
     
