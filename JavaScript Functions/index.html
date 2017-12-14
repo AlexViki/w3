@@ -7,13 +7,25 @@
 <body>
    
    <h1>JavaScript Functions</h1>
-   <p>A JavaScript function is a block of code designed to perform a particular task</p>
+   <p>A JavaScript function is a block of code designed to perform a particular task.</p>
+   <p>The code inside the function will execute when "something" invokes (calls) the function</p>
    <p id="idP_1"></p>
         <script>
             function fun1(p1, p2) {
                 return p1 * p2;
             };
             document.getElementById('idP_1').innerHTML = 'The result 5 * 5 = ' + fun1(5, 5);
+        </script>
+    <hr>
+    
+    <h2>Functions</h2>
+    <p>reuse code, define the code once, and use it many times. Use the same code many times with different arguments</p>
+    <p id="idP_2"></p>
+        <script>
+            function toCelsius (fahrenteit) {
+                return ( 5/9 ) * ( fahrenteit-32 );
+            };
+            document.getElementById('idP_2').innerHTML = '20 C = ' + toCelsius(20) + ' F';
         </script>
     <hr>
     
