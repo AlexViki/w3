@@ -21,21 +21,29 @@
     <p>All cars have the same methods, but the methods are performed at different times</p>
     <br><hr>
     
-    <h2>JavaScript Objects</h2>
+    <h2>JavaScript Objects / Methods</h2>
     <p>The values are written as name:value pairs (name and value separated by a colon)</p>
+    <button onclick='showCar()'>RUN</button>
     <p id="idP_1"></p>
         <script>
-            var car = {
-                name: 'Fiat',
-                model: '500',
-                weight: 850,
-                color: 'white'
+            function showCar () {
+                var car = {
+                    name: 'Fiat',
+                    model: '500',
+                    weight: 850,
+                    color: 'white',
+                    show: function () {
+                        return 'The nama of car: ' +
+                        this.name + ';<br>The model is: ' +
+                        this.model + ';<br>The weight is: ' +
+                        this.weight + ';';
+                        }
+                    };
+                return document.getElementById('idP_1').innerHTML = car.show();
             };
-            document.getElementById('idP_1').innerHTML = 
-            'The nama of car: ' + car.name + '; model is: ' + car.model +
-            '; weight is: ' + car.weight + ';';
         </script>
-     <hr>
+    <p>Methods are actions that can be performed on objects</p>
+    <hr>
      
 </body>
 </html>
