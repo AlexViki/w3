@@ -64,6 +64,25 @@
             document.getElementById('idP_3').innerHTML =
                 'objectName["propertyName"] is: ' + person['name'];
         </script>
+    <hr>
+    
+    <h2>Accessing Object Methods</h2>
+    <p>access an object method with the following syntax - <b>objectName.methodName()</b></p>
+    <button onclick="introFun()">INTRO</button>
+    <p id="idP_4"></p>
+        <script>
+            function introFun() {
+            var person = {
+                name: 'Alex',
+                age: 30,
+                introducing: function () {
+                    return "I'm " + this.name +
+                        '; my age is: ' + this.age
+                }
+            };
+            document.getElementById('idP_4').innerHTML = 'Accessing to method <b>introducing</b>: ' + person.introducing();
+            };
+        </script>
      
 </body>
 </html>
