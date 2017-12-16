@@ -83,6 +83,23 @@
             document.getElementById('idP_4').innerHTML = 'Accessing to method <b>introducing</b>: ' + person.introducing();
             };
         </script>
+     <hr>
+     
+    <h2>Do Not Declare Strings, Numbers, and Booleans as Objects!</h2>
+    <p>When a JavaScript variable is declared with the keyword "new", the variable is created as an object</p>
+    <p id="idP_5"></p>
+    <p id="idp_6"></p>
+    <p id="idp_7"></p>
+        <script>
+            var x = new String(),
+                y = new Number(),
+                z = new Boolean();
+            document.getElementById('idP_5').innerHTML =
+                'x = new String() is: ' + typeof(x) + 
+                '<br> y = new Number() is: ' + typeof(y) +
+                '<br> z = new Boolean() is: ' + typeof(z);
+        </script>
+     <hr>
      
 </body>
 </html>
