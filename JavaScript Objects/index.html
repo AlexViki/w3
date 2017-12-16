@@ -45,5 +45,25 @@
     <p>Methods are actions that can be performed on objects</p>
     <hr>
      
+    <h2>Accessing Object Properties</h2>
+    <p>You can access object properties in two ways:</p>
+         <ul>
+             <li>objectName.propertyName</li>
+             <li>objectName["propertyName"]</li>
+         </ul>
+    <p id="idP_2"></p>
+    <p id="idP_3"></p>
+        <script>
+            var person = {
+                name: 'Alex',
+                age: 30,
+                id: 589789
+                };
+            document.getElementById('idP_2').innerHTML =
+                'objectName.propertyName is: ' + person.name;
+            document.getElementById('idP_3').innerHTML =
+                'objectName["propertyName"] is: ' + person['name'];
+        </script>
+     
 </body>
 </html>
