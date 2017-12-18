@@ -23,11 +23,21 @@
     <script>
         function fun_1 () {
             var myCar = 'BMW';
-            return document.getElementById('idP_1').innerHTML = 'This is a local scope: ' + myCar;
+            document.getElementById('idP_1').innerHTML = 'This is a local scope: ' + myCar;
         };
-        document.getElementById('idP_2').innerHTML = 'This is a global scope: ' + myCar;
     </script>
     <hr>
+    
+    <h2>Global JavaScript Variables</h2>
+    <p>A global variable has global scope: All scripts and functions on a web page can access it</p>
+    <button onclick="fun_2()">RUN Global</button>
+    <p id="idP_2"></p>
+    <script>
+    var myCar = 'RENO';
+        function fun_2 () {
+            document.getElementById('idP_2').innerHTML = 'This is a global scope: ' + myCar;
+        }
+    </script>
     
 </body>
 </html>
