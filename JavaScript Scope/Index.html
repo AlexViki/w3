@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Scope</title>
+</head>
+<body>
+    <h1>JavaScript Scope</h1>
+    
+    <h2>JavaScript Function Scope</h2>
+    <p>In JavaScript there are two types of scope:</p>
+    <ul>
+        <li>Local scope</li>
+        <li>Global scope</li>
+    </ul>
+    <p>Each function creates a new scope.</p><hr>
+    
+    <h2>Each function creates a new scope.</h2>
+    <p>Variables declared within a JavaScript function, become LOCAL to the function.</p>
+    <button onclick="fun_1()">RUN Local</button>
+    <p id="idP_1"></p>
+    <p>->>> See a global scope in console</p>
+    <script>
+        function fun_1 () {
+            var myCar = 'BMW';
+            return document.getElementById('idP_1').innerHTML = 'This is a local scope: ' + myCar;
+        };
+        document.getElementById('idP_2').innerHTML = 'This is a global scope: ' + myCar;
+    </script>
+    <hr>
+    
+</body>
+</html>
