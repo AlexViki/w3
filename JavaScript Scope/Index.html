@@ -52,11 +52,25 @@
         // here: https://www.w3schools.com/js/tryit.asp?filename=tryjs_local_global is 
         //description that this code should work, but actually - it does not work (
     </script>
+    <hr>
     
     <h2>Strict Mode</h2>
     <p>All modern browsers support running JavaScript in "Strict Mode".</p>
     <p><b>! ! ! Global variables are not created automatically in "Strict Mode".</b></p>
+    <hr>
     
+    <h2>Global Variables in HTML</h2>
+    <p>With JavaScript, the global scope is the complete JavaScript environment. 
+    In HTML, the global scope is the <b>window object</b>. All global variables belong to the window object.</p>
+    <p id="idP_4"></p>
+    <p id="idP_5"> <b>Warning!!!</b> Do NOT create global variables unless you intend to. Your global variables (or functions) can overwrite window variables (or functions). Any function, including the window object, can overwrite your global variables and functions.
+    </p>
+    <script>
+        var myCar_4 = 'WV';
+        document.getElementById('idP_4').innerHTML = 'This is the global scope <b>"window object"</b>: ' + window.myCar_4;
+        document.getElementById('idP_5').style.backgroundColor = 'orange';
+    </script>
+    <hr>
     
     
 </body>
