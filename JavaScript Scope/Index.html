@@ -38,6 +38,20 @@
             document.getElementById('idP_2').innerHTML = 'This is a global scope: ' + myCar;
         }
     </script>
+    <hr>
+    
+    <h2>Automatically Global</h2>
+    <p>If you assign a value to a variable that has not been declared, it will automatically become a GLOBAL variable</p>
+    <p id="idP_3"></p>
+    <script>
+        function fun_3() {
+            var myNewCar = "LADA";
+        };
+        fun_3();
+        document.getElementById('idP_3').innerHTML = 'This is a global value: ' + myNewCar;
+        // here: https://www.w3schools.com/js/tryit.asp?filename=tryjs_local_global is 
+        //description that this code should work, but actually - it does not work (
+    </script>
     
 </body>
 </html>
