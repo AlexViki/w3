@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Bungee');
+@import url('https://fonts.googleapis.com/css?family=Risque');
+h2 {
+    font-family: 'Bungee', cursive;
+    color: #ffa131
+}
+
 table {
     border-top: 2px solid red;
     border-bottom: 2px solid red;
@@ -21,5 +27,11 @@ th {
     background: grey;
     color: #c3ff3d;
     font-size: 120%;
-    /*font-family: 'Bungee', cursive;
+    font-family: 'Bungee', cursive;
+}
+.styleRectangle {
+    list-style:decimal;
+    font: 20px 'Risque', cursive;
+    padding: 15px 50px;
+    text-shadow: 0 2px 0 rgba(250, 255, 125, 0.64);
 }
