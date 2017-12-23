@@ -50,6 +50,20 @@
         </script>
         <br><hr>
     
+    <h2>Special Characters</h2>
+    <p>The backslash escape character turns special characters into string characters</p>
+    <button onclick="showStringFun()">Show</button>
+    <p id="idP_4"></p>
+    <script>
+        function showStringFun() {
+            var str1 = 'I\'m Alex, \\ new text\\ etc...',
+                str2 = "\"some\" text";
+            document.getElementById('idP_4').innerHTML = 'Here is example diferent string: ' +
+                str1 + '<br>' + str2;
+        };
+    </script>
+    <hr>
+    
     </div>
  
 </body>
