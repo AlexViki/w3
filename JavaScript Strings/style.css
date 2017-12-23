@@ -1,0 +1,27 @@
+
+#idP_8 {
+    background: #f27474;
+    padding: 20px;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+#idDiv_1 {
+    border: 5px solid;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+#idDiv_2 {
+    border: 2px solid #b50707;
+    background: #d1d1d1;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.table1 {
+    background: #a5a5a5;
+    width: 30px;
+    height: 20px;
+    padding: 5px;
+}

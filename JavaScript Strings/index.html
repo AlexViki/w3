@@ -3,19 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>JavaScript Strings</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="idDiv_1">
         <h1>JavaScript Strings</h1>
     </div>
     
-    <div>
+    <div id="idDiv_2">
         <h2 id='idH2_1'>JavaScript Strings</h2>
         <p>A string can be any text inside quotes. You can use single or double quotes:</p>
         <button onclick="showString()">Show string</button><br><br>
-        <input id="input1" oninput="changeColorH2()" type="range" min="0" max="255" step="5">
+        <input id="input1" oninput="changeColorH2()" type="range" min="0" max="255" step="2">
+        <input id="input2" oninput="changeColorH2()" type="range" min="0" max="255" step="2">
+        <input id="input3" oninput="changeColorH2()" type="range" min="0" max="255" step="2">
         <p id="idP_1"></p>
         <p id="idP_2"></p>
+        <table>
+            <tr>
+                <td class="table1">RGB</td>
+                <td class="table1" id="td1"></td>
+                <td class="table1" id="td2"></td>
+                <td class="table1" id="td3"></td>
+            </tr>
+        </table>
         <script>
             function showString() {
                 var str1 = "Some text 1",
@@ -26,13 +37,21 @@
             };
             function changeColorH2() {
                 var rng = document.getElementById('input1'),
+                    rng2 = document.getElementById('input2'),
+                    rng3 = document.getElementById('input3'),
                     p = document.getElementById('idP_2'),
+                    td1 = document.getElementById('td1'),
+                    td2 = document.getElementById('td2'),
+                    td3 = document.getElementById('td3'),
                     colorH2 = document.getElementById('idH2_1'),
                     colorDiv_1 = document.getElementById('idDiv_1');
 
-                colorH2.style.color = "rgb("+ rng.value +", 0, 0)";
+                colorH2.style.color = "rgb("+ rng.value +", "+ rng2.value +", "+ rng3.value +")";
                 colorDiv_1.style.background = "rgb(209, 209, "+ rng.value +")"
                 p.innerHTML = rng.value;
+                td1.innerHTML = rng.value;
+                td2.innerHTML = rng2.value;
+                td3.innerHTML = rng3.value;
             };
         </script>
         <hr>
@@ -50,20 +69,40 @@
         </script>
         <br><hr>
     
-    <h2>Special Characters</h2>
-    <p>The backslash escape character turns special characters into string characters</p>
-    <button onclick="showStringFun()">Show</button>
-    <p id="idP_4"></p>
-    <script>
-        function showStringFun() {
-            var str1 = 'I\'m Alex, \\ new text\\ etc...',
-                str2 = "\"some\" text";
-            document.getElementById('idP_4').innerHTML = 'Here is example diferent string: ' +
-                str1 + '<br>' + str2;
-        };
-    </script>
-    <hr>
-    
+        <h2>Special Characters</h2>
+        <p>The backslash escape character turns special characters into string characters</p>
+        <button onclick="showStringFun()">Show</button>
+        <p id="idP_4"></p>
+        <script>
+            function showStringFun() {
+                var str1 = 'I\'m Alex, \\ new text\\ etc...',
+                    str2 = "\"some\" text";
+                document.getElementById('idP_4').innerHTML = 'Here is example diferent string: ' +
+                    str1 + '<br>' + str2;
+            };
+        </script>
+        <hr>
+        
+        <h2>Strings Can be Objects</h2>
+        <p>Normally, JavaScript strings are primitive values, but strings can also be defined as objects with the keyword new: <br><b> var firstName = new String("John");</b></p>
+        <p id="idP_5"></p>
+        <p><b>!!! Don't create strings as objects. It slows down execution speed.</b></p>
+        <p>When using the === operator, equal strings are not equal, because the === operator expects equality in both type and value</p>
+        <p id="idP_6"></p>
+        <p>Objects cannot be compared:</p>
+        <p id="idP_7"></p>
+        <p id="idP_8">Note the difference between (x==y) and (x===y). Comparing two JavaScript objects will always return false.</p>
+        <script>
+            var x = "Alex",
+                y = new String("Alex"),
+                z = new String("Alex");
+            document.getElementById('idP_5').innerHTML = '<b>typeOf is: </b><br>' + typeof(x) + '<br>' +
+                '<b>and</b> <br>' + typeof(y);
+            document.getElementById('idP_6').innerHTML = (x === y);
+            document.getElementById('idP_7').innerHTML = (y === z);
+        </script>
+        <hr>
+        
     </div>
  
 </body>
