@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Strings</title>
+</head>
+<body>
+    <div id="idDiv_1">
+        <h1>JavaScript Strings</h1>
+    </div>
+    
+    <div>
+        <h2 id='idH2_1'>JavaScript Strings</h2>
+        <p>A string can be any text inside quotes. You can use single or double quotes:</p>
+        <button onclick="showString()">Show string</button><br><br>
+        <input id="input1" oninput="changeColorH2()" type="range" min="0" max="255" step="5">
+        <p id="idP_1"></p>
+        <p id="idP_2"></p>
+        <script>
+            function showString() {
+                var str1 = "Some text 1",
+                    str2 = 'Some text 2',
+                    str3 = "Some 'text 3'";
+                document.getElementById('idP_1').innerHTML = "<b>str1:</b> " +
+                    str1 + ';<br><b>str2:</b> ' + str2 + ';<br><b>str3:</b> ' + str3;
+            };
+            function changeColorH2() {
+                var rng = document.getElementById('input1'),
+                    p = document.getElementById('idP_2'),
+                    colorH2 = document.getElementById('idH2_1'),
+                    colorDiv_1 = document.getElementById('idDiv_1');
+
+                colorH2.style.color = "rgb("+ rng.value +", 0, 0)";
+                colorDiv_1.style.background = "rgb(209, 209, "+ rng.value +")"
+                p.innerHTML = rng.value;
+            };
+        </script>
+    </div>
+    
+</body>
+</html>
