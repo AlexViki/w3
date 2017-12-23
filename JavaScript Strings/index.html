@@ -35,7 +35,22 @@
                 p.innerHTML = rng.value;
             };
         </script>
-    </div>
+        <hr>
+        
+        <h2>String Length</h2>
+        <p class='idP_3' id='idP_3'>The length of a string is found in the built in property length</p>
+        
+        <button onclick="myLengthFun()">Length is:</button>
+        <script>
+            function myLengthFun() {
+                var x = document.getElementById('idP_3').childNodes[0].nodeValue;
+                text = x.textContent || x.innerText;
+                alert( 'The length of this string is: ' + x.length );
+            };
+        </script>
+        <br><hr>
     
+    </div>
+ 
 </body>
 </html>
