@@ -48,6 +48,25 @@
             <br><br>            
         </div>
         
+        <div class="block_1">
+            <h2>Extracting String Parts</h2>
+            <p>There are 3 methods for extracting a part of a string:</p>
+            <ol>
+                <li>slice(start, end)</li>
+                <li>substring(start, end)</li>
+                <li>substr(start, length)</li>
+            </ol>
+            <h3>The slice() Method</h3>
+            <p><b>slice()</b> extracts a part of a string and returns the extracted part in a new string.</p>
+            <p>The method takes 2 parameters: the starting index (position), and the ending index (position).</p>
+            <button onclick="mySliceFun()">RUN</button>
+            <p id="idP_6"></p>
+            <p>If a parameter is negative, the position is counted from the end of the string.</p>
+            <p id="idP_7"></p>
+            <p id="idP_8"></p>
+            <p id="idP_9"></p>
+        </div>
+        
     </div>
     
     <script>
@@ -80,8 +99,23 @@
                 searchRes = text3.search('is'),
                 sln3 = text3.length;
             document.getElementById('idP_5').innerHTML = 'The string: <b>' + text3 + '</b> lenght = ' +
-                sln3 + ';<br> position = ' + searchRes + ';'
+                sln3 + ';<br> position = ' + searchRes + ';';
         };
+        
+        var mySliceFun = function () {
+            var text6 = "\\My name is Alex\\",
+                sliceRes = text6.slice(3,11),
+                sliceResEnd = text6.slice(-13, -9),
+                sliceResFrom = text6.slice(3),
+                sliceResFromEnd = text6.slice(-6),
+                allRes = 'The string: ' + text6 + ';<br> the slice: ' + sliceRes,
+                allResEnd = 'The string: ' + text6 + ';<br> the slice of end: ' + sliceResEnd ;
+            document.getElementById('idP_6').innerHTML = allRes;
+            document.getElementById('idP_7').innerHTML = allResEnd;
+            document.getElementById('idP_8').innerHTML = sliceResFrom;
+            document.getElementById('idP_9').innerHTML = sliceResFromEnd;
+        };
+        
     </script>
 </body>
 </html>
