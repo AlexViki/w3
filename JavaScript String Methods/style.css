@@ -22,3 +22,20 @@ h1 {
 .block_1 {
     border-bottom: 2px solid green;
 }
+
+h3 {
+    color: #55008b;
+    width: 300px;
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
+    padding:5px 10px 5px 30px;
+}
+
+#idP_12 {
+    width: 400px;
+    color: red;
+    font-weight: bolder;
+    font-size: 150%;
+    padding: 5px;
+    margin-left: 50px;
+}

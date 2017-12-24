@@ -72,6 +72,12 @@
             <button onclick="mySubstringFun()">RUN</button>
             <p id="idP_10"></p>
             
+            <h3>The substr() Method</h3>
+            <p>substr() is similar to slice(). The difference is that the second parameter specifies the <b>length</b> of the extracted part.</p>
+            <p>If the first parameter is negative, the position counts from the end of the string.</p>
+            <button onclick="mySubStrFun()">RUN</button>
+            <p id="idP_11"></p>
+            <p id="idP_12"></p>
         </div>
         
     </div>
@@ -129,7 +135,16 @@
                 allRes = 'The string: ' + textSubstring + ';<br>' +
                 'substring: ' + resSubStrint;
             document.getElementById('idP_10').innerHTML = allRes;
-        }
+        };
+        
+        var mySubStrFun = function () {
+            var textSubStr = "\\My name is Alex\\",
+                resSubStr = textSubStr.substr(6, 3),
+                allRes = 'The string: <b>' + textSubStr + '</b><br> result: ' + resSubStr;
+            document.getElementById('idP_11').innerHTML = allRes;
+            document.getElementById('idP_12').innerHTML = '!!! The second parameter can not be negative, because it defines the length.';
+            document.getElementById('idP_12').style.border = '3px solid red';
+        };
         
     </script>
 </body>
