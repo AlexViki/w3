@@ -15,16 +15,55 @@
             <h2>String Methods and Properties</h2>
             <p>Primitive values, like "John Doe", cannot have properties or methods (because they are not objects). But with JavaScript, methods and properties are also available to primitive values, because JavaScript treats primitive values as objects when executing methods and properties.</p>
         </div>
+        
         <div class="block_1">
             <h2>String Length</h2>
             <p>The length property returns the length of a string:</p>
             <button onclick="showLenghtFun()">Show lenght</button>
             <p id="idP_1"></p>
-            
+        </div>
+        
+        <div class="block_1">
+            <h2>Finding a String in a String</h2>
+            <p>The indexOf() method returns the index of (the position of) the first occurrence of a specified text in a string:</p>
+            <button id="button2" onclick="indexOfFun()">Run IndexOf</button>
+            <p id="idP_2"></p>
+            <p>The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:</p>
+            <p id="idP_3"></p>
+            <p>Both the indexOf(), and the lastIndexOf() methods return -1 if the text is not found.</p>
+            <p>Both methods accept a second parameter as the starting position for the search:</p>
+            <p id="idP_4"></p>
+             
         </div>
         
     </div>
     
-    <script src="main.js"></script>
+    <script>
+        var showLenghtFun = function () {
+            var txt = "QWERTYUIOPKJHGFFDAA",
+            sln = txt.length,
+            tmp = document.getElementById('idP_1');
+        tmp.innerHTML = "The lenght is: " + sln;
+        };
+
+        var indexOfFun = function () {
+            var text1 = "\\My name is Alex, his mane is Bob\\",
+                firstPosition = text1.indexOf('is'),
+                lastPosition = text1.lastIndexOf('is'),
+                startFromPos = 10,
+                startFrom = text1.indexOf('is', startFromPos),
+                sln2 = text1.length;
+        document.getElementById('idP_2').innerHTML = 'The string: <b>' + text1 + '</b> lenght=' +
+            sln2 + '<br> seach <b>first</b> position of "is" = ' +
+            firstPosition;
+        document.getElementById('idP_3').innerHTML = 'The string: <b>' + text1 + '</b> lenght=' + 
+            sln2 + '<br> seach <b>last</b> position of "is" = ' +
+            lastPosition;
+        document.getElementById('idP_4').innerHTML = 'The string: <b>' + text1 + '</b><br>start from: ' +
+            startFromPos + ';<br>position = ' + startFrom + ';';
+        };
+        
+        
+    </script>
 </body>
 </html>
