@@ -1,0 +1,24 @@
+
+#head {
+    background: #c7c7c7;
+    width: 960px;
+    border-radius: 20px;
+    border: 2px solid green;
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: chocolate;
+    text-align: center;
+}
+
+#main {
+    background: #ffe6e6;
+    width: 950px;
+    border-radius: 20px;
+    padding: 10px
+}
+
+.block_1 {
+    border-bottom: 2px solid green;
+}
