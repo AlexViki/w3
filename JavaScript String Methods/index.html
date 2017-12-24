@@ -75,9 +75,20 @@
             <h3>The substr() Method</h3>
             <p>substr() is similar to slice(). The difference is that the second parameter specifies the <b>length</b> of the extracted part.</p>
             <p>If the first parameter is negative, the position counts from the end of the string.</p>
+            <p>If you omit the second parameter, substr() will slice out the rest of the string.</p>
             <button onclick="mySubStrFun()">RUN</button>
             <p id="idP_11"></p>
             <p id="idP_12"></p>
+        </div>
+        
+        <div class="block_1">
+            <h2>Replacing String Content</h2>
+            <p>The replace() method replaces a specified value with another value in a string</p>
+            <button onclick="myReplaceFun()" id="buttonReplace">RUN this action</button>
+            <p id="idP_13"></p>
+            <p>By default, the replace() function replaces only the first match</p>
+            <p>By default, the replace() function is case sensitive</p>
+            <p id="idP_14"></p>
         </div>
         
     </div>
@@ -144,6 +155,23 @@
             document.getElementById('idP_11').innerHTML = allRes;
             document.getElementById('idP_12').innerHTML = '!!! The second parameter can not be negative, because it defines the length.';
             document.getElementById('idP_12').style.border = '3px solid red';
+            document.getElementById('idP_12').style.background = '#ffff8d';
+        };
+        
+        var myReplaceFun = function () {
+            var textReplace = document.getElementById('buttonReplace').innerHTML,
+                textReplace_A = "My name is Alex, he is Alex too",
+                textNewName = "James",
+                textReplaceFrom = "RUN",
+                textReolaceTo = "Show",
+                resReplace = textReplace.replace(textReplaceFrom, textReolaceTo),
+                resReplaceName = textReplace_A.replace('Alex', textNewName);
+            document.getElementById('buttonReplace').innerHTML = resReplace;
+            document.getElementById('idP_13').innerHTML = 'The replace() method does not change the string it is called on. It returns a new string.';
+            document.getElementById('idP_13').style.border = '3px solid red';
+            document.getElementById('idP_13').style.background = '#ffff8d';
+            document.getElementById('idP_14').innerHTML = 'The original text: ' + textReplace_A +
+                '<br>The replaced text: ' + resReplaceName;
         };
         
     </script>
