@@ -33,7 +33,19 @@
             <p>Both the indexOf(), and the lastIndexOf() methods return -1 if the text is not found.</p>
             <p>Both methods accept a second parameter as the starting position for the search:</p>
             <p id="idP_4"></p>
-             
+        </div>
+        
+        <div class="block_1">
+            <h2>Searching for a String in a String</h2>
+            <p>The search() method searches a string for a specified value and returns the position of the match:</p>
+            <p id="idP_5"></p>
+            <button onclick="mySearchFun()">RUN</button>
+            <p>The two methods are NOT equal. These are the differences:</p>
+            <ul>
+                <li>The search() method cannot take a second start position argument.</li>
+                <li>The indexOf() method cannot take powerful search values (regular expressions).</li>
+            </ul>
+            <br><br>            
         </div>
         
     </div>
@@ -63,7 +75,13 @@
             startFromPos + ';<br>position = ' + startFrom + ';';
         };
         
-        
+        var mySearchFun = function () {
+            var text3 = "\\My name is Alex, his mane is Bob\\",
+                searchRes = text3.search('is'),
+                sln3 = text3.length;
+            document.getElementById('idP_5').innerHTML = 'The string: <b>' + text3 + '</b> lenght = ' +
+                sln3 + ';<br> position = ' + searchRes + ';'
+        };
     </script>
 </body>
 </html>
