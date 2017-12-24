@@ -56,6 +56,7 @@
                 <li>substring(start, end)</li>
                 <li>substr(start, length)</li>
             </ol>
+            
             <h3>The slice() Method</h3>
             <p><b>slice()</b> extracts a part of a string and returns the extracted part in a new string.</p>
             <p>The method takes 2 parameters: the starting index (position), and the ending index (position).</p>
@@ -65,6 +66,12 @@
             <p id="idP_7"></p>
             <p id="idP_8"></p>
             <p id="idP_9"></p>
+            
+            <h3>The substring() Method</h3>
+            <p>substring() is similar to slice(). The difference is that substring() cannot accept negative indexes.</p>
+            <button onclick="mySubstringFun()">RUN</button>
+            <p id="idP_10"></p>
+            
         </div>
         
     </div>
@@ -115,6 +122,14 @@
             document.getElementById('idP_8').innerHTML = sliceResFrom;
             document.getElementById('idP_9').innerHTML = sliceResFromEnd;
         };
+        
+        var mySubstringFun = function () {
+            var textSubstring = "\\My name is Alex\\",
+                resSubStrint = textSubstring.substring(3,11),
+                allRes = 'The string: ' + textSubstring + ';<br>' +
+                'substring: ' + resSubStrint;
+            document.getElementById('idP_10').innerHTML = allRes;
+        }
         
     </script>
 </body>
