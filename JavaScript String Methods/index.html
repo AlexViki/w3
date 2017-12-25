@@ -142,11 +142,20 @@
             <h3>The charAt() Method</h3>
             <p>The charAt() method returns the character at a specified index (position) in a string</p>
             <p id="id-p-19"></p>
-            <script>
-                var textCharAt = "My name is Alex";
-                document.getElementById('id-p-19').innerHTML = 'The string: ' + textCharAt +
-                    '<br>The result: ' + textCharAt.charAt(0);
-            </script>
+            <h3>The charCodeAt() Method</h3>
+            <p>The charCodeAt() method returns the unicode of the character at a specified index in a string</p>
+            <p id="id-p-20"></p>
+                <script>
+                    var textCharAt = "My name is Alex",
+                        position = 0,
+                        resCahrAt = textCharAt.charCodeAt(position);
+                    document.getElementById('id-p-19').innerHTML = 'The string: ' + textCharAt +
+                        '<br>The result: ' + textCharAt.charAt(0) + 
+                        '<br>The position: ' + position;
+                    document.getElementById('id-p-20').innerHTML = 'The string: ' + textCharAt +
+                        '<br>The unicode: ' + resCahrAt + 
+                        '<br>The position: ' + position;
+                </script>
         </div>
         
     </div>
