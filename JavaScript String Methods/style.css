@@ -21,6 +21,10 @@ h1 {
 
 .block_1 {
     border-bottom: 2px solid green;
+    padding: 15px;
+}
+h2 {
+    color: crimson;
 }
 
 h3 {
@@ -31,11 +35,16 @@ h3 {
     padding:5px 10px 5px 30px;
 }
 
-#idP_12, #idP_13 {
+#idP_12, #idP_13, #idP_19 {
     width: 400px;
     color: red;
     font-weight: bolder;
     font-size: 150%;
     padding: 5px;
     margin-left: 50px;
+}
+
+#idP_19 {
+    width: 700px;
+    border: 5px solid #e600de;
 }
