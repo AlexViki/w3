@@ -87,8 +87,14 @@
             <button onclick="myReplaceFun()" id="buttonReplace">RUN this action</button>
             <p id="idP_13"></p>
             <p>By default, the replace() function replaces only the first match</p>
-            <p>By default, the replace() function is case sensitive</p>
             <p id="idP_14"></p>
+            <p>By default, the replace() function is case sensitive</p>
+            <p>To replace case insensitive, use a regular expression with an /i flag (insensitive)</p>
+            <button onclick="myRegularFun()">RUN</button>
+            <p id="idP_15"></p>
+            <p>!!!Note that regular expressions are written without quoutes.</p><hr>
+            <p>To replace all matches, use a regular expression with a /g flag (global match)</p>
+            <p id="idP_16"></p>
         </div>
         
     </div>
@@ -172,6 +178,28 @@
             document.getElementById('idP_13').style.background = '#ffff8d';
             document.getElementById('idP_14').innerHTML = 'The original text: ' + textReplace_A +
                 '<br>The replaced text: ' + resReplaceName;
+        };
+        var myRegularFun = function () {
+            var textRegular_A = "My name is Alex",
+                textRegular_B = "My name is Alex, he is Alex too",
+                regularValue = /ALEX/i,
+                regularValue_2 = /ALEX/,
+                regularValue_3 = /Alex/g,
+                replaceToValue = "Bob",
+                resRegular = textRegular_A.replace(regularValue, replaceToValue),
+                resRegular_2 = textRegular_A.replace(regularValue_2, replaceToValue),
+                resRegular_3 = textRegular_B.replace(regularValue_3, replaceToValue);
+            
+            document.getElementById('idP_15').innerHTML = 'The string: ' + textRegular_A +
+                '<br>The regular expression: ' + regularValue + 
+                '<br>Replace to: ' + replaceToValue +
+                '<br>The result: ' + resRegular + '<br><hr>' +
+                'The regular expression wiout "i": ' + regularValue_2 +
+                '<br> The result_2: ' + resRegular_2;
+            document.getElementById('idP_16').innerHTML = 'The string: ' + textRegular_B +
+                '<br>The regular expresiion: ' + regularValue_3 +
+                '<br>Replace to: ' + replaceToValue +
+                '<br>The result_3: ' + resRegular_3;
         };
         
     </script>
