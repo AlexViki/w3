@@ -97,6 +97,22 @@
             <p id="idP_16"></p>
         </div>
         
+        <div class="block_1">
+            <h2>Converting to Upper and Lower Case</h2>
+            <button id="button-to-upper" onclick="toUpperFun()">run</button>
+            <button id="button-to-lower" onclick="toLowerFun()">RUN</button>
+            <script>
+                function toUpperFun () {
+                    var text = document.getElementById('button-to-upper').innerHTML;
+                    return document.getElementById('button-to-upper').innerHTML = text.toUpperCase();
+                };
+                function toLowerFun () {
+                    var text = document.getElementById('button-to-lower').innerHTML;
+                    return document.getElementById('button-to-lower').innerHTML = text.toLowerCase();
+                };
+            </script>
+        </div>
+        
     </div>
     
     <script>
