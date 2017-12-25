@@ -158,9 +158,56 @@
                 </script>
         </div>
         
+        <div class="block_1">
+            <h2>Accessing a String as an Array is Unsafe</h2>
+            <p>The accessing to a string as an array</p>
+            <p id="id-p-21"></p>
+            <p>This is unsafe and unpredictable:</p>
+            <ul>
+                <li>It does not work in all browsers (not in IE5, IE6, IE7)</li>
+                <li>It makes strings look like arrays (but they are not)</li>
+            </ul>
+            <p id="id-p-22">If you want to read a string as an array, convert it to an array first</p>
+                <script>
+                    var textAsArr = "My nme is Alex";
+                    document.getElementById('id-p-21').innerHTML = 'The string: ' + textAsArr +
+                        '<br>The resuld: ' + textAsArr[0];
+                </script>
+        </div>
+        
+        <div class="block_1">
+            <h2>Converting a String to an Array</h2>
+            <p>A string can be converted to an array with the split() method</p>
+            <button onclick="strToArrFun()">RUN</button><hr>
+            <p id="id-p-23"></p>
+            <p>If the separator is "", the returned array will be an array of single characters:</p><hr>
+            <p id="id-p-24"></p><hr>
+                <script>
+                    function strToArrFun() {
+                        var textStrToArr = "My name is Alex",
+                            newArr = textStrToArr.split(' '),
+                            newArr2 = textStrToArr.split(),
+                            newArr3 = textStrToArr.split('');
+                        document.getElementById('id-p-23').innerHTML = 
+                            'Original srting: ' + textStrToArr +
+                            '<br>Was created array: ' + newArr +
+                            '<br>Array[1]: ' + newArr[1] +
+                            '<br>Array[2]: ' + newArr[2] +
+                            '<br>Without separator: ' + newArr2 +
+                            '<br>Array_2[0]: ' + newArr2[0] + 
+                            '<br>Array_2[1]: ' + newArr2[1];
+                        document.getElementById('id-p-24').innerHTML = 
+                            'Original string: ' + textStrToArr + 
+                            '<br>The separator is "" : ' + newArr3 +
+                            '<br>Array_3[0]: ' + newArr3[0] +
+                            '<br>Array_3[1]: ' + newArr3[1]; 
+                    };
+                </script>
+        </div>
+        
     </div>
-    
- <!-- ----------- SCIPRS --------------------------------------------------------------------------->   
+        
+ <!-- ----------- SCIPRS --------------------------------------------------------------------------->           
     <script>
         var showLenghtFun = function () {
             var txt = "QWERTYUIOPKJHGFFDAA",
