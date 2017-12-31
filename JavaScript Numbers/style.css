@@ -7,7 +7,7 @@
     margin: auto;
     
 }
-.inner_div, .inner_div_2, .inner_div_3 {
+.inner_div, .inner_div_2, .inner_div_3, .inner_div_4 {
     position: relative;
     width: auto;
     background: #ffffba;
@@ -28,3 +28,5 @@
     height: 20px;
     border: none;
 }
+
+

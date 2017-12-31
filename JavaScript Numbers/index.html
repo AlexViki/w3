@@ -87,6 +87,20 @@
            </script>
        </div>
        
+       <div class="inner_div_4" id="inner_div_id_4" onclick="testFunA()">
+           <h2>Infinity (click to this block)</h2>
+           <p>Infinity (or -Infinity) is the value JavaScript will return if you calculate a number outside the largest possible number.</p>
+           <p id="id_p_5"></p>
+           <script>
+               function testFunA() {
+                   document.getElementById('inner_div_id_4').style.background = 'linear-gradient(to bottom, #38ed46, #ffffff)';
+                   document.getElementById('inner_div_id_4').style.border = '5px solid #0b9100';
+               }
+            document.getElementById('id_p_5').innerHTML = 'Division by 0 (zero) also generates Infinity: ' + 
+                (2 / 0) + '<br>typeof Infinity returns: ' + '<b>' + typeof(Infinity) + '</b>';
+           </script>
+       </div>
+       
    </div>
     
 </body>
