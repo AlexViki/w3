@@ -101,6 +101,19 @@
            </script>
        </div>
        
+       <div class="inner_div">
+           <h2>Hexadecimal + "Happy new year!!!"</h2>
+           <p>JavaScript interprets numeric constants as hexadecimal if they are preceded by 0x.</p>
+           <button onclick="newFun()">Run New Year</button>
+           <p id="id_2018"></p>
+           <script>
+               function newFun() {
+               var x = 0x7E2;
+                document.getElementById('id_2018').innerHTML = 'Happy new ' + x + ' year!!!';
+               };
+           </script>
+       </div>
+       
    </div>
     
 </body>
