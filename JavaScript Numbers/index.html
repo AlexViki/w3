@@ -33,19 +33,19 @@
            <h2>JavaScript Numbers - 64-bit Floating Point</h2>
            <p>Unlike many other programming languages, JavaScript does not define different types of numbers, like integers, short, long, floating-point etc</p>
            <p>JavaScript numbers are always stored as double precision floating point numbers, following the international IEEE 754 standard</p>
-                <h3>Precision</h3>
-                <p>Integers - numbers without a period or exponent notation:</p>
-                <p id="id_p_2"></p>
-                <script>
-                    var x = 999999999999999,
-                        y = 9999999999999999,
-                        z = 99999999999999999,
-                        t = 999999999999999999,
-                        h = 0.2 + 0.1,
-                        r = (0.2 * 10 + 0.1 * 10) / 10,
-                        e = 10,
-                        b = 40;
-                    document.getElementById('id_p_2').innerHTML = '15 digits: ' + x +
+            <h2>Precision</h2>
+            <p>Integers - numbers without a period or exponent notation:</p>
+            <p id="id_p_2"></p>
+            <script>
+                var x = 999999999999999,
+                    y = 9999999999999999,
+                    z = 99999999999999999,
+                    t = 999999999999999999,
+                    h = 0.2 + 0.1,
+                    r = (0.2 * 10 + 0.1 * 10) / 10,
+                    e = 10,
+                    b = 40;
+                document.getElementById('id_p_2').innerHTML = '15 digits: ' + x +
                         '<br>16 digits: ' + y + 
                         '<br>17 digits: ' + z + 
                         '<br>18 digits: ' + t + 
@@ -56,11 +56,36 @@
                         r + '</b>' + 
                         '<br>A common mistake: ' + e + b + 
                         '<br>but if we use <b>()</b>, result: ' + (e + b);
-                </script>
+            </script>
        </div>
+       
        <div class="inner_div_3"></div>
        
-       
+       <div class="inner_div">
+           <h2>NaN - Not a Number</h2>
+           <p>NaN is a JavaScript reserved word indicating that a number is not a legal number</p>
+           <p id="id_p_4"></p>
+           <script>
+            var a = 100,
+                b = 'Alex',
+                c = a / b,
+                d = 5,
+                h = a / d,
+                k = 10/'red',
+                l = NaN,
+                s = a / l,
+                f = l + a;
+            document.getElementById('id_p_4').innerHTML = 'arithmetic with a number and a string: ' + c +
+                '<br>if the string contains a numeric value , the result will be a number: ' + h +
+                '<br>the typeOf: ' + typeof(h) +
+                '<br>use the global JavaScript function isNaN() to find out if a value is a number: ' + 
+                '<b>' + isNaN(k) + '</b>' + 
+                '<br><br>Watch out for NaN. If you use NaN in a mathematical operation,' + 
+                'the result will also be NaN: ' + '<b>' + s + '</b>' + 
+                '<br>Or the result might be a concatenation: ' + '<b>' + f + '</b>' + 
+                '<br>typeof NaN returns: ' + typeof(NaN);
+           </script>
+       </div>
        
    </div>
     
