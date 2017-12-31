@@ -1,0 +1,16 @@
+
+.main {
+    position: absolute;
+    background: #7cc8de;
+    border: 2px solid #005d77;
+    padding: 10px;
+}
+.inner_div {
+    position: relative;
+    width: 960px;
+    background: #ffffba;
+    padding: 20px;
+    border: 1px grey solid;
+    border-radius: 20px;
+    margin-top: 30px;
+}
