@@ -30,8 +30,11 @@ p {
     margin: 30px;
     padding: 10px;
     box-shadow: 8px 8px 15px #6a6a6a;
+    transition: background 1s linear 0s;
 }
-
+.inner_div:hover {
+    background: #6e6e6e;
+}
 #span {
     color: #d2ff14;
     font-weight: bolder;
