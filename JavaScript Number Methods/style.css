@@ -1,0 +1,20 @@
+
+#main_div {
+    position: absolute;
+    background: linear-gradient(to right, #6a6a6a, #ffffff);
+    padding: 15px;
+    outline-style: double;
+    outline-color: #19342b;
+}
+h2 {
+    color: #93ff63;
+    outline-style: double;
+    outline-color: #93ff63;
+    padding: 5px;
+    width: 500px;
+}
+
+p {
+    color: #1f2929;
+    font-size: 100%;
+}

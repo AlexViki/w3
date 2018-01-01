@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Number Methods</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="main_div">
+        <h1>JavaScript Number Methods</h1>
+        
+        <div class="inner_div">
+            <h2>Number Methods and Properties</h2>
+            <p>Primitive values (like 3.14 or 2014), cannot have properties and methods (because they are not objects).<br>But with JavaScript, methods and properties are also available to primitive values, because JavaScript treats primitive values as objects when executing methods and properties.</p>
+        </div>
+        
+        <div class="inner_div">
+            <h2>The toString() Method</h2>
+            <p>toString() returns a number as a string. All number methods can be used on any type of numbers (literals, variables, or expressions):</p>
+            <p id="id_p_1"></p>
+            <script>
+                var a = 120,
+                    x = a.toString();
+                document.getElementById('id_p_1').innerHTML = 'The result: ' + x + 
+                    '<br>The typeOf a: ' + typeof(a) + 
+                    '<br>a.toString(): ' + typeof(x);
+            </script>
+        </div>
+        
+        
+    </div>
+    
+</body>
+</html>
