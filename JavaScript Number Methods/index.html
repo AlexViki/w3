@@ -31,7 +31,7 @@
         
         <div class="inner_div">
             <h2>The toExponential() Method</h2>
-            <p>toExponential() returns a string, with a number rounded and written using exponential notation.<br>
+            <p><span id="span">toExponential() returns a string</span>, with a number rounded and written using exponential notation.<br>
             A parameter defines the number of characters behind the decimal point.<br>
             The parameter is optional. If you don't specify it, JavaScript will not round the number.</p>
             <p id="id_p_2"></p>
@@ -40,6 +40,19 @@
                 document.getElementById('id_p_2').innerHTML = 'The value is: ' + x + 
                     '<br>The result is (2): ' + x.toExponential(2) + 
                     '<br>The result is (6): ' + x.toExponential(6);
+            </script>
+        </div>
+        
+        <div class="inner_div">
+            <h2>The toFixed() Method</h2>
+            <p><span id="span">toFixed() returns a string</span>, with the number written with a specified number of decimals:</p>
+            <p id="id_p_3"></p>
+            <script>
+                var d = 45.674;
+                document.getElementById('id_p_3').innerHTML = 'The vulue is: ' + d + 
+                    '<br>to 2: ' + d.toFixed(2) + 
+                    '<br>to 4: ' + d.toFixed(4) + 
+                    '<br>to 6: ' + d.toFixed(6);
             </script>
         </div>
         
