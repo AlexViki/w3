@@ -2,14 +2,19 @@
 #main_div {
     position: absolute;
     background: linear-gradient(to right, #6a6a6a, #ffffff);
-    padding: 15px;
     outline-style: double;
     outline-color: #19342b;
 }
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #5a3b16;
+    text-shadow: 2px 3px #696969;
+}
 h2 {
-    color: #93ff63;
+    color: #dfffd1;
     outline-style: double;
-    outline-color: #93ff63;
+    outline-color: #dfffd1;
     padding: 5px;
     width: 500px;
 }
@@ -17,4 +22,12 @@ h2 {
 p {
     color: #1f2929;
     font-size: 100%;
+}
+
+.inner_div {
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    margin: 10px;
+    padding: 10px;
+    
 }
