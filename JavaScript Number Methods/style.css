@@ -9,7 +9,7 @@ h1 {
     text-align: center;
     text-transform: uppercase;
     color: #5a3b16;
-    text-shadow: 2px 3px #696969;
+    text-shadow: 2px 3px 10px #696969;
 }
 h2 {
     color: #dfffd1;
@@ -27,13 +27,14 @@ p {
 .inner_div {
     border-top: 1px solid #ffffff;
     border-bottom: 1px solid #ffffff;
-    margin: 10px;
+    margin: 30px;
     padding: 10px;
-    
+    box-shadow: 8px 8px 15px #6a6a6a;
 }
 
 #span {
     color: #d2ff14;
     font-weight: bolder;
     font-size: 20px;
+    background: #9f6d6d;
 }

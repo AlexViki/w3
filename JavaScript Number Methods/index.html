@@ -72,6 +72,23 @@
             </script>
         </div>
         
+        <div class="inner_div">
+            <h2>The valueOf() Method</h2>
+            <p id="span">valueOf() returns a number as a number.</p>
+            <p id="id_p_5"></p>
+            <p>In JavaScript, a number can be a primitive value (typeof = number) or an object (typeof = object).<br>
+            The valueOf() method is used internally in JavaScript to convert Number objects to primitive values.<br>
+            There is no reason to use it in your code.</p>
+            <p id="span">All JavaScript data types have a valueOf() and a toString() method.</p>
+            <script>
+                var h = 127;
+                document.getElementById('id_p_5').innerHTML = 'The value is: ' + h +
+                    '<br>- valueOf(): ' + h.valueOf() + 
+                    '<br>- (127).valueOf(): ' + (127).valueOf() + 
+                    '<br>- (100+27).valueOf(): ' + (100 + 27).valueOf() ;
+            </script>
+        </div>
+        
     </div>
     
 </body>
