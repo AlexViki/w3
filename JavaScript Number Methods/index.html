@@ -46,13 +46,29 @@
         <div class="inner_div">
             <h2>The toFixed() Method</h2>
             <p><span id="span">toFixed() returns a string</span>, with the number written with a specified number of decimals:</p>
+            <p id="span">toFixed(2) is perfect for working with money!!!</p>
             <p id="id_p_3"></p>
             <script>
-                var d = 45.674;
+                var d = 45.678;
                 document.getElementById('id_p_3').innerHTML = 'The vulue is: ' + d + 
                     '<br>to 2: ' + d.toFixed(2) + 
                     '<br>to 4: ' + d.toFixed(4) + 
                     '<br>to 6: ' + d.toFixed(6);
+            </script>
+        </div>
+        
+        <div class="inner_div">
+            <h2>The toPrecision() Method</h2>
+            <p><span id="span">toPrecision() returns a string</span>, with a number written with a specified length:</p>
+            <p id="id_p_4"></p>
+            <script>
+                var f = 13.684321567;
+                document.getElementById('id_p_4').innerHTML = 'The value is: ' + f + 
+                    '<br>The specified length (2): ' + f.toPrecision(2) + 
+                    '<br>The specified length (4): ' + f.toPrecision(4) + 
+                    '<br>The specified length (6): ' + f.toPrecision(6) +
+                    '<br>The specified length (8): ' + f.toPrecision(8) + 
+                    '<br>The specified length (10): ' + f.toPrecision(10);
             </script>
         </div>
         
