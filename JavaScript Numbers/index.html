@@ -106,11 +106,45 @@
            <p>JavaScript interprets numeric constants as hexadecimal if they are preceded by 0x.</p>
            <button onclick="newFun()">Run New Year</button>
            <p id="id_2018"></p>
+           <p class="class_p_1">Never write a number with a leading zero (like 07).<br>
+           Some JavaScript versions interpret numbers as octal if they are written with a leading zero.</p>
+           <p>By default, JavaScript displays numbers as base 10 decimals. <br>
+           But you can use the toString() method to output numbers as base 16 (hex), 
+           base 8 (octal), or base 2 (binary)</p>
+           <p id="id_p_7"></p>
            <script>
                function newFun() {
                var x = 0x7E2;
                 document.getElementById('id_2018').innerHTML = 'Happy new ' + x + ' year!!!';
                };
+               var num_A = 150;
+               document.getElementById('id_p_7').innerHTML = 'The number: ' + num_A +
+                   '; <br>base 16 (HEX): ' + num_A.toString(16) +
+                   ';<br>base 8 (octal): ' + num_A.toString(8) + 
+                   ';<br>base 2 (binary): ' + num_A.toString(2);
+           </script>
+       </div>
+       
+       <div class="inner_div">
+           <h2>Numbers Can be Objects</h2>
+           <p>Normally JavaScript numbers are primitive values created from literals</p>
+           <p>But numbers can also be defined as objects with the keyword new</p>
+           <p id="id_p_8"></p>
+           <p class="class_p_1">Do not create Number objects. It slows down execution speed.<br>
+           The new keyword complicates the code. This can produce some unexpected results:</p>
+           <p class="class_p_1">Note the difference between (x==y) and (x===y).<br>
+           Comparing two JavaScript objects will always return false.</p>
+           <script>
+            var a = 150,
+                b = new Number(150),
+                c = new Number(150);
+               document.getElementById('id_p_8').innerHTML = 'Number - A = ' + a +
+                   '<br>Number - B = ' + b + '<br>TypeOf Number - A: ' + typeof(a) + 
+                   '<br>Type of Number - B: ' + typeof(b) + 
+                   '<br>When using the == operator, equal numbers are equal: ' + '<b>' +
+                   + a + ' == ' + b + '; ' + (a == b) + '</b>' +
+                   '<br>When using the === operator, equal numbers are not equal, because the === operator expects equality in both type and value: ' + '<b>' + a + ' === ' + b + '; ' + (a === b) + '</b>' +
+                   '<br><br><b>Objects cannot be compared: ' + b + ' == ' + c + '; ' + (b == c) + '</b>';
            </script>
        </div>
        
