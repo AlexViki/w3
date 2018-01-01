@@ -17,6 +17,13 @@ h2 {
     outline-color: #dfffd1;
     padding: 5px;
     width: 500px;
+    margin: auto;
+    transition: all 1s linear 0s;
+}
+h2:hover {
+    transform: scale(1.2);
+    background: #dfffd1;
+    color: #6e6e6e;
 }
 
 p {
