@@ -47,4 +47,24 @@ p {
     font-weight: bolder;
     font-size: 20px;
     background: #9f6d6d;
+    padding-left: 5px;
+}
+
+ul {
+    list-style-type: upper-alpha;
+    list-style-position: inside;
+    background: #87e8ff;
+    border-radius: 10px;
+    width: 50%;
+    padding: 10px;
+}
+
+h3 {
+    color: #4dcece;
+    padding: 5px;
+    padding-left: 10px;
+    border-left: 7px solid aqua;
+    border-bottom: 2px solid aqua;
+    width: 300px;
+    margin-left: 30px;
 }

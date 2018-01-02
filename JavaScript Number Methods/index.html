@@ -51,6 +51,7 @@
             <script>
                 var d = 45.678;
                 document.getElementById('id_p_3').innerHTML = 'The vulue is: ' + d + 
+                    '<br><b>to 0: ' + d.toFixed(0) + '</b>' + 
                     '<br>to 2: ' + d.toFixed(2) + 
                     '<br>to 4: ' + d.toFixed(4) + 
                     '<br>to 6: ' + d.toFixed(6);
@@ -86,6 +87,61 @@
                     '<br>- valueOf(): ' + h.valueOf() + 
                     '<br>- (127).valueOf(): ' + (127).valueOf() + 
                     '<br>- (100+27).valueOf(): ' + (100 + 27).valueOf() ;
+            </script>
+        </div>
+        
+        <div class="inner_div">
+            <h2>Converting Variables to Numbers</h2>
+            <p>There are 3 JavaScript methods that can be used to convert variables to numbers:</p>
+            <ul>
+                <li>Number() method</li>
+                <li>parseInt() method</li>
+                <li>parseFloat() method</li>
+            </ul>
+            <p id="span">These methods are not number methods, but global JavaScript methods.</p>
+        </div>
+        
+        <div class="inner_div">
+            <h2>Global Methods</h2>
+            <p>JavaScript global methods can be used on all JavaScript data types. <br>
+            These are the most relevant methods, when working with numbers:</p>
+            <ul>
+                <li>Number() - returns a number, converted from its argument.</li>
+                <li>parseFloat() - parses its argument and returns a floating point number</li>
+                <li>parseInt() - parses its argument and returns an integer</li>
+            </ul><hr>
+            <h3>The Number() Method</h3>
+            <p><b>Number()</b> can be used to convert JavaScript variables to numbers:</p>
+            <p id="id-p-5"></p>
+            <p id="span">If the number cannot be converted, NaN (Not a Number) is returned.</p><hr>
+            <h3>Number() Method Used on Dates</h3>
+            <p>Number() can also convert a date to a number</p>
+            <p id="id-p-6"></p><hr>
+            <h3>The parseInt() Method</h3>
+            <p>parseInt() parses a string and returns a whole number. Spaces are allowed. Only the first number is returned</p>
+            <p id="id-p-7"></p><hr>
+            <h3>The parseFloat() Method</h3>
+            <p>parseFloat() parses a string and returns a number. Spaces are allowed. Only the first number is returned</p>
+            <p id="id-p-8"></p>
+               <script>
+                document.getElementById('id-p-5').innerHTML = 'false: ' + Number(false) +
+                    '<br>true: ' + Number(true) + 
+                    '<br>"10": ' + Number('10') +
+                    '<br>"10 ": ' + Number('10 ') + 
+                    '<br>" 10": ' + Number(' 10') + 
+                    '<br>"10 20": ' + Number('10 20') + 
+                    '<br>"Alex": ' + Number('Alex');
+                var t = new Date('2018-01-31');
+                document.getElementById('id-p-6').innerHTML = 'the number of milliseconds since 1.1.1970: ' + 
+                    Number( t );
+                document.getElementById('id-p-7').innerHTML = '"10": ' + parseInt('10') + 
+                    '<br>"10.456": ' + parseInt('10.456') +
+                    '<br>"10 Alex": ' + parseInt('10 Alex') +
+                    '<br>"Alex 10": ' + parseInt('Alex 10');
+                document.getElementById('id-p-8').innerHTML = '"12": ' + parseFloat('12') +
+                    '<br>"12.764": ' + parseFloat('12.764') +
+                    '<br>"12 Alex": ' + parseFloat('12 Alex') +
+                    '<br>"Alex 12": ' + parseFloat('Alex 12');
             </script>
         </div>
         
