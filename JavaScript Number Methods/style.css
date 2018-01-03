@@ -53,10 +53,16 @@ p {
 ul {
     list-style-type: upper-alpha;
     list-style-position: inside;
-    background: #87e8ff;
+    background: #989898;
     border-radius: 10px;
     width: 50%;
     padding: 10px;
+}
+.ul-list-1 {
+    list-style-type: lower-alpha;
+    color: blue;
+    padding: 5px 0 5px 40px;
+    width: auto;
 }
 
 h3 {

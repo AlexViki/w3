@@ -145,6 +145,47 @@
             </script>
         </div>
         
+        <div class="inner_div">
+            <h2>Number Properties</h2>
+            <ul>
+                <li>MAX_VALUE - Returns the largest number possible in JavaScript
+                    <ul class="ul-list-1">
+                        <li id="max-value"></li>
+                    </ul>
+                </li>
+                <li>MIN_VALUE - Returns the smallest number possible in JavaScript
+                    <ul class="ul-list-1">
+                        <li id="min-value"></li>
+                    </ul>
+                </li>
+                <li>NEGATIVE_INFINITY - Represents negative infinity (returned on overflow)
+                    <ul class="ul-list-1">
+                        <li id="negative-inf"></li>
+                    </ul>
+                </li>
+                <li>NaN - Represents a "Not-a-Number" value
+                    <ul class="ul-list-1">
+                        <li id="nan"></li>
+                    </ul>
+                </li>
+                <li>POSITIVE_INFINITY - Represents infinity (returned on overflow)
+                    <ul class="ul-list-1">
+                        <li id="positive-inf"></li>
+                    </ul>
+                </li>
+            </ul>
+            <script>
+                document.getElementById('max-value').innerHTML = 'The max value is: ' + Number.MAX_VALUE;
+                document.getElementById('min-value').innerHTML = 'The min value is: ' + Number.MIN_VALUE;
+                document.getElementById('negative-inf').innerHTML = 'The negative infinity is: ' +
+                    Number.NEGATIVE_INFINITY;
+                document.getElementById('nan').innerHTML = 'The Not a Number value is: ' +
+                    NaN;
+                document.getElementById('positive-inf').innerHTML = 'The positive infinity is: ' +
+                    Number.POSITIVE_INFINITY;
+            </script>
+        </div>
+        
     </div>
     
 </body>
