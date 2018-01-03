@@ -1,0 +1,12 @@
+
+body {
+    background: #c7faa2;
+    border: 3px solid #00b1ff;
+    border-radius: 20px;
+    margin: 50px;
+    padding: 20px;
+}
+
+p:first-child {
+    color: red;
+}

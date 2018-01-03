@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Math Object</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+        <header>
+            <h1>JavaScript Math Object</h1>
+        </header>
+        
+        <main>
+            <article>
+                <h2>Math.round()</h2>
+                <p><b>Math.round(x)</b> returns the value of x rounded to its nearest integer</p>
+                <p id="id-p-1"></p>
+                <script>
+                    var x = 14.7,
+                        y = 14.4,
+                        h = 14.5;
+                document.getElementById('id-p-1').innerHTML = 'The value is: ' + x +
+                    '; nearest integer: ' + Math.round(x) + 
+                    '<br>The value is: ' + y + '; nearest integer: ' + Math.round(y) +
+                    '<br>The value is: ' + h + '; nearest integer: ' + Math.round(h);
+                </script>
+            </article>
+            
+        </main>
+        
+</body>
+</html>
