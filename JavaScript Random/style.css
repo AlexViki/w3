@@ -1,0 +1,35 @@
+
+body {
+    background: #e7fdff;
+    padding: 30px;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+}
+
+main {
+    border-left: 5px solid #ffa2a2;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+h1, h2 {
+    padding-left: 5px;
+    width: 60%;
+    box-shadow: 0 0 15px 3px grey;
+}
+
+article {
+    background: rgb(247, 255, 205);
+    padding: 20px;
+    margin-bottom: 10px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.pay-attatniot {
+    color: red;
+    font-weight: bolder;
+    border: 2px solid #ffa2a2;
+    padding: 3px;
+    margin-left: 50px;
+    width: 70%;
+}
