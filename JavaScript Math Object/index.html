@@ -14,17 +14,116 @@
         <main>
             <article>
                 <h2>Math.round()</h2>
-                <p><b>Math.round(x)</b> returns the value of x rounded to its nearest integer</p>
+                <p><b>Math.round(x)</b> returns the value of "x" rounded to its nearest integer</p>
                 <p id="id-p-1"></p>
                 <script>
                     var x = 14.7,
                         y = 14.4,
-                        h = 14.5;
+                        h = 14.5,
+                        g = 14.54;
                 document.getElementById('id-p-1').innerHTML = 'The value is: ' + x +
                     '; nearest integer: ' + Math.round(x) + 
                     '<br>The value is: ' + y + '; nearest integer: ' + Math.round(y) +
-                    '<br>The value is: ' + h + '; nearest integer: ' + Math.round(h);
+                    '<br>The value is: ' + h + '; nearest integer: ' + Math.round(h) +
+                    '<br>The value is: ' + g + '; nearest integer: ' + Math.round(g);
                 </script>
+            </article>
+            
+            <article>
+                <h2>Math.pow()</h2>
+                <p>Math.pow(x, y) returns the value of "x" to the power of "y"</p>
+                <button onclick="powFun()">Run</button>
+                <p id="id-p-2"></p><hr>
+                <h2>Math.sqrt()</h2>
+                <p>Math.sqrt(x) returns the square root of "x"</p>
+                <p id="id-p-3"></p><hr>
+                <h2>Math.abs()</h2>
+                <p>Math.abs(x) returns the absolute (positive) value of "x"</p>
+                <p id="id-p-4"></p><hr>
+                <h2>Math.ceil()</h2>
+                <p>Math.ceil(x) returns the value of "x" rounded <b>up</b> to its nearest integer</p>
+                <p id="id-p-5"></p><hr>
+                <h2>Math.floor()</h2>
+                <p>Math.floor(x) returns the value of "x" rounded <b>down</b> to its nearest integer</p>
+                <p id="id-p-6"></p><hr>
+                <h2>Math.sin()</h2>
+                <p>Math.sin(x) returns the sine (a value between -1 and 1) of the angle x (given in radians).<br>
+                If you want to use degrees instead of radians, you have to convert degrees to radians:<br>
+                Angle in radians = Angle in degrees x PI / 180.</p>
+                <p id="id-p-7"></p><hr>
+                <h2>Math.cos()</h2>
+                <p>Math.cos(x) returns the cosine (a value between -1 and 1) of the angle x (given in radians).<br>
+                If you want to use degrees instead of radians, you have to convert degrees to radians:<br>
+                Angle in radians = Angle in degrees x PI / 180.</p>
+                <p id="id-p-8"></p><hr>
+                <h2>Math.min() and Math.max()</h2>
+                <p>Math.min() and Math.max() can be used to find the lowest or highest value in a list of arguments</p>
+                <p id="id-p-9"></p>
+                <h2>Math.random()</h2>
+                <p>Math.random() returns a random number between 0 (inclusive),  and 1 (exclusive)</p>
+                <p id="id-p-10"></p>
+                <h2>Math Properties (Constants)</h2>
+                <p>JavaScript provides 8 mathematical constants that can be accessed with the Math object</p>
+                <p id="id-p-11"></p>
+                    <script>
+                        function powFun() {
+                            var num1 = 2,
+                                num2 = 3,
+                                res = Math.pow( num1, num2);
+                        document.getElementById('id-p-2').innerHTML = 'Num-1 = ' + num1 + 
+                                '; Num-2 = ' + num2 + '; <b>Result = ' + res + '</b>';
+                        };
+                        var num3 = 25;
+                        document.getElementById('id-p-3').innerHTML = 'Num-3 = ' + num3 + 
+                            '; Result = <b>' + Math.sqrt(num3) + '</b>';
+                        let numAbs = -5.9,
+                            numNear = 5.1,
+                            numFloor = 5.7,
+                            num90 = 90,
+                            num45 = 45,
+                            num30 = 30,
+                            num0 = 0,
+                            numRanMin = 10,
+                            numRanMax = 50;
+                        document.getElementById('id-p-4').innerHTML = 'The number is: ' + numAbs + 
+                            '<br>The absolute: ' + Math.abs(numAbs);
+                        document.getElementById('id-p-5').innerHTML = 'The number is: ' + numNear +
+                            '<br>The nearest UP integer is: ' + Math.ceil(numNear);
+                        document.getElementById('id-p-6').innerHTML = 'The number is: ' + numFloor +
+                            '<br>The nearest DOWN integer is: ' + Math.floor(numFloor);
+                        document.getElementById('id-p-7').innerHTML = 'Sin of ' + num90 +
+                            '<br>The result =  ' + ( Math.sin (num90 * Math.PI / 180) ).toFixed(3) +
+                            '<br>Sin of ' + num45 + 
+                            '<br>The result = ' + ( Math.sin(num45 * Math.PI / 180) ).toFixed(3) + 
+                            '<br>Sin of ' + num30 + 
+                            '<br>The result = ' + ( Math.sin( num30 * Math.PI / 180 ) ).toFixed(3) +
+                            '<br>Sin of ' + num0 + 
+                            '<br>The result ' + ( Math.sin( num0 * Math.PI / 180 ) ).toFixed(3);
+                        document.getElementById('id-p-8').innerHTML = 'Cos of ' + num0 + 
+                            '<br>The result: ' + ( Math.cos( num0 * Math.PI / 180 ) ).toFixed(3) +
+                            '<br>Cos of ' + num30 + 
+                            '<br>The result: ' + ( Math.cos( num30 * Math.PI / 180 ) ).toFixed(3) +
+                            '<br>Cos of ' + num45 + 
+                            '<br>The result: ' + ( Math.cos( num45 * Math.PI / 180 ) ).toFixed(3) + 
+                            '<br>Cos of ' + num90 + 
+                            '<br>The result: ' + ( Math.cos( num90 * Math.PI / 180 ) ).toFixed(3);
+                        document.getElementById('id-p-9').innerHTML = 'The volues: ' +
+                            + numAbs + ', ' + numNear + ', ' + num30 + ', ' + num0 + ', ' + num90 + ';' + 
+                            '<br>The max is: ' + Math.max(numAbs, numNear, num30, num0, num90) +
+                            '<br>The min is: ' + Math.min(numAbs, numNear, num30, num0, num90);
+                        document.getElementById('id-p-10').innerHTML = 'Random rumber between: ' +
+                            numRanMin + ', ' + numRanMax + '<br>' +
+                            Math.floor( ( Math.random() * (numRanMax - numRanMin) + numRanMin ) );
+                        document.getElementById('id-p-11').innerHTML = 'Math.E = ' + Math.E +
+                            '<br>Math.PI = ' + Math.PI +
+                            '<br>Math.SQRT2 = ' + Math.SQRT2 +
+                            '<br>Math.SQRT2 = ' + Math.SQRT1_2 +
+                            '<br>Math.log2 = ' + Math.log2 + 
+                            '<br>Math.log10 = ' + Math.log10 + 
+                            '<br>Math.LOG2E = ' + Math.LOG2E +
+                            '<br>Math.LOG2E = ' + Math.LOG10E;
+                    </script>
+               
             </article>
             
         </main>
