@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Dates</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <main>
+        <header>
+            <h1>JavaScript Dates</h1>
+            <p>The Date object lets you work with dates (years, months, days, hours, minutes, seconds, and milliseconds)</p>
+        </header>
+        
+        <article>
+            <h2>JavaScript Date Formats</h2>
+            <p>A JavaScript date can be written as a string or as a number<br>
+            Dates written as numbers, specifiy the number of milliseconds since January 1, 1970, 00:00:00</p>
+        </article>
+        
+        <article>
+            <h2>Displaying Dates</h2>
+            <p>We use a script to display dates inside a &lt;p&gt; element with id</p>
+            <p id="id-p-1"></p>
+        </article>
+        
+        <article>
+            <h2>Creating Date Objects</h2>
+            <p>The Date object lets us work with dates.<br>
+            A date consists of a year, a month, a day, an hour, a minute, a second, and milliseconds.<br>
+            Date objects are created with the new Date() constructor.<br>
+            <b>There are 4 ways of initiating a date:</b></p>
+                <ul>
+                    <li><h3>Use "new Date()"</h3>
+                        <p>Using new Date(), creates a new date object with the current date and time</p>
+                        <p id="id-p-2"></p>
+                    </li>
+                    <li><h3>Use "new Date(dateString)"</h3>
+                        <p>Using new Date(date string), creates a new date object from the specified date and time</p>
+                        <p id="id-p-3"></p>
+                    </li>
+                    <li><h3>Use "new Date(milliseconds)"</h3>
+                        <p>Using new Date(number), creates a new date object as zero time plus the number.<br>
+                        Zero time is 01 January 1970 00:00:00 UTC. The number is specified in milliseconds.<br>100000000000 milliseconds from Jan 1, 1970, is approximately Mar 3, 1973<br>
+                        One day (24 hours) contains 86,400,000 milliseconds</p>
+                        <p id="id-p-4"></p>
+                    </li>
+                    <li><h3>Use "new Date(year, month, day, hours, minutes, seconds, milliseconds)"</h3>
+                        <p>Using new Date(7 numbers), creates a new date object with the specified date and time.<br>
+                        The 7 numbers specify the year, month, day, hour, minute, second, and millisecond, in that order</p>
+                        <p id="id-p-5"></p>
+                        <p id="id-p-6"></p>
+                        <p><b>!!! JavaScript counts months from 0 to 11. January is 0. December is 11</b></p>
+                    </li>
+                </ul>
+                
+        </article>
+        
+    </main>
+    
+    <script>
+        document.getElementById('id-p-1').innerHTML = 'Show like a string: ' +
+            '<br>Current date is: ' + Date() +
+            '<br><br>Show like a number: ' + '<br>Current date is: ';
+        
+        var date1 = new Date(),
+            date2 = new Date("Jun 13, 2018 12:34:12"),
+            date3 = new Date(1515050000000),
+            date4 = new Date(86, 04, 01, 22, 34, 23, 11),
+            date5 = new Date(2017, 03, 01);
+        document.getElementById('id-p-2').innerHTML = date1;
+        document.getElementById('id-p-3').innerHTML = date2;
+        document.getElementById('id-p-4').innerHTML = date3;
+        document.getElementById('id-p-5').innerHTML = date4;
+        document.getElementById('id-p-6').innerHTML = date5;
+        
+        
+    </script>
+</body>
+</html>
