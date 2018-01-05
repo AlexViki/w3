@@ -54,8 +54,31 @@
                         <p><b>!!! JavaScript counts months from 0 to 11. January is 0. December is 11</b></p>
                     </li>
                 </ul>
-                
         </article>
+        
+        <article>
+            <h2>Date Methods</h2>
+            <p>When a Date object is created, a number of methods allow you to operate on it.</p>
+            <p>Date methods allow you to get and set the year, month, day, hour, minute, second, and millisecond of objects, using either local time or UTC (universal, or GMT) time.</p>
+        </article>
+        
+        <article>
+            <h2>Displaying Dates</h2>
+            <p>When you display a date object in HTML, it is automatically converted to a string, with the toString() method.</p>
+            <p id="id-p-7"></p>
+            <p>The toUTCString() method converts a date to a UTC string (a date display standard)</p>
+            <p id="id-p-8"></p>
+            <p>The toDateString() method converts a date to a more readable format</p>
+            <p id="id-p-9"></p>
+            <p class="pay-attantion">Date objects are static. The computer time is ticking, but date objects, once created, are not.</p>
+        </article>
+        
+        <acticle>
+            <h2>Time Zones</h2>
+            <p class="pay-attantion">When setting a date, without specifying the time zone, JavaScript will use the browser's time zone.<br>
+            When getting a date, without specifying the time zone, the result is converted to the browser's time zone.<br>
+            In other words: If a date/time is created in GMT (Greenwich Mean Time), the date/time will be converted to CDT (Central US Daylight Time) if a user browses from central US.</p>
+        </acticle>
         
     </main>
     
@@ -75,6 +98,12 @@
         document.getElementById('id-p-5').innerHTML = date4;
         document.getElementById('id-p-6').innerHTML = date5;
         
+        document.getElementById('id-p-7').innerHTML = '<b>Without</b> toSting() method: ' + 
+            date1 + '<br><b>With</b> toString() method: ' + date1.toString();
+        
+        document.getElementById('id-p-8').innerHTML = 'The toUTCString(): ' + date1.toUTCString();
+        
+        document.getElementById('id-p-9').innerHTML = 'The toDateString(): ' + date1.toDateString();
         
     </script>
 </body>
