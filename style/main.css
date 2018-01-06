@@ -53,7 +53,7 @@ h1 {
 
 #right-menu-h2 {
     text-align: center;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid #f09b00;
     padding-bottom: 5px;
 }
 
@@ -72,6 +72,10 @@ a {
 }
 li:hover {
     box-shadow: 0 0 10px grey;
+    /*border-bottom: 1px solid #f09b00;
+    із за додавання лінії при наведен на елемент решта меню дьоргаєтся
+    точно є інший вихід знінити це, типу не показувати і потіб відобразити щось таке
+    */
 }
 img {
     width: 100px;;
