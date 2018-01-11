@@ -3,7 +3,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Comfortaa', 'Arial', 'Verdana', sans-serif;
     color: #363636;
 }
 
@@ -51,28 +51,34 @@ h1 {
     border-bottom: 2px solid #f09b00;
 }
 
-#right-menu-h2 {
+#right-menu-h2, h2 {
     text-align: center;
     border-bottom: 1px solid #f09b00;
     padding-bottom: 5px;
     margin-bottom: 30px;
+}
+h2 {
+    width: 95%;
+    margin: auto;
 }
 
 ul {
     list-style: none;
 }
 li {
-    margin-top: 10px;
+    margin-top: 5px;
     padding: 5px 3px 3px 3px;
     border-radius: 3px;
-    border-bottom: 1px solid #f09b00;
+    border: 1px solid #d4d4d4;
+    background: #fbfbfb;
 }
 a {
     text-decoration: none;
     padding-left: 5px;
 }
 li:hover {
-    box-shadow: 0 0 10px grey;
+    box-shadow: 0 0 5px grey;
+    background: #f3f3f3;
     /*border-bottom: 1px solid #f09b00;
     із за додавання лінії при наведен на елемент решта меню дьоргаєтся
     точно є інший вихід знінити це, типу не показувати і потіб відобразити щось таке
@@ -82,4 +88,22 @@ img {
     width: 100px;;
     height: 100px;
     margin-left: 10px;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+}
+
+.inner-block {
+    border: 1px solid #f09b00;
+    border-radius: 3px;
+    padding: 5px;
+    text-align: center;
+}
+
+.inner-block:hover {
+    box-shadow: 0 0 5px grey;
+    background: #f3f3f3; 
 }
