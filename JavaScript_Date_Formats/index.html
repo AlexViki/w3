@@ -14,13 +14,13 @@
         </div>
         <div class="main">
             <div class="block-1">
-                <h2>JavaScript Date Input</h2>
+                <h2 id="h2-date-input">JavaScript Date Input</h2>
                 <p>There are generally 4 types of JavaScript date input formats</p>
                 <ul>
-                    <li>ISO Date - "2015-03-25" (The International Standard)</li>
-                    <li>Short Date - "03/25/2015"</li>
-                    <li>Long Date - "Mar 25 2015" or "25 Mar 2015"</li>
-                    <li>Full Date - "Wednesday March 25 2015"</li>
+                    <li><a href="#h2-iso_date">ISO Date - "2015-03-25" (The International Standard)</a></li>
+                    <li><a href="#h2-sort-day">Short Date - "03/25/2015"</a></li>
+                    <li><a href="#h2-long-date">Long Date - "Mar 25 2015" or "25 Mar 2015"</a></li>
+                    <li><a href="#h2-full-date">Full Date - "Wednesday March 25 2015"</a></li>
                 </ul>
                 <p class="important-info">The ISO format follows a strict standard in JavaScript.<br>
                 The other formats are not so well defined and might be browser specific.</p>
@@ -32,7 +32,7 @@
             </div>
             
             <div class="block-1">
-               <h2>JavaScript ISO Dates</h2>
+               <h2 id="h2-iso_date">JavaScript ISO Dates</h2>
                <p>ISO 8601 is the international standard for the representation of dates and times</p>
                 <div class="block-1-inner">
                     <h3>JavaScript ISO Dates(Year and Month and Date)</h3>
@@ -59,6 +59,7 @@
                     <p class="important-info">UTC (Universal Time Coordinated) is the same as GMT (Greenwich Mean Time).<br>
                     Omitting T or Z in a date-time string can give different result in different browser.</p>
                 </div>
+                <a class="back-to-top" href="#h2-date-input">&lt;&lt; Back</a>
                 <script>
                     var d = new Date("2017-01-25"),
                         d2 = new Date("2017-01"),
@@ -82,7 +83,7 @@
             </div>
             
             <div class="block-1">
-                <h2>JavaScript Short Dates</h2>
+                <h2 id="h2-sort-day">JavaScript Short Dates</h2>
                 <p>Short dates are written with an "MM/DD/YYYY" syntax like this</p>
                 <p id="id-p-6"></p>
                 <p class="important-info">In some browsers, months or days with no leading zeroes may produce an error.<br>
@@ -90,6 +91,7 @@
                 Some browsers will try to guess the format. Some will return NaN<br>
                 The behavior of  "DD-MM-YYYY" is also undefined.<br>
                 Some browsers will try to guess the format. Some will return NaN.</p>
+                <a class="back-to-top" href="#h2-date-input">&lt;&lt; Back</a>
                 <script>
                     var myDate_1 = new Date("2017/01/25");
                     document.getElementById('id-p-6').innerHTML = myDate_1;
@@ -97,9 +99,10 @@
             </div>
             
             <div class="block-1">
-                <h2>JavaScript Long Dates</h2>
+                <h2 id="h2-long-date">JavaScript Long Dates</h2>
                 <p>Long dates are most often written with a "MMM DD YYYY" syntax</p>
                 <p id="id-p-7"></p>
+                <a class="back-to-top" href="#h2-date-input">&lt;&lt; Back</a>
                 <script>
                     var myDate2 = new Date("Jan 12 2018"),
                         myDate3 = new Date ("12 January 2018");
@@ -108,9 +111,10 @@
             </div>
             
             <div class="block-1">
-                <h2>JavaScript Full Date</h2>
+                <h2 id="h2-full-date">JavaScript Full Date</h2>
                 <p>JavaScript will accept date strings in "full JavaScript format"</p>
                 <p id="id-p-8"></p>
+                <a class="back-to-top" href="#h2-date-input">&lt;&lt; Back</a>
                 <script>
                     var myDate4 = new Date("Wed Mar 25 2018 22:56:24 GMT+0100 (W. Europe Standard Time)");
                     document.getElementById('id-p-8').innerHTML = myDate4;
