@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Date Methods</title>
+    <link rel="stylesheet" href="../style/inner_styles.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="header">
+            <h1>JavaScript Date Methods</h1>
+            <p>Date methods let you get and set date values (years, months, days, hours, minutes, seconds, milliseconds)</p>
+        </div>
+        <div class="main">
+            <div class="block-1">
+                <h2>Date Get Methods</h2>
+                <p>Get methods are used for getting a part of a date. Here are the most common (alphabetically)</p>
+                <ul>
+                    <li><a href="#">getDate() - Get the day as a number (1-31)</a></li>
+                    <li><a href="#">getDay() - Get the weekday as a number (0-6)</a></li>
+                    <li><a href="#">getFullYear() - Get the four digit year (yyyy)</a></li>
+                    <li><a href="#">getHours() - Get the hour (0-23)</a></li>
+                    <li><a href="#">getMilliseconds() - Get the milliseconds (0-999)</a></li>
+                    <li><a href="#">getMinutes() - Get the minutes (0-59)</a></li>
+                    <li><a href="#">getMonth() - Get the month (0-11)</a></li>
+                    <li><a href="#">getSeconds() - Get the seconds (0-59)</a></li>
+                    <li><a href="#">getTime() - Get the time (milliseconds since January 1, 1970)</a></li>
+                </ul>    
+            </div>
+            <div class="block-1">
+                <h2>The getTime() Method</h2>
+                <p>getTime() returns the number of milliseconds since January 1, 1970</p>
+                <button onclick="funMyGetTime ()">RUN</button>
+                <div id="id-p-1" class="style-result">Here will show a result</div>
+                <script>
+                    function funMyGetTime () {
+                        var myDateTime = new Date();
+                        document.getElementById('id-p-1').innerHTML = 'The result: ' + myDateTime.getTime();
+                    }
+                </script>
+            </div>
+            <div class="block-1">
+                <h2>The getFullYear() Method</h2>
+                <p>getFullYear() returns the year of a date as a four digit number</p>
+                <div id="id-2" class="style-result"></div>
+                <script>
+                    var myDateYear = new Date();
+                    document.getElementById('id-2').innerHTML = 'The result: ' + myDateYear.getFullYear();
+                </script>
+            </div>
+            <div class="block-1">
+                <h2>The getDay() Method</h2>
+                <p>getDay() returns the weekday as a number (0-6)</p>
+                <p id="id-3" class="style-result"></p>
+                <p class="important-info">In JavaScript, the first day of the week (0) means "Sunday", even if some countries in the world consider the first day of the week to be "Monday"</p>
+                <script>
+                    var myDateDay = new Date(),
+                        day = '',
+                        arrayOfDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+                    switch (myDateDay.getDay()) {
+                        case 0:
+                            day = 'Sun';
+                            break;
+                        case 1:
+                            day = 'Mod';
+                            break;
+                        case 2:
+                            day = 'Tus';
+                            break;
+                        case 3:
+                            day = 'Wed';
+                            break;
+                        case 4:
+                            day = 'Thu';
+                            break;
+                        case 5:
+                            day = 'Fri';
+                            break;
+                        case 6:
+                            day = 'Sat';
+                            break;
+                    };
+                    document.getElementById('id-3').innerHTML = 'The result: ' + myDateDay.getDay() + ';<br>The day is: ' + day +
+                        ';<br> Other way shows day from array: ' + arrayOfDays[myDateDay.getDay()];
+                </script>
+            </div>
+            <div class="block-1"></div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,21 @@
+
+.style-result {
+    background: #84ff84;
+    padding: 15px;
+    border: 1px solid grey;
+    box-shadow: 0 0 10px grey;
+    width: 50%;
+}
+
+.container {
+    width: 960px;
+    margin: auto;
+}
+
+h1 {
+    border-bottom: 1px solid orangered;
+    padding-bottom: 5px;
+    width: 70%;
+    margin: auto;
+}
+
