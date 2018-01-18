@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Arrays</title>
+    <link rel="stylesheet" href="../style/inner_styles.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>JavaScript Arrays</h1>
+    </div>
+    <div class="main">
+        <div class="block-1">
+            <p>JavaScript arrays are used to store multiple values in a single variable.</p>
+            <p id="id-1" class="style-result"></p>
+            <script>
+                var examOfArrayWords = ['blue', 'green', 'grey', 'yellow'],
+                    examOfArrayNumber = [1,3,6,11,3,0,104];
+                document.getElementById('id-1').innerHTML = 'Array of words: ' + examOfArrayWords +
+                    '<br> Array of numbers: ' + examOfArrayNumber;
+            </script>
+        </div>
+        <div class="block-1">
+            <h2>What is an Array?</h2>
+            <p>An array is a special variable, which can hold more than one value at a time.<br>
+            However, what if you want to loop through the cars and find a specific one? And what if you had not 3 cars, but 300?<br>
+            The solution is an array! An array can hold many values under a single name, and you can access the values by referring to an index number.
+            </p>
+        </div>
+        <div class="block-1">
+            <h2>Creating an Array</h2>
+            <p>Using an array literal is the easiest way to create a JavaScript Array</p>
+            <p class="important-info">Putting a comma after the last element (like "BMW",)  is inconsistent across browsers. IE 8 and earlier will fail.</p>
+        </div>
+        <div class="block-1">
+            <h2>Using the JavaScript Keyword new</h2>
+            <p id="id-2" class="style-result"></p>
+            <p class="important-info">The two examples above do exactly the same. There is no need to use new Array().<br>
+            For simplicity, readability and execution speed, use the first one (the array literal method).</p>
+            <script>
+                var examOfArrayWords_1 = new Array('blue',
+                                                   'black',
+                                                   'green',
+                                                   'grey',
+                                                   'yellow'
+                                                  ),
+                    examOfArrayNumber_1 = new Array(11,33,67,1,113,60,1604);
+                document.getElementById('id-2').innerHTML = 'Array of words: ' + examOfArrayWords_1 +
+                    '<br> Array of numbers: ' + examOfArrayNumber_1;
+            </script>
+        </div>
+        <div class="block-1">
+            <h2>Access the Elements of an Array</h2>
+            <p>You refer to an array element by referring to the index number</p>
+            <p id="id-3" class="style-result"></p>
+            <p id="id-4" class="style-result"></p>
+            <script>
+                var examOfArrayWords_2 = new Array('blue',
+                                                   'black',
+                                                   'green',
+                                                   'grey',
+                                                   'yellow'
+                                                  ),
+                    examOfArrayNumber_2 = new Array(11,33,67,1,113,60,1604);
+                document.getElementById('id-3').innerHTML = 'Original array: ' + examOfArrayWords_2 +
+                    '<br>Accesses to the value by the index 2: ' + examOfArrayWords_2[2] +
+                    '<br>Accesses to the value by the index 0: ' + examOfArrayWords_2[0] +
+                    '<br>Accesses to the value by the index 4: ' + examOfArrayWords_2[4] +
+                    '<br>Accesses to the value by the index 1: ' + examOfArrayNumber_2[1] +
+                    '<br>Accesses to the value by the index 5: ' + examOfArrayNumber_2[5];
+                examOfArrayWords_2[2] = 'red';
+                examOfArrayWords_2[0] = 'orange';
+                document.getElementById('id-4').innerHTML = 'Modifies array index 2: ' + examOfArrayWords_2[2] +
+                    '<br>Modifies array index 0: ' + examOfArrayWords_2[0];
+            </script>
+        </div>
+        <div class="block-1">
+            <h2>Arrays are Objects</h2>
+            <p>Arrays are a special type of objects. The typeof operator in JavaScript returns "object" for arrays.<br>
+            But, JavaScript arrays are best described as arrays.<br>
+            Arrays use numbers to access its "elements"</p>
+            <p id="id-5" class="style-result"></p>
+            <script>
+                var person = ['Alex', 'Viki', 30],
+                    person_1 = {
+                        firstN: 'Alex',
+                        secondN: 'Viki',
+                        age: 30
+                    };
+                document.getElementById('id-5').innerHTML = 'use numbers to access its "elements"' +
+                    person[0] + person[1] + person[2] +
+                    '<br><br>use names to access its "members": ' + person_1.firstN + person_1.age;
+            </script>
+        </div>
+        <div class="block-1">
+            <h2>Array Elements Can Be Objects</h2>
+            <p>JavaScript variables can be objects. Arrays are special kinds of objects.<br>
+            Because of this, you can have variables of different types in the same Array.<br>
+            You can have objects in an Array. You can have functions in an Array. You can have arrays in an Array</p>
+            <p id="id-6" class="style-result"></p>
+            <script>
+                var funIntoArray = function() {
+                        return 'Hi from function';
+                    },
+                    currentDate = new Date(),
+                    arrayOfDifferetType = [
+                    145,
+                    'Alex',
+                    ['red','blue','gren'],
+                    funIntoArray(),
+                    currentDate
+                ];
+                
+                document.getElementById('id-6').innerHTML = 'Functio: ' + arrayOfDifferetType[3] +
+                    '<br>Date: ' + arrayOfDifferetType[4] +
+                    '<br>Number: ' + arrayOfDifferetType[0] +
+                    '<br>Text: ' + arrayOfDifferetType[1];
+            </script>
+        </div>
+        <div class="block-1"></div>
+    </div>
+</body>
+</html>
