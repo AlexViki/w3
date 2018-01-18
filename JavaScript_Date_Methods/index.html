@@ -58,7 +58,8 @@
                 <script>
                     var myDateDay = new Date(),
                         day = '',
-                        arrayOfDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+                        arrayOfDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+                        arrayOfMonhts = ['Jan','Feb','Mar', 'Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
                     switch (myDateDay.getDay()) {
                         case 0:
                             day = 'Sun';
@@ -82,11 +83,111 @@
                             day = 'Sat';
                             break;
                     };
-                    document.getElementById('id-3').innerHTML = 'The result: ' + myDateDay.getDay() + ';<br>The day is: ' + day +
-                        ';<br> Other way shows day from array: ' + arrayOfDays[myDateDay.getDay()];
+                    document.getElementById('id-3').innerHTML = 'The result: ' + myDateDay.getDay() + 
+                        '<br>The day: ' + day +
+                        '<br> Other way shows day from array: ' + arrayOfDays[myDateDay.getDay()] + 
+                        '<br>The date: ' + myDateDay.getDate() +
+                        '<br>The month: ' + myDateDay.getMonth() +
+                        '<br>The name of month: ' + arrayOfMonhts[myDateDay.getMonth()] +
+                        '<br>The hour: ' + myDateDay.getHours() + 
+                        '<br>The minutes: ' + myDateDay.getMinutes() +
+                        '<br>The seconds: ' + myDateDay.getSeconds() + 
+                        '<br><br>Time: ' + myDateDay.getHours() + ':' +
+                        myDateDay.getMinutes() + ':' + myDateDay.getSeconds();
                 </script>
             </div>
-            <div class="block-1"></div>
+            <div class="block-1">
+                <h2>Date Set Methods</h2>
+                <p>Set methods are used for setting a part of a date. Here are the most common (alphabetically)</p>
+                <ul>
+                    <li><a href="#">setDate() - Set the day as a number (1-31)</a></li>
+                    <li><a href="#">setFullYear() - Set the year (optionally month and day)</a></li>
+                    <li><a href="#">setHours() - Set the hour (0-23)</a></li>
+                    <li><a href="#">setMilliseconds() - Set the milliseconds (0-999)</a></li>
+                    <li><a href="#">setMinutes() - Set the minutes (0-59)</a></li>
+                    <li><a href="#">setMonth() - Set the month (0-11)</a></li>
+                    <li><a href="#">setSeconds() - Set the seconds (0-59)</a></li>
+                    <li><a href="#">setTime() - Set the time (milliseconds since January 1, 1970)</a></li>
+                </ul>
+            </div>
+            <div class="block-1">
+                <h2>The setFullYear() Method</h2>
+                <p>setFullYear() sets a date object to a specific date. Here use miliseconds</p>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setFullYear">link</a>
+                <p id="id-4" class="style-result"></p>
+                <script>
+                    var myDateSet = new Date();
+                        myDateSet.setFullYear(1995);
+                    document.getElementById('id-4').innerHTML = 'The set Year is: '+ myDateSet;
+                </script>
+            </div>
+            <div class="block-1">
+                <h2>The setDate() Method</h2>
+                <p>setDate() sets the day of the month (1-31)</p>
+                <p id="id-5" class="style-result"></p>
+                <script>
+                    var myDateDay = new Date();
+                        myDateDay.setDate(10);
+                    document.getElementById('id-5').innerHTML = 'Set day is: ' + myDateDay;
+                </script>
+            </div>
+            <div class="block-1">
+                <h2>Date Input - Parsing Dates</h2>
+                <p>If you have a valid date string, you can use the Date.parse() method to convert it to milliseconds.<br>
+                Date.parse() returns the number of milliseconds between the date and January 1, 1970</p>
+                <p id="id-6" class="style-result"></p>
+                <script>
+                    var myDatePars = Date.parse('21 May 2018 10:12');
+                    document.getElementById('id-6').innerHTML = myDatePars;
+                </script>
+            </div>
+            <div class="block-1">
+                <h2>Compare Dates</h2>
+                <p>Dates can easily be compared.<br>
+                Compares today's date with January 14, 1999</p>
+                <button onclick="compareDate()">Compare</button>
+                <p id="id-7" class="style-result"></p>
+                <p class="important-info">JavaScript counts months from 0 to 11. January is 0. December is 11.</p>
+                <script>
+                    function compareDate () {
+                        var today = new Date(),
+                            otherDay = new Date(),
+                            text;
+                        otherDay.setFullYear(1999, 0, 14);
+                        if (otherDay > today) {
+                            text = "Day is nowaday: " + today;
+                        } else {
+                            text = "Day is past";
+                        };
+                        document.getElementById('id-7').innerHTML = text;
+                    };
+                </script>
+            </div>
+            <div class="block-1">
+                <h2>UTC Date Methods</h2>
+                <ul>
+                    <li><a href="#">getUTCDate() - Same as getDate(), but returns the UTC date</a></li>
+                    <li><a href="#">getUTCDay() - Same as getDay(), but returns the UTC day</a></li>
+                    <li><a href="#">getUTCFullYear() - Same as getFullYear(), but returns the UTC year</a></li>
+                    <li><a href="#">getUTCHours() - Same as getHours(), but returns the UTC hour</a></li>
+                    <li><a href="#">getUTCMilliseconds() - Same as getMilliseconds(), but returns the UTC milliseconds</a></li>
+                    <li><a href="#">getUTCMinutes() - Same as getMinutes(), but returns the UTC minutes</a></li>
+                    <li><a href="#">getUTCMonth() - Same as getMonth(), but returns the UTC month</a></li>
+                    <li><a href="#">getUTCSeconds() - Same as getSeconds(), but returns the UTC seconds</a></li>
+                </ul>
+                <p id="id-8" class="style-result"></p>
+                <script>
+                    var dateOfUTC = new Date();
+                    document.getElementById('id-8').innerHTML = 'Day is: ' + dateOfUTC.getUTCDay() + 
+                        '<br>Date is: ' + dateOfUTC.getUTCDate() +
+                        '<br>Month: ' +dateOfUTC.getUTCMonth() +
+                        '<br>Full Year is: ' + dateOfUTC.getFullYear() + 
+                        '<br>Hour: ' + dateOfUTC.getUTCHours() +
+                        '<br>Minute: ' + dateOfUTC.getUTCMinutes() +
+                        '<br>Second: ' + dateOfUTC.getUTCSeconds() +
+                        '<br>Milliecond: ' + dateOfUTC.getUTCMilliseconds();
+                </script>
+            </div>
         </div>
     </div>
     

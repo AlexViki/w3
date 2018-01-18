@@ -46,10 +46,33 @@ ul {
     list-style-type: circle;
     list-style-position: inside;
 }
+li {
+    background: #e8e8e8;
+    margin-bottom: 5px;
+    padding: 3px 10px 3px 10px;
+    border: 1px solid #e8e8e8;
+    width: 70%;
+}
+li, a {
+    text-decoration: none;
+    color: #a76650;
+    
+}
+li:hover {
+    border: 1px solid grey;
+}
+
 .important-info {
     border: 2px solid red;
     background: #f8a2a2;
-    padding: 5px;
+    padding: 15px;
+    width: 50%;
+}
+.style-result {
+    background: #84ff84;
+    padding: 15px;
+    border: 1px solid grey;
+    box-shadow: 0 0 10px grey;
     width: 50%;
 }
 
