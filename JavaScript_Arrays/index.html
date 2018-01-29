@@ -118,6 +118,158 @@
                     '<br>Text: ' + arrayOfDifferetType[1];
             </script>
         </div>
+        <div class="block-1">
+            <h2>Array Properties and Methods</h2>
+            <p>The real strength of JavaScript arrays are the built-in array properties and methods</p>
+        </div>
+        <div class="block-1">
+            <h2>The length Property</h2>
+            <p>The length property of an array returns the length of an array (the number of array elements)</p>
+            <p id="id-7" class="style-result"></p>
+            <p class="important-info">The length property is always one more than the highest array index.</p>
+            <script>
+                var myArrayLength = ['blue',
+                                    'black',
+                                    'green',
+                                    'grey',
+                                    'yellow'
+                                    ];
+                document.getElementById('id-7').innerHTML = 'Array is: ' + myArrayLength +
+                    '<br>The length is: ' + myArrayLength.length;
+            </script>
+        </div>
+        <div class="block-1">
+            <h2>Looping Array Elements</h2>
+            <p>The best way to loop through an array, is using a "for" loop</p>
+            <div id="id-8" class="style-result"></div>
+            <script>
+                var myArrayColor, lenMyArray, addText; 
+                myArrayColor = ['blue',
+                                'black',
+                                'green',
+                                'grey',
+                                'yellow'
+                                ];
+                lenMyArray = myArrayColor.length;
+                addText = '<ul>';
+                for (i = 0; lenMyArray > i; i++) {
+                    addText += '<li>' + myArrayColor[i] + '</li>'
+                };
+                document.getElementById('id-8').innerHTML = addText + '</ul>';
+            </script>
+        </div>
+        <div class="block-1">
+            <h2>Adding Array Elements</h2>
+            <p>The easiest way to add a new element to an array is using the push method</p>
+            <input id='addElem' type="text">
+            <button onclick="val_Of_Input()">RUN</button>
+            <p id="id-10" class="style-result"></p>
+            <p id="id-11" class="style-result"></p>
+            <p>New element can also be added to an array using the length property</p>
+            <p id="id-12" class="style-result"></p>
+            <p class="important-info">Adding elements with high indexes can create undefined "holes" in an array</p>
+            <p id="id-13" class="style-result"></p>
+            <script>
+                var myArray_10 = ['blue',
+                                    'black',
+                                    'green',
+                                    'grey',
+                                    'yellow'];
+                document.getElementById('id-10').innerHTML = 'Old array: ' + myArray_10;
+                myArray_10[myArray_10.length] = 'Last';
+                document.getElementById('id-12').innerHTML = 'Other new array: ' + myArray_10;
+                function val_Of_Input() {
+                    var newElem_1 = 'QQqqq',
+                        newElem_2 = 'WWWwww',
+                        newElem_3 = 'Eeeee';
+                    myArray_10 += myArray_10.push('333: ');
+                    console.log( myArray_10 );
+                    document.getElementById('id-11').innerHTML = 'New array: ' + myArray_10;
+                };
+                myArray_10[20] = 'new20';
+                document.getElementById('id-13').innerHTML = 'New array with high indexes: <b>' + myArray_10 + '</b>';
+            </script>    
+        </div>
+        <div class="block-1">
+            <h2>Associative Arrays</h2>
+            <p>Many programming languages support arrays with named indexes.<br>
+            Arrays with named indexes are called associative arrays (or hashes).<br>
+            JavaScript does not support arrays with named indexes.<br>
+            In JavaScript, arrays always use numbered indexes.</p>
+            <p id="id-14" class="style-result"></p>
+            <p class="important-info">WARNING !! If you use named indexes, JavaScript will redefine the array to a standard object.<br>
+            After that, some array methods and properties will produce incorrect results.</p>
+            <script>
+                var assoArray = [], firstArr_1, secondArr_2;
+                assoArray[0] = 'Alex';
+                assoArray[1] = 'Bob';
+                assoArray[2] = 'James';
+                firstArr_1 = assoArray;
+                secondArr_2 = assoArray;
+                document.getElementById('id-14').innerHTML = 'First array: ' + firstArr_1[2] +
+                    '<br>Second array: ' + secondArr_2[2];
+            </script>
+        </div>
+        <div class="block-1">
+            <h2>The Difference Between Arrays and Objects</h2>
+            <p>In JavaScript, arrays use numbered indexes. <br>
+            In JavaScript, objects use named indexes</p>
+            <p class="important-info">Arrays are a special kind of objects, with numbered indexes.</p>
+        </div>
+        <div class="block-1">
+            <h2>When to Use Arrays. When to use Objects.</h2>
+            <ul>
+                <li>JavaScript does not support associative arrays.</li>
+                <li>You should use objects when you want the element names to be strings (text)</li>
+                <li>You should use arrays when you want the element names to be numbers.</li>
+            </ul>
+        </div>
+        <div class="block-1">
+            <h2>Avoid new Array()</h2>
+            <p>There is no need to use the JavaScript's built-in array constructor <b>new Array()</b>.</p>
+            <p>These two different statements both create a new empty array named points</p>
+            <p id="id-15"></p>
+            <p>The new keyword only complicates the code. It can also produce some unexpected results</p>
+            <p id="id-16"></p>
+            <script>
+                var arrayNew_1 = new Array (10,30,1,4,678),
+                    arrayNew_2 = [10,30,1,4,678];
+                document.getElementById('id-15').innerHTML = 'Bad way create array: ' + arrayNew_1 +
+                    '<br>Good way crete array: ' + arrayNew_2;
+                arrayNew_1 = new Array(22,66,77);
+                arrayNew_2 = [33,44,55];
+                document.getElementById('id-16').innerHTML = 'Recreate array_2: ' + arrayNew_2 +
+                    '<br>Recreate array_1: ' + arrayNew_1;
+            </script>
+        </div>
+        <div class="block-1">
+            <h2>How to Recognize an Array</h2>
+            <p>The problem is that the JavaScript operator typeof returns "object"</p>
+            <p id="id-17"></p>
+                <h3>Solution 1:</h3>
+                <p>To solve this problem ECMAScript 5 defines a new method <b>Array.isArray()</b><br>
+                The problem with this solution is that ECMAScript 5 is not supported in older browsers.</p>
+                <p id="id-18" class="style-result"></p>
+                <h3>Solution 2:</h3>
+                <p>To solve this problem you can create your own isArray() function<br>
+                This function always returns true if the argument is an array<br>
+                Or more precisely: it returns true if the object prototype contains the word "Array".</p>
+                <p id="id-19" class="style-result"></p>
+                <h3>Solution 3:</h3>
+                <p><b>Instanceof</b> operator returns true if an object is created by a given constructor</p>
+                <p id="id-20" class="style-result"></p>
+            <script>
+                var myNames = ['Alex', 'Bob', 'Kuk'];
+                document.getElementById('id-17').innerHTML = 'TypeOf is: ' + typeof myNames + 
+                    '<br>The typeof operator returns object because a JavaScript array is an object.';
+                document.getElementById('id-18').innerHTML = 'Solution - 1: Is it an array? ' + Array.isArray(myNames);
+                document.getElementById('id-19').innerHTML = 'Solution - 2 (use myFunIsArray): Is it an array? ' + myFunIsArray(myNames);
+                document.getElementById('id-20').innerHTML = 'Solution - 3: Is it an array? ' + (myNames instanceof Array);
+                function myFunIsArray (myNames) {
+                    return myNames.constructor.toString().indexOf('Array') > -1;
+                };
+            </script>
+        </div>
         <div class="block-1"></div>
     </div>
 </body>
