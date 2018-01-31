@@ -4,7 +4,7 @@
 }
 
 .container {
-    background: #fff8c3;
+    background: #fffbde;
     border: 1px solid grey;
 }
 
@@ -37,10 +37,16 @@ h1 {
 
 h2 {
     margin-left: 20px;
+    margin-right: 20px;
+    border-bottom: 2px solid #ffb3b3;
 }
 
 h3 {
     margin-left: 40px;
+    width: 45%;
+    border-bottom: 1px solid #ffb3b3;
+    border-left: 4px solid #ffb3b3;
+    padding-left: 5px;
 }
 
 ul {

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Array Methods</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style/inner_styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>JavaScript Array Methods</h1>
+    </div>
+    <div class="container">
+        <div class="main">
+            <div class="block-1">
+                <h2>Converting Arrays to Strings</h2>
+                <p>The JavaScript method toString() converts an array to a string of (comma separated) array values.</p>
+                <p id="id-1" class="style-result"></p>
+                <p>join() method also joins all array elements into a string</p>
+                <p id="id-2" class="style-result"></p>
+                <script>
+                    var myName = ['Alex', 'Bo', 'Jeck'],
+                        myNameSring = myName.toString();
+                    document.getElementById('id-1').innerHTML = myNameSring + 
+                        '<br>TypeOf: ' + typeof(myNameSring) + 
+                        '<br>Original TypeOf: ' + typeof(myName);
+                    document.getElementById('id-2').innerHTML = 'v1: ' + myName.join(' - ') +
+                        '<br>v2: ' + myName.join(' ');
+                </script>
+            </div>
+            <div class="block-1">
+                <h2>Popping and Pushing</h2>
+                <p>When you work with arrays, it is easy to remove elements and add new elements.<br>
+                This is what popping and pushing is:</p>
+                <ul>
+                    <li>Popping items out of an array</li>
+                    <li>Pushing items into an array</li>
+                </ul>
+                <h3>Popping</h3>
+                <p>The pop() method removes the last element from an array</p>
+                <p id="id-3" class="style-result"></p>
+                <p id="id-4" class="style-result"></p>
+                <h3>Pushing</h3>
+                <p>push() method adds a new element to an array (at the end)</p>
+                <p id="id-5" class="style-result"></p>
+                <p id="id-6" class="style-result"></p>
+                <script>
+                    var myNamePop = ['Alex', 'Bo', 'Jeck'],
+                        myNamePopCopy = ['Alex', 'Bo', 'Jeck'],
+                        myNamePush = ['Alex', 'Bo', 'Jeck'];
+                    document.getElementById('id-3').innerHTML = 'Original array: ' + myNamePop;
+                    myNamePop.pop();
+                    document.getElementById('id-4').innerHTML = 'Changed array: ' + myNamePop +
+                        '<br>The pop() method returns the value that was "popped out" ' + myNamePopCopy.pop();
+                    document.getElementById('id-5').innerHTML = 'Original array: ' + myNamePush;
+                    myNamePush.push('Jonet');
+                    document.getElementById('id-6').innerHTML = 'Changed array: ' + myNamePush;
+                </script>
+            </div>
+            <div class="block-1">
+                <h2>Shifting and unshift methods</h2>
+                <button onclick="FunMyNameShift()">Shift</button>
+                <button onclick="FunMyNameUnshift()">Unshift</button>
+                    <h3>The shift() method</h3>
+                    <p>Shifting is equivalent to popping, working on the first element instead of the last<br>
+                    The shift() method removes the first array element and "shifts" all other elements to a lower index.</p>
+                    <p id="id-7" class="style-result"></p>
+                    <p id="id-8" class="style-result"></p>
+                    <h3>The unshift() method</h3>
+                    <p>The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements:</p>
+                    <p id="id-10" class="style-result"></p>
+                    <p id="id-11" class="style-result"></p>
+
+                <script>
+                    var myNameShift = ['Alex', 'Bo', 'Jeck'],
+                        myNameUnshift = ['Alex', 'Bo', 'Jeck'];
+                    document.getElementById('id-7').innerHTML = 'Original array: '+ myNameShift;
+                    document.getElementById('id-10').innerHTML = 'Original array: '+ myNameUnshift;
+                    function FunMyNameShift() {
+                        myNameShift.shift();
+                        document.getElementById('id-8').innerHTML = 'Changet array: ' + myNameShift;
+                    };
+                    function FunMyNameUnshift() {
+                        myNameUnshift.unshift('Denis');
+                        document.getElementById('id-11').innerHTML = 'Changet array: ' + myNameUnshift + 
+                            '<br>The unshift() method returns the new array length: ' + myNameUnshift.length;
+                    };
+                    
+                </script>
+                
+            </div>
+            <div class="block-1"></div>
+            <div class="block-1"></div>
+        </div>
+    </div>
+</body>
+</html>
