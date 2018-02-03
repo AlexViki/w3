@@ -38,14 +38,15 @@ h1 {
 h2 {
     margin-left: 20px;
     margin-right: 20px;
-    border-bottom: 2px solid #ffb3b3;
+    border-bottom: 2px solid #a3a3a3;
+    padding-left: 5px;
 }
 
 h3 {
     margin-left: 40px;
     width: 45%;
-    border-bottom: 1px solid #ffb3b3;
-    border-left: 4px solid #ffb3b3;
+    border-bottom: 1px solid #a3a3a3;
+    border-left: 4px solid #a3a3a3;
     padding-left: 5px;
 }
 
@@ -83,7 +84,7 @@ li:hover {
     width: 50%;
 }
 
-button {
+button, .inputButtom {
     padding: 4px;
     border: 1px solid grey;
     border-radius: 4px;
