@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style/inner_styles.css">
+    <title>JavaScript Sorting Arrays</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+           <!-- сделать хедер фиксированим, пробы при пролистовании станици он был постояно вверху -->
+            <h1>JavaScript Sorting Arrays</h1>
+            <ul>
+                <li><a href="#sorting_an_array">Sorting an Array</a></li>
+                <li><a href="#reversing_an_array">Reversing an Array</a></li>
+                <li><a href="#numeric_sort">Numeric Sort</a></li>
+                <li><a href="#compare_function">The Compare Function</a></li>
+                <li><a href="#sorting_array_random">Sorting an Array in Random Order</a></li>
+                <li><a href="#highest_lowest_value">Find the Highest (or Lowest) Array Value</a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="block-1" id='sorting_an_array'>
+                <h2>Sorting an Array</h2>
+                <p>The sort() method sorts an array <b>alphabetically</b></p>
+                <p id="id-1" class="style-result"></p>
+                <script>
+                    var arrayOfNames = ['Xenia','Alex','Den','Rob','Alena','Tomy','Diana','Dana'];
+                    document.getElementById('id-1').innerHTML = 'Original: ' + arrayOfNames +
+                        '<br>Sorted: ' + arrayOfNames.sort();
+                </script>
+            </div>
+            <div class="block-1" id='reversing_an_array'>
+                <h2>Reversing an Array</h2>
+                <p>The reverse() method reverses the elements in an array<br>
+                We can use it to sort an array in descending order</p>
+                <p id="id-2" class="style-result"></p>
+                <script>
+                    var arrayOfNumbers_1 = [11,33,100,789,77,22,99,44,55,11,12];
+                    document.getElementById('id-2').innerHTML = 'Original array: ' + arrayOfNumbers_1 +
+                        '<br>The reverse array: ' + arrayOfNumbers_1.reverse() +
+                        '<br>The sorted array: ' + arrayOfNumbers_1.sort();
+                </script>
+            </div>
+            <div class="block-1" id='numeric_sort'>
+                <h2>Numeric Sort</h2>
+                <p>By default, the sort() function sorts values as <b>strings.</b>This works well for strings.<br>
+                <b>However, if numbers are sorted as strings, "25" is bigger than "100", because "2" is bigger than "1".</b><br>
+                Because of this, the sort() method will produce <b>incorrect</b> result when sorting numbers.</p>
+                <p>We can fix this by providing a compare function</p>
+                <p id="id-3" class="style-result"></p>
+                <script>
+                    var arrayOfNumbersSorting = [11,33,100,789,77,22,99,44,55,11,12],
+                        arrayOfNumbersSorting_2 = [11,33,100,789,77,22,99,44,55,11,12],
+                        arrayOfSortedIncrease = [],
+                        arrayOfSortedDecrease = [];
+                    arrayOfSortedIncrease = arrayOfNumbersSorting.sort( function(a, b) { return a - b; } );
+                    arrayOfSortedDecrease = arrayOfNumbersSorting_2.sort( function(a, b) { return b - a; } );
+                    document.getElementById('id-3').innerHTML = 'Sort of increase: ' + arrayOfSortedIncrease + 
+                        '<br>Sort of decrease: ' + arrayOfSortedDecrease;
+                </script>
+            </div>
+            <div id='compare_function'>
+               <div class="block-1">
+                <h2>The Compare Function</h2>
+                <p>The purpose of the compare function is to define an alternative sort order.<br>
+                The compare function should return a negative, zero, or positive value, depending on the arguments<br>
+                When the sort() function compares two values, it sends the values to the compare function, and sorts the values according to the returned (negative, zero, positive) value.</p>
+                <button onclick="funSortNumbersDec()">Sort 123</button>
+                <button onclick="funSortNumbersInc()">Sort 321</button>
+                <button onclick="funSortWordsDec()">Sort A-Z</button>
+                <button onclick="funSortWordsInc()">Sort Z-A</button>
+                <div id="id-sr1" class="sort-result"></div>
+                <div id="id-sr2" class="sort-result"></div>
+                <div id="id-sr3" class="sort-result"></div>
+                <div id="id-sr4" class="sort-result"></div>
+                <script>
+                    var arrayOfNumbersSort = [56,70,1,-3,7,790,1001,0],
+                        arrayOfWords = ['Alex','alex','Red','45','red','Dina','Zz','Yana'];
+                    function funToSortIncrement(firstCharacter, secondCharacter) {
+                        return secondCharacter - firstCharacter;
+                    };
+                    function funToSortDecrement(firstCharacter, secondCharacter) {
+                        return firstCharacter - secondCharacter;
+                    };
+                    
+                    function funSortNumbersDec() {
+                        var text_1 = document.getElementById('id-sr1').innerHTML = '<b>Sort 123</b>' +
+                            '<br>Original: ' + arrayOfNumbersSort + '<br>Sorted: ';
+                        arrayOfNumbersSort.sort(funToSortDecrement);
+                        document.getElementById('id-sr1').innerHTML = text_1 + arrayOfNumbersSort;
+                    };
+                    function funSortNumbersInc() {
+                        var text_2 = document.getElementById('id-sr2').innerHTML = '<b>Sort 321</b>' +
+                            '<br>Original: ' + arrayOfNumbersSort + '<br>Sorted: ';
+                        arrayOfNumbersSort.sort(funToSortIncrement);
+                        document.getElementById('id-sr2').innerHTML = text_2 + arrayOfNumbersSort;
+                    };
+                    
+                    function funSortWordsDec() {
+                        var text_3 = document.getElementById('id-sr3').innerHTML = '<b>Sort A-Z</b>' +
+                            '<br>Original: ' + arrayOfWords;
+                        arrayOfWords.sort();
+                        document.getElementById('id-sr3').innerHTML = text_3 + 
+                            '<br>Sorted: ' + arrayOfWords;
+                    };
+                    function funSortWordsInc() {
+                        var text_4 = document.getElementById('id-sr4').innerHTML = '<b>Sort Z-A</b>' +
+                            '<br>Original: ' + arrayOfWords;
+                        (arrayOfWords.sort()).reverse();
+                        document.getElementById('id-sr4').innerHTML = text_4 + 
+                            '<br>Sorted: ' + arrayOfWords;
+                    };
+                </script>
+                </div></div>
+            <div class="block-1" id="sorting_array_random">
+                <h2>Sorting an Array in Random Order</h2>
+                <button onclick="funSortArrayRandom()">RUN</button>
+                <p id="id-4" class="sort-result"></p>
+                <script>
+                    function funSortArrayRandom() {
+                        var numbersOfRandom = [3,1,56,99,2,-4,168,0,1,11,-90];
+                        numbersOfRandom.sort( function(a, b) { return 0.5 - Math.random(); } );
+                        document.getElementById('id-4').innerHTML = numbersOfRandom;
+                    };
+                </script>
+            </div>
+            <div class="block-1" id="highest_lowest_value">
+                <h2>Find the Highest (or Lowest) Array Value</h2>
+                <p>There are no built-in functions for finding the max or min value in an array.
+                However, after you have sorted an array, you can use the index to obtain the highest and lowest values</p>
+                <button onclick="funFindHighestLowest()">FIND</button>
+                <p id="id-5" class="sort-result"></p>            
+                <p id="id-6" class="sort-result"></p>
+                <p class="important-info">Sorting a whole array is a very inefficient method if you only want to find the highest (or lowest) value.</p>
+                <script>
+                    function funFindHighestLowest() {
+                        var numbersHighestLowest = [101,2,-9,0,1,4,7,-10,10];
+                        document.getElementById('id-5').innerHTML = 'Original: ' + numbersHighestLowest;
+                        numbersHighestLowest.sort( function(a, b) { return b - a; } );
+                        document.getElementById('id-6').innerHTML = 'The highest: ' + numbersHighestLowest[0] +
+                            '<br>The lowest: ' + numbersHighestLowest[((numbersHighestLowest.length) - 1)];
+                    };
+                </script>
+            </div>
+            <div class="block-1">
+                <h2>Using Math.max() on an Array</h2>
+                <p>can use Math.max.apply to find the highest number in an array</p>
+                <p id="id-7" class="sort-result"></p>
+                <script>
+                    var numbersMaxArray = [101,2,-9,0,1,4,700,-10,10];
+                    function funMaxOfArray (q) {
+                        return Math.max.apply(null, q);
+                    };
+                    var resultMax = funMaxOfArray(numbersMaxArray);
+                    document.getElementById('id-7').innerHTML = 'Original: ' + numbersMaxArray + 
+                        '<br>Result: ' + resultMax;
+                    
+                </script>
+            </div>
+            <div class="block-1"></div>
+        </div>
+    </div>
+</body>
+</html>
