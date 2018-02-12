@@ -19,6 +19,7 @@
                 <li><a href="#sorting_array_random">Sorting an Array in Random Order</a></li>
                 <li><a href="#highest_lowest_value">Find the Highest (or Lowest) Array Value</a></li>
                 <li><a href="#my_min_max_methods">My Min / Max JavaScript Methods</a></li>
+                <li><a href="#sorting_object_arrays">Sorting Object Arrays</a></li>
                 <li><a href="#"></a></li>
             </ul>
         </div>
@@ -194,7 +195,6 @@
                         };
                         return min;
                     };
-                    
                     var tmpMax = funMyMax(myNumbersMaxMinArray),
                         tmpMin = funMyMin(myNumbersMaxMinArray);
                     document.getElementById('id-8').innerHTML = 'Original: ' + myNumbersMaxMinArray +
@@ -202,6 +202,27 @@
                         '<br>Min: ' + tmpMin;
                 </script>
                         
+            </div>
+            <div class="block-1" id="sorting_object_arrays">
+                <h2>Sorting Object Arrays</h2>
+                <p>JavaScript arrays often contain objects<br>
+                Even if objects have properties of different data types, the sort() method can be used to sort the array</p>
+                <p id="id-9" class="style-result"></p>
+                
+                <script>
+                    var mySordObjectOfArray = [ 
+                        {type: 'Lada', year: 1997},
+                        {type: 'BMW', year: 2000},
+                        {type: 'Audi', year: 2015} ];
+                    var len = mySordObjectOfArray.length,
+                        addText = '';
+                    mySordObjectOfArray.sort( function (a, b) { return b.year - a.year } );
+                    for (i = 0; len > i; i++) {
+                        addText += mySordObjectOfArray[i].type + ' ' + mySordObjectOfArray[i].year + '<br>';
+                    };
+                    document.getElementById('id-9').innerHTML = addText;
+                        /*console.log(addText);*?
+                </script>
             </div>
             <div class="block-1"></div>
         </div>

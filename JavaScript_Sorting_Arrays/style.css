@@ -3,3 +3,8 @@
     background: #d1d1d1;
     margin-bottom: 5px;
 }
+
+
+#sorting_object_arrays, li{
+    list-style-type: none;
+}
