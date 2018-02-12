@@ -18,6 +18,7 @@
                 <li><a href="#compare_function">The Compare Function</a></li>
                 <li><a href="#sorting_array_random">Sorting an Array in Random Order</a></li>
                 <li><a href="#highest_lowest_value">Find the Highest (or Lowest) Array Value</a></li>
+                <li><a href="#my_min_max_methods">My Min / Max JavaScript Methods</a></li>
                 <li><a href="#"></a></li>
             </ul>
         </div>
@@ -118,7 +119,7 @@
             <div class="block-1" id="sorting_array_random">
                 <h2>Sorting an Array in Random Order</h2>
                 <button onclick="funSortArrayRandom()">RUN</button>
-                <p id="id-4" class="sort-result"></p>
+                <p id="id-4" class="style-result"></p>
                 <script>
                     function funSortArrayRandom() {
                         var numbersOfRandom = [3,1,56,99,2,-4,168,0,1,11,-90];
@@ -132,8 +133,8 @@
                 <p>There are no built-in functions for finding the max or min value in an array.
                 However, after you have sorted an array, you can use the index to obtain the highest and lowest values</p>
                 <button onclick="funFindHighestLowest()">FIND</button>
-                <p id="id-5" class="sort-result"></p>            
-                <p id="id-6" class="sort-result"></p>
+                <p id="id-5" class="style-result"></p>            
+                <p id="id-6" class="style-result"></p>
                 <p class="important-info">Sorting a whole array is a very inefficient method if you only want to find the highest (or lowest) value.</p>
                 <script>
                     function funFindHighestLowest() {
@@ -146,19 +147,61 @@
                 </script>
             </div>
             <div class="block-1">
-                <h2>Using Math.max() on an Array</h2>
+                <h2>Using Math.max() and Math.min() on an Array</h2>
                 <p>can use Math.max.apply to find the highest number in an array</p>
-                <p id="id-7" class="sort-result"></p>
+                <p id="id-7" class="style-result"></p>
+                
                 <script>
-                    var numbersMaxArray = [101,2,-9,0,1,4,700,-10,10];
-                    function funMaxOfArray (q) {
-                        return Math.max.apply(null, q);
+                    var numbersMaxMinArray = [101,2,-9,0,1,4,700,-10,10];
+                    function funMaxOfArray (max) {
+                        return Math.max.apply(null, max);
                     };
-                    var resultMax = funMaxOfArray(numbersMaxArray);
-                    document.getElementById('id-7').innerHTML = 'Original: ' + numbersMaxArray + 
-                        '<br>Result: ' + resultMax;
+                    function funMinOfArray(min) {
+                        return Math.min.apply(null, min);
+                    };
+                    
+                    var resultMax = funMaxOfArray(numbersMaxMinArray),
+                        resultMin = funMinOfArray(numbersMaxMinArray);
+                    document.getElementById('id-7').innerHTML = 'Original: ' + numbersMaxMinArray + 
+                        '<br>Result Max: ' + resultMax +
+                        '<br>Result Min: ' + resultMin;
                     
                 </script>
+            </div>
+            <div class="block-1" id="my_min_max_methods">
+                <h2>My Min / Max JavaScript Methods</h2>
+                    <h3>Find Max and Find Min</h3>
+                    <p>Fastest solution is to use a "home made" method.<br>
+                    function loops through an array comparing each value with the highest value found<br>
+                    function loops through an array comparing each value with the lowest value found</p>
+                    <p id="id-8" class="style-result"></p>
+                    
+                <script>
+                    var myNumbersMaxMinArray = [101,2,-9,0,1,4,700,-10,10];
+                    function funMyMax(arr) {    
+                        len = arr.length,
+                        max = -Infinity;
+                        while( len-- ) {
+                            if (arr[len] > max) { max = arr[len]; };
+                        };
+                        return max;
+                    };
+                    function funMyMin (arr) {
+                        len = arr.length;
+                        min = Infinity;
+                        while ( len-- ) {
+                            if (arr[len] < min ) { min = arr[len]; };
+                        };
+                        return min;
+                    };
+                    
+                    var tmpMax = funMyMax(myNumbersMaxMinArray),
+                        tmpMin = funMyMin(myNumbersMaxMinArray);
+                    document.getElementById('id-8').innerHTML = 'Original: ' + myNumbersMaxMinArray +
+                        '<br>Max: ' + tmpMax +
+                        '<br>Min: ' + tmpMin;
+                </script>
+                        
             </div>
             <div class="block-1"></div>
         </div>
