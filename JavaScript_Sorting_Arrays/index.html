@@ -213,10 +213,15 @@
                 <script>
                     var mySordObjectOfArray = [ 
                         {type: 'Lada', year: 1997},
-                        {type: 'BMW', year: 2000},
+                        {type: 'BMW', year: 2017},
+                        {type: 'ZAZ', year: 1970},
                         {type: 'Audi', year: 2015} ];
                     var len = mySordObjectOfArray.length;
                     mySordObjectOfArray.sort( function(a, b) { return b.year - a.year; } );
+                    
+                    mySortObjectArray();
+                    mySort2 ();
+                    
                         function mySortObjectArray() {
                             var id9 = document.getElementById('id-9'),
                                 i = 0;
@@ -226,7 +231,29 @@
                                     i++;
                                    };
                         };
-                        mySortObjectArray();
+
+                        function mySort2 () {
+                            mySordObjectOfArray.sort(
+                                function(a, b)  { 
+                                    var x = a.type.toLowerCase(),
+                                        y = b.type.toLowerCase();
+                                    if (x < y) { return -1; }
+                                    if (x > y) { return 1; }
+                                    return 0;
+                                }
+                            );
+                        myFunShow2 ();   
+                        };
+                        function myFunShow2 () {
+                            var id10 = document.getElementById('id-10');
+                                /*len2 = mySordObjectOfArray.length;*/
+                            for (i = 0; len > i; i++) {
+                                /*console.log( mySordObjectOfArray2[i].type );*/
+                                id10.innerHTML += mySordObjectOfArray[i].type + ' ' +
+                                mySordObjectOfArray[i].year + '<br>';
+                            };
+                        };
+                    
                 </script>
             </div>
             <div class="block-1"></div>
