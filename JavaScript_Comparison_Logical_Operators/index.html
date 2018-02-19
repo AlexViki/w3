@@ -36,7 +36,16 @@
                 <p>Chech your age: </p>
                 <p style-result id="id-4"></p>
             </div>
-            <div class="block-1"></div>
+            <div class="block-1">
+                <h2>Comparing Different Types</h2>
+                <p>Comparing data of different types may give unexpected results</p>
+                <p>When comparing a string with a number, JavaScript will convert the string to a number when doing the comparison.<br>
+                    <b>An empty string converts to 0.</b> A non-numeric string converts to NaN which is always false</p>
+                <p style-result id="id-5"></p>
+                <button onclick="checkAge2()">Check</button>
+                <input id="inputAge2" type="text" value="">
+                <p style-result id="id-6"></p>
+            </div>
         </div>
     </div>
     
