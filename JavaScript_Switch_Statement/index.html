@@ -23,7 +23,7 @@
                    <li>If there is a match, the associated block of code is executed</li>
                </ul>
                <button onclick="dayTodayIs()">DAY</button>
-               <p id="id-1"></p>
+               <p class="style-result" id="id-1"></p>
            </div>
            <div class="block-1">
                <h2>The break Keyword</h2>
@@ -33,7 +33,13 @@
                <p class="important-info">A break can save a lot of execution time because it "ignores" the execution of all the rest of the code in the switch block.<br>
                It is not necessary to break the last case in a switch block. The block breaks (ends) there anyway.</p>
            </div>
-           <div class="block-1"></div>
+           <div class="block-1">
+               <h2>The default Keyword</h2>
+               <p>The default keyword specifies the code to run if there is no case match</p>
+                Type number of month: <input id="input_month" type="number" value="">
+               <p class="style-result" id="id-2" onclick="runMonth()"></p>
+               <p class="important-info">If default is not the last case in the switch block, remember to end the default case with a break.</p>
+           </div>
            <div class="block-1"></div>
            <div class="block-1"></div>
        </div>
