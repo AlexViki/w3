@@ -81,3 +81,35 @@ function runMonth() {
     };
     doc2.innerHTML = id_2Text + '<b>' + month + '</b>';
 };
+
+//Common Code Blocks
+function runMonth_3() {
+    let doc3 = document.getElementById('id_3');
+    let inputMonth_3 = (document.getElementById('input_month3').value) * 1;
+    let tmp_3;
+    switch (inputMonth_3 - 1) {
+        default:
+            tmp_3 = 'ERROR!!! Month can not be less 0 or more 12';
+            break;
+        case 11:
+        case 0:
+        case 1:
+            tmp_3 = 'Winter';
+            break;
+        case 2:
+        case 3:
+        case 4:
+            tmp_3 = 'Spring';
+            break;
+        case 5:
+        case 6:
+        case 7:
+            tmp_3 = 'Summer';
+            break;
+        case 8:
+        case 9:
+        case 10:
+            tmp_3 = 'Autumn';
+    };
+    doc3.innerHTML = 'The season is <b>' + tmp_3 + '</b>';
+};
