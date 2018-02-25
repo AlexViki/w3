@@ -35,3 +35,19 @@ function runLoopFor_2() {
         doc_3.innerHTML += 'ERROR! Type more -100 or less 100';
         };
 };
+
+//The For/In Loop
+function forInLoop() {
+    let car = {
+        model: 'BMW',
+        year: 2010,
+        type: 'sedan',
+        engine: '1.8l'
+    };
+    let doc_4 = document.getElementById('id_4');
+    let tmp;
+    for (tmp in car) {
+        doc_4.innerHTML += car[tmp] + ';<br>';
+    };
+};
+forInLoop();
