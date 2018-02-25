@@ -42,7 +42,8 @@ function forInLoop() {
         model: 'BMW',
         year: 2010,
         type: 'sedan',
-        engine: '1.8l'
+        engine: '1.8l',
+        drive: ( function () { return "Go go go ...."; } () )
     };
     let doc_4 = document.getElementById('id_4');
     let tmp;
