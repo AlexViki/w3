@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>JavaScript While Loop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style/inner_styles.css">
 </head>
 <body>
-   <div class="conteiner">
+   <div class="container">
        <div class="header">
+          <h1>JavaScript While Loop</h1>
            <p id="inner-header">Loops can execute a block of code as long as a specified condition is true.</p>
        </div>
        <div class="main">
@@ -18,8 +21,16 @@
                <p class="style-result" id="id_1"></p>
                <p class="important-info">If you forget to increase the variable used in the condition, the loop will never end. This will crash your browser.</p>
            </div>
-           <div class="block-1"></div>
-           <div class="block-1"></div>
+           <div class="block-1">
+               <h2>The Do/While Loop</h2>
+               <p>The do/while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.</p>
+                <form class="style-result" action="radio_1">
+                    <input onchange="runDoWhileLoop_1()" type="radio" name="name" value="5"> 5 
+                    <input onchange="runDoWhileLoop_1()" type="radio" name="name" value="10"> 10
+                    <input onchange="runDoWhileLoop_1()" type="radio" name="name" value="15"> 15
+                </form>
+               <p class="style-result" id="id_2"></p>
+           </div>
            <div class="block-1"></div>
            <div class="block-1"></div>
        </div>
