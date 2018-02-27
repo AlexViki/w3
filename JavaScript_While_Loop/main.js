@@ -21,13 +21,13 @@ function runDoWhileLoop_1() {
     let inputDoc_2 = document.getElementsByName('name');
     let valueOfInput;
     let text_2 = 'Run "do/while": ';
-    let j = 0;
+    let j = 1;
     let i = 0;
     doc_2.innerHTML = '';
     ////////////
     do {
         if (inputDoc_2[i].checked) {
-            console.log(inputDoc_2[i].value);
+            //console.log(inputDoc_2[i].value);
             valueOfInput = inputDoc_2[i].value;
         };
         i++;
@@ -45,5 +45,29 @@ function runDoWhileLoop_1() {
         doc_2.innerHTML += text_2 + j + '<br>';
         j++;
     }
-    while (j < valueOfInput);
+    while (j <= valueOfInput);
+};
+
+//Comparing For and While
+function runForAndWhile() {
+    let colors = ['red','blue','green','yellow'];
+    let i = 0;
+    let doc_3 = document.getElementById('id_3');
+    let text_3 = 'Run loop <b>for</b>: ';
+    let text_3a = ' The value: ';
+    doc_3.innerHTML = colors + '<br>';
+    for (;colors[i];) {
+        doc_3.innerHTML += text_3 + ' - ' + i + text_3a + colors[i] + '<br>';
+        i++;
+    };
+    
+    let doc_4 = document.getElementById('id_4');
+    let text_4 = 'Run loop <b>while</b>: ';
+    let j = 0;
+    doc_4.innerHTML = colors + '<br>';
+    while(colors[j]) {
+        doc_4.innerHTML += text_4 + ' - ' + j + text_3a + colors[j] + '<br>';
+        //console.log(j);
+        j++;
+    };
 };
