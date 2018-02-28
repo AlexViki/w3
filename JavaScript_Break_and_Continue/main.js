@@ -23,3 +23,18 @@ function funWithContinue() {
     };
 };
 funWithContinue();
+
+// JavaScript Labels
+function funWithLabeles() {
+    let doc_3 = document.getElementById('id_3');
+    let array_3 = ['red','green','blue','grey'];
+    doc_3.innerHTML += array_3 + '<br>';
+    array_3: {
+        doc_3.innerHTML += 'Value: ' + array_3[0] + '<br>';
+        doc_3.innerHTML += 'Value: ' + array_3[1] + '<br>';
+        break array_3;
+        doc_3.innerHTML += 'Value: ' + array_3[2] + '<br>';
+        doc_3.innerHTML += 'Value: ' + array_3[4] + '<br>';
+    };
+};
+funWithLabeles();
