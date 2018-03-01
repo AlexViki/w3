@@ -1,0 +1,14 @@
+li {
+    background: none;
+    width: initial;
+    border: none;
+}
+
+li:hover {
+    border: none;
+}
+
+.item_class_1 {
+    color: #ff4500;
+    font-weight: bolder;
+}
