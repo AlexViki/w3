@@ -12,3 +12,6 @@ li:hover {
     color: #ff4500;
     font-weight: bolder;
 }
+#form_1 {
+    list-style-type: decimal;
+}

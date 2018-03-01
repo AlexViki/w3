@@ -35,7 +35,34 @@
                    <li>undefined</li>
                </ul>
            </div>
-           <div class="block-1"></div>
+           <div class="block-1">
+               <h2>The typeof Operator</h2>
+               <p>We can use the <b>typeof</b> operator to find the data type of a JavaScript variable.</p>
+               <form action="form_1">
+                   <ul id="form_1">
+                       <li><input onchange="runCheck_1()" type="radio" name="name_1" > Alex</li>
+                       <li><input onchange="runCheck_1()" type="radio" name="name_1" > 3.14</li>
+                       <li><input onchange="runCheck_1()" type="radio" name="name_1" > Nan</li>
+                       <li><input onchange="runCheck_1()" type="radio" name="name_1" > false</li>
+                       <li><input onchange="runCheck_1()" type="radio" name="name_1" > [1,2,3,4]</li>
+                       <li><input onchange="runCheck_1()" type="radio" name="name_1" > {name: 'Jon', age: 35}</li>
+                       <li><input onchange="runCheck_1()" type="radio" name="name_1" > new Date()</li>
+                       <li><input onchange="runCheck_1()" type="radio" name="name_1" > function() {}</li>
+                       <li><input onchange="runCheck_1()" type="radio" name="name_1" > myColor</li>
+                       <li><input onchange="runCheck_1()" type="radio" name="name_1" > null</li>
+                   </ul>
+               </form>
+               <p class="style-result" id="id_1"></p>
+               <ul>
+                   <li>The data type of NaN is number</li>
+                   <li>The data type of an array is object</li>
+                   <li>The data type of a date is object</li>
+                   <li>The data type of null is object</li>
+                   <li>The data type of an undefined variable is undefined *</li>
+                   <li>The data type of a variable that has not been assigned a value is also undefined *</li>
+               </ul>
+               <p class="important-info">You cannot use typeof to determine if a JavaScript object is an array (or a date).</p>
+           </div>
            <div class="block-1"></div>
            <div class="block-1"></div>
            <div class="block-1"></div>
