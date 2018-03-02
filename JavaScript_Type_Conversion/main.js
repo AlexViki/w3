@@ -28,12 +28,27 @@ function runCheck_1() {
 
 //The constructor Property
 function runConstructorProp() {
-    document.getElementById('id_2').innerHTML = '<b>"Alex".constructor = </b>' + "Alex".constructor +
+    let doc_2 = document.getElementById('id_2');
+    let arrColor = ['red', 'green', 'yellow'];
+    let myDate = new Date();
+    doc_2.innerHTML = '<b>"Alex".constructor = </b>' + "Alex".constructor +
         '<br><b>(3.14).constructor = </b>' + (3.14).constructor +
         '<br><b>false.constructor = </b>' + false.constructor +
         '<br><b>[1,2,3,44,22].constructor = </b>' + [1,2,3,44,22].constructor +
         '<br><b>{name: "Alex", age: 30}.constructor = </b>' + {name: "Alex", age: 30}.constructor +
         '<br><b>new Date().constructor = </b>' + new Date().constructor + 
         '<br><b>function() {}.constructor = </b>' + function() {}.constructor;
+    doc_2.innerHTML += '<br>Find out if an object is an Array using "constructor" (contains the word "Array"): <b>' +
+        runCheckArr_1(arrColor, 'Array') + '</b>' + 
+        '<br>Other simpler way, check if the object is an Array function: <b>' + 
+        runCheckArr_2(arrColor, Array) + '</b>' + 
+        '<br>Find out if an object is a Date (contains the word "Date"): <b>' + runCheckArr_1(myDate, 'Date') + '</b>' +
+        '<br>Othere simpler way, check if the object is a Date function: <b>' + runCheckArr_2(myDate, Date); 
+    function runCheckArr_1(arg_1, value_1) {
+        return arg_1.constructor.toString().indexOf(value_1) > -1;
+    };
+    function runCheckArr_2(arg_2, value_2) {
+        return arg_2.constructor === value_2;
+    };
 };
 runConstructorProp();
