@@ -25,3 +25,15 @@ function runCheck_1() {
     };
     };
 };
+
+//The constructor Property
+function runConstructorProp() {
+    document.getElementById('id_2').innerHTML = '<b>"Alex".constructor = </b>' + "Alex".constructor +
+        '<br><b>(3.14).constructor = </b>' + (3.14).constructor +
+        '<br><b>false.constructor = </b>' + false.constructor +
+        '<br><b>[1,2,3,44,22].constructor = </b>' + [1,2,3,44,22].constructor +
+        '<br><b>{name: "Alex", age: 30}.constructor = </b>' + {name: "Alex", age: 30}.constructor +
+        '<br><b>new Date().constructor = </b>' + new Date().constructor + 
+        '<br><b>function() {}.constructor = </b>' + function() {}.constructor;
+};
+runConstructorProp();
