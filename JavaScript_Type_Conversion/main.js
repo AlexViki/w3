@@ -52,3 +52,25 @@ function runConstructorProp() {
     };
 };
 runConstructorProp();
+
+//Converting Numbers to Strings
+runConvertNumbers();
+function runConvertNumbers() {
+    let doc_3 = document.getElementById('id_3');
+    let number_3 = 100;
+    let num_3 = 345.123456;
+    doc_3.innerHTML = 'The type of: ' + typeof number_3 + '; convert to: ' + String(number_3) +
+        '<br>The type of: ' + typeof 125 + '; convert to: ' + String(125) +
+        '<br>The Number method toString() does the same. The type of: ' + typeof number_3 +
+        '; convert to: ' + number_3.toString() +
+        '<br>The Number method toString() does the same. The type of: ' + typeof 125 + 
+        '; convert to: ' + (125).toString() +
+        '<br><br>The number = ' + num_3 + '; toExponential(): ' + (num_3).toExponential() +
+        '<br>The number = ' + num_3 + '; toFixed(): ' + (num_3).toFixed() +
+        '<br>The number = ' + num_3 + '; toPrecision(1): ' + (num_3).toPrecision(1) +
+        '<br>The number = ' + num_3 + '; toPrecision(2): ' + (num_3).toPrecision(2) +
+        '<br>The number = ' + num_3 + '; toPrecision(3): ' + (num_3).toPrecision(3) +
+        '<br>The number = ' + num_3 + '; toPrecision(4): ' + (num_3).toPrecision(4) +
+        '<br>The number = ' + num_3 + '; toPrecision(5): ' + (num_3).toPrecision(5) +
+        '<br>The number = ' + num_3 + '; toPrecision(6): ' + (num_3).toPrecision(6);
+};
