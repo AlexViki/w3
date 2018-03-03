@@ -74,3 +74,16 @@ function runConvertNumbers() {
         '<br>The number = ' + num_3 + '; toPrecision(5): ' + (num_3).toPrecision(5) +
         '<br>The number = ' + num_3 + '; toPrecision(6): ' + (num_3).toPrecision(6);
 };
+
+//Converting Booleans to Strings
+runConvertBollen();
+function runConvertBollen() {
+    let doc_4 = document.getElementById('id_4');
+    let f = false;
+    let t = true;
+    doc_4.innerHTML = 'The value 1, typeof is: ' + typeof f + '; Convert to string: ' + String(f) +
+        '<br>The value 2, typeof is: ' + typeof t + '; Convert to string: ' + String(t) +
+        '<br><b>The Boolean method toString() does the same.</b>' +
+        '<br>Conver to string: ' + f.toString() +
+        '<br>Convert to string: ' + t.toString();
+};
