@@ -108,3 +108,26 @@ function runConvertDate() {
         '<br><b>getMilliseconds()</b> Get the milliseconds (0-999): ' + date_5.getMilliseconds() +
         '<br><b>getTime()</b> Get the time (milliseconds since January 1, 1970): ' + date_5.getTime();
 };
+
+//Converting Strings to Numbers
+runConvertToNumber();
+function runConvertToNumber () {
+    let doc_6 = document.getElementById('id_6');
+    let doc_7 = document.getElementById('id_7');
+    let arrOfRadio = document.getElementsByName('radio_string');
+    let len = arrOfRadio.length;
+    for (let i = 0; i < len; i++) {
+        arrOfRadio[i].onchange = function () {
+            console.log(arrOfRadio[i].value);
+             doc_6.innerHTML = 'It was a: ' + arrOfRadio[i].value + '; ' +
+                 '<br>Convetr to: ' + Number( arrOfRadio[i].value ) + 
+                 '<br><br><b>parseFloat()</b> Parses a string and returns a floating point number: <b>' +
+                 parseFloat(arrOfRadio[i].value) + '</b>' +
+                 '<br><b>parseInt()</b> Parses a string and returns an integer: <b>' +
+                 parseInt( arrOfRadio[i].value );
+        }; 
+    };
+    // doc_7.innerHTML = '<b>parseFloat()</b> Parses a string and returns a floating point number' + 
+    //    ': ' + parseFloat('   2.5367') +  
+    //    '<br><b>parseInt()</b> Parses a string and returns an integer';
+};
