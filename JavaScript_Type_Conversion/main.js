@@ -162,3 +162,17 @@ function runBoolToNumber() {
         '<br>Convert value_A to number: ' + Number(value_A) +
         '<br>Convert value_B to number: ' + Number(value_B) ;
 };
+
+//Converting Dates to Numbers
+runDateToNumber();
+function runDateToNumber() {
+    let doc_10 = document.getElementById('id_10');
+    let text_1 = 'The global method Number() can be used to convert dates to numbers.',
+        text_2 = 'The date method getTime() does the same.';
+    let myDate = new Date();
+    doc_10.innerHTML = text_1 + '<br>The date is: ' + myDate +
+        '<br>Convert to number: ' + Number(myDate) +
+        '<br>' + text_2 + '<br>getTime(): ' + myDate.getTime();
+};
+
+//
