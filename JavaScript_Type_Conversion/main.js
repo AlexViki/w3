@@ -131,6 +131,7 @@ function runConvertToNumber() {
     //    ': ' + parseFloat('   2.5367') +  
     //    '<br><b>parseInt()</b> Parses a string and returns an integer';
 };
+
 //The Unary + Operator
 runUnaryOperator();
 function runUnaryOperator() {
@@ -146,4 +147,18 @@ function runUnaryOperator() {
         '<br><br>' + text_2 + 
         '<br>The value_3: ' + value_3 + '; The type of: ' + typeof value_3 +
         '<br>The value_4: ' + value_4 + '; The type of: ' + typeof value_4;
+};
+
+//Converting Booleans to Numbers
+runBoolToNumber();
+function runBoolToNumber() {
+    let doc_9 = document.getElementById('id_9');
+    let text_1 = 'The global method <b>Number()</b> can also convert booleans to numbers.';
+    let value_A = true,
+        value_B = false;
+    doc_9.innerHTML = 'Value A: ' + value_A + ';<br>Value B: ' + value_B + ';<br>' +
+        'The typeof value_A: ' + typeof value_A +
+        '<br>The typeof value_B: ' + typeof value_B + 
+        '<br>Convert value_A to number: ' + Number(value_A) +
+        '<br>Convert value_B to number: ' + Number(value_B) ;
 };
