@@ -175,4 +175,18 @@ function runDateToNumber() {
         '<br>' + text_2 + '<br>getTime(): ' + myDate.getTime();
 };
 
-//
+//Automatic Type Conversion
+runAutoConvert();
+function runAutoConvert() {
+    let text_1 = 'When JavaScript tries to operate on a "wrong" data type, it will try to convert the value to a "right" type.';
+    let doc_11 = document.getElementById('id_11');
+    doc_11.innerHTML = text_1 + '(5 + null) = ' + (5 + null) +
+        '<br>("5" + null) = ' + ('5' + null) +
+        '<br>("5" + 2) = ' + ('5' + 2) +
+        '<br>("abc" + 2) = ' + ('abc' + 2) +
+        '<br>("5" - 2) = ' +('5' - 2) +
+        '<br>("10 abc" - 2) = ' +('10 abc' - 2) +
+        '<br>("abc" - 2) = ' +('abc' - 2) +
+        '<br>("5" * 2) = ' + ('5' * 2) +
+        '<br>("rrr5" * 2) = ' + ('rrr5' * 2);
+};
