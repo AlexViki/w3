@@ -87,3 +87,24 @@ function runConvertBollen() {
         '<br>Conver to string: ' + f.toString() +
         '<br>Convert to string: ' + t.toString();
 };
+
+//Converting Dates to Strings
+runConvertDate();
+function runConvertDate() {
+    let doc_5 = document.getElementById('id_5');
+    let date_5 = new Date();
+    doc_5.innerHTML = 'The typeof is: ' + typeof date_5 + 
+        '<br>Convert to string: ' + String(date_5) +
+        '<br><b>The Date method toString() does the same.</b>' +
+        '<br>Convert to string: ' + date_5.toString() + 
+        '<br><br>' +
+        '<br><b>getDate()</b> Get the day as a number (1-31): ' + date_5.getDate() +
+        '<br><b>getDay()</b> Get the weekday a number (0-6): ' + date_5.getDay() +
+        '<br><b>getMonth()</b> Get the month (0-11): ' + date_5.getMonth() +
+        '<br><b>getFullYear()</b> Get the four digit year (yyyy): ' + date_5.getFullYear() +
+        '<br><b>getHours()</b> Get the hour (0-23): ' + date_5.getHours() +
+        '<br><b>getMinutes()</b> Get the minutes (0-59): ' + date_5.getMinutes() +
+        '<br><b>getSeconds()</b> Get the seconds (0-59): ' + date_5.getSeconds() +
+        '<br><b>getMilliseconds()</b> Get the milliseconds (0-999): ' + date_5.getMilliseconds() +
+        '<br><b>getTime()</b> Get the time (milliseconds since January 1, 1970): ' + date_5.getTime();
+};
