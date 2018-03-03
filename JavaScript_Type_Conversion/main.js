@@ -190,3 +190,50 @@ function runAutoConvert() {
         '<br>("5" * 2) = ' + ('5' * 2) +
         '<br>("rrr5" * 2) = ' + ('rrr5' * 2);
 };
+
+//Automatic String Conversion
+//JavaScript Type Conversion Table
+runTypeConvertTable();
+function runTypeConvertTable() {
+    let myObj = {
+        m1: false,
+        m2: true,
+        m3: 0,
+        m4: 1,
+        m5: '0',
+        m6: '000',
+        m7: '1',
+        m8: NaN,
+        m9: Infinity,
+        m10: -Infinity,
+        m11: '',
+        m12: '215',
+        m13: 'twenty',
+        m14: [],
+        m15: [134],
+        m16: [12,99,34],
+        m17: ['three'],
+        m18: ['two','one'],
+        m19: function(){},
+        m20: {},
+        m21: null,
+        m22: undefined
+    };
+    let doc_12 = document.getElementById('id_12');
+    //doc_12.innerHTML = '----------------------------------------------------------------' +
+    //    '<br>Original Value: <b>' + v_1 + '</b> -> to number: <b>' + Number(v_1) + '</b> -> to Boolen: <b>' + Boolean(v_1) + '</b>' + 
+    //    '<br>Original Value: <b>' + v_3 + '</b> -> to number: <b>' + Number(v_3) + '</b> -> to Boolen: <b>' + Boolean(v_3) + '</b>' + 
+    //    '<br>Original Value: <b>' + v_4 + '</b> -> to number: <b>' + Number(v_4) + '</b> -> to Boolen: <b>' + Boolean(v_4) + '</b>' + 
+    //    '<br>Original Value: <b>' + v_5 + '</b> -> to number: <b>' + Number(v_5) + '</b> -> to Boolen: <b>' + Boolean(v_5) + '</b>' ; 
+
+    for (let tmp in myObj) { 
+        let i = 0; i++;
+        console.log( i );
+        doc_12.innerHTML += 'Original Value: <b>' + myObj[tmp] + 
+            '</b> -> type of: <b>' + typeof myObj[tmp] + 
+            '</b> -> to Number(): <b>' + Number(myObj[tmp]) + 
+            '</b> -> to String(): <b>' + String(myObj[tmp]) + 
+            '</b> -> to Boolen(): <b>' + Boolean(myObj[tmp]) + 
+            '</b><br><br>';
+    }
+};
