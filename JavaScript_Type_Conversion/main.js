@@ -111,7 +111,7 @@ function runConvertDate() {
 
 //Converting Strings to Numbers
 runConvertToNumber();
-function runConvertToNumber () {
+function runConvertToNumber() {
     let doc_6 = document.getElementById('id_6');
     let doc_7 = document.getElementById('id_7');
     let arrOfRadio = document.getElementsByName('radio_string');
@@ -130,4 +130,20 @@ function runConvertToNumber () {
     // doc_7.innerHTML = '<b>parseFloat()</b> Parses a string and returns a floating point number' + 
     //    ': ' + parseFloat('   2.5367') +  
     //    '<br><b>parseInt()</b> Parses a string and returns an integer';
+};
+//The Unary + Operator
+runUnaryOperator();
+function runUnaryOperator() {
+    let doc_8 = document.getElementById('id_8');
+    let text_1 = 'The <b>unary + operator</b> can be used to convert a variable to a number';
+    let text_2 = 'If the variable cannot be converted, it will still become a number, but with the value <b>NaN</b> (Not a number)';
+    let value_1 = '10',
+        value_2 = + value_1,
+        value_3 = 'Alex',
+        value_4 = + value_3;
+    doc_8.innerHTML = text_1 + '<br>The value_1: ' + value_1 + '; The type of: ' + typeof value_1 + 
+        '<br>The value_2: ' + value_2 + '; The type of: ' + typeof value_2 + 
+        '<br><br>' + text_2 + 
+        '<br>The value_3: ' + value_3 + '; The type of: ' + typeof value_3 +
+        '<br>The value_4: ' + value_4 + '; The type of: ' + typeof value_4;
 };
