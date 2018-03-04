@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Bitwise Operations</title>
+    <link rel="stylesheet" href="../style/inner_styles.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="header">
+           <h1>JavaScript Bitwise Operations</h1>
+            <p id="inner-header"></p>
+        </div>
+        <div class="main">
+            <div>
+                <div class="block-1" id='div_id_1'>
+                    <h2>JavaScript Bitwise Operators</h2>
+                    <p id="id_1" class="style-result"></p>
+                </div>
+                <div class="block-1" id='div_id_2'>
+                    <p>JavaScript stores numbers as 64 bits floating point numbers, but all bitwise operations are performed on 32 bits binary numbers.
+                    Before a bitwise operation is performed, JavaScript converts numbers to 32 bits signed integers. After the bitwise operation is performed, the result is converted back to 64 bits JavaScript numbers.</p>
+                    <p class="important-info">The examples above uses 4 bits unsigned binary numbers. Because of this ~ 5 returns 10.<br>
+                    Since JavaScript uses 32 bits signed integers, it will not return 10. It will return -6.<br>
+                    00000000000000000000000000000101 (5)<br>
+                    11111111111111111111111111111010 (~5 = -6)<br>
+                    A signed integer uses the leftmost bit as the minus sign.</p>
+                </div>
+                <div class="block-1" id='div_id_3'>
+                    <h2>Bitwise AND</h2>
+                    <p>When a bitwise AND is performed on a pair of bits, it returns 1 if both bits are 1.</p>
+                </div>
+                <div class="block-1"></div>
+                <div class="block-1"></div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

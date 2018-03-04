@@ -220,12 +220,7 @@ function runTypeConvertTable() {
         m22: undefined
     };
     let doc_12 = document.getElementById('id_12');
-    //doc_12.innerHTML = '----------------------------------------------------------------' +
-    //    '<br>Original Value: <b>' + v_1 + '</b> -> to number: <b>' + Number(v_1) + '</b> -> to Boolen: <b>' + Boolean(v_1) + '</b>' + 
-    //    '<br>Original Value: <b>' + v_3 + '</b> -> to number: <b>' + Number(v_3) + '</b> -> to Boolen: <b>' + Boolean(v_3) + '</b>' + 
-    //    '<br>Original Value: <b>' + v_4 + '</b> -> to number: <b>' + Number(v_4) + '</b> -> to Boolen: <b>' + Boolean(v_4) + '</b>' + 
-    //    '<br>Original Value: <b>' + v_5 + '</b> -> to number: <b>' + Number(v_5) + '</b> -> to Boolen: <b>' + Boolean(v_5) + '</b>' ; 
-
+    let doc_13 = document.getElementById('id_table');
     for (let tmp in myObj) { 
         let i = 0; i++;
         console.log( i );
@@ -235,5 +230,12 @@ function runTypeConvertTable() {
             '</b> -> to String(): <b>' + String(myObj[tmp]) + 
             '</b> -> to Boolen(): <b>' + Boolean(myObj[tmp]) + 
             '</b><br><br>';
-    }
+    };
+    
+    for (let j = 1, y = 0; j < 10; j++) {
+        //y += j;
+        //doc_13.innerHTML += y + '; ';
+        console.log(y);
+        doc_13.createElement('table');
+    };
 };
