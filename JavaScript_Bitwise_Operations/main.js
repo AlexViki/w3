@@ -60,3 +60,27 @@ function runAllBitwises() {
         '<br>Bitwise XOR: ' + num1 + ' ^ ' + num2 + ' -> ' + (num1 ^ num2) +
         '<br>Bitwise NOT: ~' + num1 + ' -> ' + (~num1);
 };
+
+//Converting Decimal to Binary / Binary to Decimal 
+//runConvertDecimalBinary();
+
+function runConvertDecimalBinary() {
+    let doc_5 = document.getElementById('id_5');
+    let input_5 = document.getElementById('input_5');
+    let valueInput_5 = input_5.value;
+    //console.log(valueInput_5);
+    function dec2bin(val) {
+         doc_5.innerHTML += val + ' = ' + (val >>> 0).toString(2) + '<br>';
+    };
+    dec2bin(valueInput_5);
+};
+
+function runConvertBinaryDecimal() {
+//получаем id_5 потому что будем дописывать в тот же параграф    
+    let doc_6 = document.getElementById('id_5');
+    let input_6 = document.getElementById('input_6').value;
+    function bin2bec(val2) {
+        doc_6.innerHTML += val2 + ' = ' + parseInt(val2, 2).toString(10) + '<br>';
+    };
+    bin2bec(input_6);
+};
