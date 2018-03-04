@@ -30,7 +30,7 @@ function runUses32() {
 runBitwiseAnd();
 function runBitwiseAnd() {
     let divId_3 = document.getElementById('div_id_3');
-    console.log(divId_3);
+    //console.log(divId_3);
     let p = document.createElement('P');
     p.setAttribute('class','style-result');
     p.setAttribute('id', 'id_result_3');
@@ -46,4 +46,17 @@ function runBitwiseAnd() {
         '1111 & 0001 = ' + (1111 & 0001) + '<br>' +
         '1111 & 0010 = ' + (1111 & 0010) + '<br>' +
         '1111 & 0100 = ' + (1111 & 0100);
+};
+
+// JavaScript Bitwise AND (&), JavaScript Bitwise OR (|)
+// JavaScript Bitwise XOR (^), JavaScript Bitwise NOT (~)
+runAllBitwises();
+function runAllBitwises() {
+    let doc_4 = document.getElementById('id_4');
+    let num1 = 5,
+        num2 = 1;
+    doc_4.innerHTML = 'Bitwise AND: ' + num1 + ' & ' + num2 + ' -> ' + (num1 & num2) +
+        '<br>Bitwise OR: ' + num1 + ' | ' + num2 + ' -> ' + (num1 | num2) +
+        '<br>Bitwise XOR: ' + num1 + ' ^ ' + num2 + ' -> ' + (num1 ^ num2) +
+        '<br>Bitwise NOT: ~' + num1 + ' -> ' + (~num1);
 };
