@@ -22,3 +22,12 @@ function runStringReplace() {
         '<br>Replace with a <b>string</b>: ' + doc4.replace('Alex', '<b>Bob<b>');
     //console.log(doc4);
 };
+
+//Using test()
+//runTestMethod();
+function runTestMethod() {
+    let doc5 = document.getElementById('id_5');
+    let input5 = document.getElementById('input_5').value;
+    let arg = /A/;
+    doc5.innerHTML = 'Search: ' + arg + '; Result: ' + arg.test(input5);
+};

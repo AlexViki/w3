@@ -52,9 +52,52 @@
                Regular expressions can make your search much more powerful (case insensitive for example).</p>
            </div>
            <div class="block-5">
-               <h2></h2>
-               <p></p>
-               <p class="style-result" id="id_5"></p>
+               <h2>Regular Expression Modifiers</h2>
+               <p>Modifiers can be used to perform case-insensitive more global searches</p>
+               <ul>
+                   <li>Modifier - <b>i</b> Perform case-insensitive matching</li>
+                   <li>Modifier - <b>g</b> Perform a global match (find all matches rather than stopping after the first match)</li>
+                   <li>Modifier - <b>m</b> Perform multiline matching</li>
+               </ul>
+               <!--<p class="style-result" id="id_5"></p> -->
+               <div class="block-1">
+                   <h2>Regular Expression Patterns</h2>
+                   <p><b>Brackets</b> are used to find a range of characters</p>
+                   <ul>
+                       <li>Expression <b>[abc]</b> Find any of the characters between the brackets</li>
+                       <li>Expression <b>[0-9]</b> Find any of the digits between the brackets</li>
+                       <li>Expression <b>(x|y)</b> Find any of the alternatives separated with |</li>
+                   </ul>
+                   <p><b>Metacharacters</b> are characters with a special meaning</p>
+                   <ul>
+                       <li>Metacharacter <b>\d</b> Find a digit</li>
+                       <li>Metacharacter <b>\s</b> Find a whitespace character</li>
+                       <li>Metacharacter <b>\b</b> Find a match at the beginning or at the end of a word</li>
+                       <li>Metacharacter <b>\uxxxx</b> Find the Unicode character specified by the hexadecimal number xxxx</li>
+                   </ul>
+                   <p><b>Quantifiers</b> define quantities</p>
+                   <ul>
+                       <li>Quantifier <b>n+</b> Matches any string that contains at least one "n"</li>
+                       <li>Quantifier <b>n*</b> Matches any string that contains zero or more occurrences of "n"</li>
+                       <li>Quantifier <b>n?</b> Matches any string that contains zero or one occurrences of "n"</li>
+                   </ul>
+                   
+               </div>
+               <div class="block-1">
+                   <h2>Using the RegExp Object</h2>
+                   <p>In JavaScript, the RegExp object is a regular expression object with predefined properties and methods.</p>
+               </div>
+                <div class="block-1">
+                   <h2>Using test()</h2>
+                   <p>The test() method is a RegExp expression method. It searches a string for a pattern, and returns true or false, depending on the result.</p>
+                   Type the text: <input id="input_5" type="text" value="My name is Alex">
+                   <button onclick="runTestMethod()">RUN</button>
+                   <p class="style-result" id="id_5"></p>
+                </div>
+                <div class="block-1">
+                   <h2></h2>
+                   <p></p>
+                </div>
            </div>
        </div>
    </div>
