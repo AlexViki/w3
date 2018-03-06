@@ -7,5 +7,18 @@ function runStringSearch() {
     //inp_3_2 += '/' + inp_3_2 + '/i';
     //let objInp_3_2 = new RegExp(inp_3_2);
     //console.log(typeof objInp_3_2);
-    doc3.innerHTML = 'Saerching: "text". <br>The result: ' + ( inp_3_1.search(/text/i) );
+    doc3.innerHTML = 'Saerch() with a <b>regular</b>: "text". The result: ' + ( inp_3_1.search(/text/i) ) +
+        '<br>The search method will also accept a string as search argument. The string argument will be converted to a regular expression.' +
+        '<br>Search() with <b>string:</b> "text". The result: ' + ( inp_3_1.search('text') );
+};
+
+//Use String replace()
+runStringReplace();
+function runStringReplace() {
+    let doc4 = document.getElementById('id_4').textContent;
+    let doc4_1 = document.getElementById('id_4_1');
+    doc4_1.innerHTML = 'Replace with a <b>regular</b>: ' + doc4.replace(/alex/i, '<b>Andry</b>') +
+        '<br>The replace() method will also accept a string as search argument.' +
+        '<br>Replace with a <b>string</b>: ' + doc4.replace('Alex', '<b>Bob<b>');
+    //console.log(doc4);
 };
