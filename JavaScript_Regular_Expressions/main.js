@@ -29,5 +29,15 @@ function runTestMethod() {
     let doc5 = document.getElementById('id_5');
     let input5 = document.getElementById('input_5').value;
     let arg = /A/;
-    doc5.innerHTML = 'Search: ' + arg + '; Result: ' + arg.test(input5);
+    doc5.innerHTM = 'Search: ' + arg + ';<br> Result: <b>' + arg.test(input5) + '</b>' +
+    "<br>You don't have to put the regular expression in a variable first. The result: <br><b>" + /A/.test(input5) + '</b>' + ' Same)))';
+};
+
+//Using exec()
+function runExec() {
+    let doc6 = document.getElementById('id_6');
+    let input_6 = document.getElementById('input_6').value;
+    //console.log(input_6);
+    doc6.innerHTML = 'Search "A". The result: ' + /A/.exec(input_6) +
+        '<br>Searc "B". The result2: ' + /B/.exec(input_6);
 };
