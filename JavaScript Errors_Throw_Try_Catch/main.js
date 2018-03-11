@@ -26,7 +26,7 @@ document.getElementById('button_r2').onclick = function() {
 };
 
 //Input Validation Example
-runValidExm();
+//runValidExm();
 function runValidExm() {
     let inp5 = document.getElementById('input_5').value;
     let doc5 = document.getElementById('id_5');
@@ -41,6 +41,33 @@ function runValidExm() {
     }
     catch (e) {
         doc5.innerHTML = 'The ERRO is: ' + e + '; Inputed: ' + inp5;
-        alert(e);
+        //alert(e);
     };
+};
+
+// HTML Validation
+function runHtmlValid() {
+    let inp6 = document.getElementById('input_6').value;
+    let doc6 = document.getElementById('id_6');
+    //console.log(inp6);
+    doc6.innerHTML = 'The result: ' + inp6;
+};
+
+//The finally Statement
+function runFinallyStat() {
+    let doc7 = document.getElementById('id_7');
+    let in7 = document.getElementById('input_7').value;
+    doc7.innerHTML = '';
+    try {
+        if (in7 == '') throw 'ERROR: Empty value';
+        if (isNaN(in7)) throw 'ERROR: not a number!!!'
+        in7 = Number(in7);
+        if (in7 < 10) throw 'ERROR: less than 10';
+        if (in7 > 20) throw 'ERROR: more than 20';
+    } catch (e) {
+        doc7.innerHTML = 'The result: ' + e;
+    } finally {
+        //console.log(in7);
+        doc7.innerHTML += '<br>Block of code to be executed regardless of the try / catch result. Value: ' + in7;
+    }
 };
