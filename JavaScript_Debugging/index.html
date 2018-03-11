@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../style/inner_styles.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <title>JavaScript Debugging</title>
+</head>
+<body>
+<div class="conteiner">
+    <div class="header">
+        <h1>JavaScript Debugging</h1>
+        <p id="inner-header">Errors can (will) happen, every time you write some new computer code.</p>
+    </div>
+    <div class="main">
+        <div class="block-1">
+            <h2>Code Debugging</h2>
+            <p>Programming code might contain syntax errors, or logical errors. Many of these errors are difficult to diagnose. <br>
+            Often, when programming code contains errors, nothing will happen. There are no error messages, and you will get no indications where to search for errors. <br>
+            Searching for (and fixing) errors in programming code is called code debugging.</p>
+            <!-- <p id="id_1" class="style-result"></p>
+            -->
+        </div>
+        <div class="block-1">
+            <h2>JavaScript Debuggers</h2>
+            <p>Debugging is not easy. But fortunately, all modern browsers have a built-in JavaScript debugger. <br>
+            Built-in debuggers can be turned on and off, forcing errors to be reported to the user. <br>
+            With a debugger, you can also set breakpoints (places where code execution can be stopped), and examine variables while the code is executing. <br>
+            Normally, otherwise follow the steps at the bottom of this page, you activate debugging in your browser with the F12 key, and select "Console" in the debugger menu.</p>
+            <!-- <p id="id_2" class="style-result"></p>
+            -->
+        </div>
+        <div class="block-1">
+            <h2>Setting Breakpoints</h2>
+            <p>In the debugger window, you can set breakpoints in the JavaScript code. <br> At each breakpoint, JavaScript will stop executing, and let you examine JavaScript values. <br>After examining values, you can resume the execution of code (typically with a play button)</p>
+            <!-- <p id="id_3" class="style-result"></p>
+            -->
+        </div>
+        <div class="block-1">
+            <h2>The debugger Keyword</h2>
+            <p>The debugger keyword stops the execution of JavaScript, and calls (if available) the debugging function. <br>
+            This has the same function as setting a breakpoint in the debugger. If no debugging is available, the debugger statement has no effect. </p>
+            <button type="button" onclick="runDebuger()">RUN</button>
+            <p id="id_4" class="style-result"></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
