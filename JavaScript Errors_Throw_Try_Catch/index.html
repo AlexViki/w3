@@ -51,7 +51,7 @@
             <div class="block-1">
                 <h2>Input Validation (try, thro, catch)</h2>
                 <p></p>
-                Type the number 10 to 20: <input id="input_5" type="text" value="11">
+                Type the number 10 to 20: <input id="input_5" type="text" value="">
                 <button type="button" onclick="runValidExm()">RUN</button>
                 <p class="style-result" id="id_5"></p>
             </div>
@@ -70,19 +70,63 @@
                 <p class="style-result" id="id_7"></p>
             </div>
             <div class="block-1">
-                <h2></h2>
-                <p></p>
-                <p class="style-result" id="id_8"></p>
+                <h2>The Error Object</h2>
+                <p>JavaScript has a built in error object that provides error information when an error occurs<br>
+                The error object provides two useful properties: <b>name</b> and <b>message</b>.</p>
+                <p>Error Object Properties</p>
+                <ul>
+                    <li><b>name</b> - sets or returns an error name</li>
+                    <li><b>message</b> - sets or returns an error message (a string)</li>
+                </ul>
+                <!-- <p class="style-result" id="id_8"></p> -->
             </div>
             <div class="block-1">
-                <h2></h2>
-                <p></p>
-                <p class="style-result" id="id_9"></p>
+                <h2>Error Name Values</h2>
+                <p>Six different values can be returned by the error name property</p>
+                <ul>
+                    <li><b>EvalError</b> - An error has occurred in the eval() function</li>
+                    <li><b>RangeError</b> - A number "out of range" has occurred</li>
+                    <li><b>ReferenceError</b> - An illegal reference has occurred</li>
+                    <li><b>SyntaxError</b> - A syntax error has occurred</li>
+                    <li><b>TypeError</b> - A type error has occurred</li>
+                    <li><b>URIError</b> - An error in encodeURI() has occurred</li>
+                </ul>
+                <!-- <p class="style-result" id="id_9"></p> -->
+                <h3>Eval Error</h3>
+                    <p>An EvalError indicates an error in the eval() function.</p>
+                    <p class="important-info">Newer versions of JavaScript does not throw any EvalError. Use SyntaxError instead.</p>
+                <h3>Range Error</h3>
+                    <p>A RangeError is thrown if you use a number that is outside the range of legal values.</p>
+                    <button type="button" onclick="runRanfeError()">Run</button>
+                    <p class="style-result" id="id_9_2"></p>
+                <h3>Reference Error</h3>
+                    <p>A ReferenceError is thrown if you use (reference) a variable that has not been declared</p>
+                    <button type="button" onclick="runReferenceError()">Run</button>
+                    <p class="style-result" id="id_9_3"></p>
+                <h3>Syntax Error</h3>
+                    <p>A SyntaxError is thrown if you try to evaluate code with a syntax error.</p>
+                    <button type="button" onclick="runSyntaxError()">Run</button>
+                    <p class="style-result" id="id_9_4"></p>
+                <h3>Type Error</h3>
+                    <p>A TypeError is thrown if you use a value that is outside the range of expected types</p>
+                    <button type="button" onclick="runTypeError()">Run</button>
+                    <p class="style-result" id="id_9_5"></p>
+                <h3>URI Error</h3>
+                    <p>A URIError is thrown if you use illegal characters in a URI function.</p>
+                    <button type="button" onclick="runURIError()">Run</button>
+                    <p class="style-result" id="id_9_6"></p>
             </div>
             <div class="block-1">
-                <h2></h2>
-                <p></p>
-                <p class="style-result" id="id_10"></p>
+                <h2>Non-Standard Error Object Properties</h2>
+                <!--<p class="style-result" id="id_10"></p>-->
+                <p class="important-info">Mozilla and Microsoft defines some non-standard error object properties.<br>
+                    <b>fileName (Mozilla)<br>
+                    lineNumber (Mozilla)<br>
+                    columnNumber (Mozilla)<br>
+                    stack (Mozilla)<br>
+                    description (Microsoft)<br>
+                    number (Microsoft)</b><br>
+                Do not use these properties in public web sites. They will not work in all browsers</p>
             </div>
         </div>
     </div>
