@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Use Strict</title>
+    <link rel="stylesheet" href="../style/inner_styles.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+   <div class="container">
+       <div class="header">
+           <h1>JavaScript Use Strict</h1>
+           <p id="inner-header">"use strict" Defines that JavaScript code should be executed in "strict mode".</p>
+       </div>
+       <div class="main">
+           <div class="block-1">
+               <h2>The "use strict" Directive</h2>
+               <p>The "use strict" directive is new in JavaScript 1.8.5 (ECMAScript version 5). It is not a statement, but a literal expression, ignored by earlier versions of JavaScript. The purpose of "use strict" is to indicate that the code should be executed in "strict mode". With strict mode, you can not, for example, use undeclared variables.</p>
+               <!-- <p class="style-result" id="id_1"></p> -->
+           </div>
+           <div class="block-1">
+               <h2>Declaring Strict Mode</h2>
+               <p>Strict mode is declared by adding "use strict"; to the beginning of a script or a function. Declared at the beginning of a script, it has global scope (all code in the script will execute in strict mode)</p>
+               <button onclick="runStrictModeFun()">RUN</button>
+               <p class="style-result" id="id_2"></p>
+           </div>
+           <div class="block-1">
+               <h2>The "use strict"; Syntax</h2>
+               <p>The syntax, for declaring strict mode, was designed to be compatible with older versions of JavaScript. Compiling a numeric literal (4 + 5;) or a string literal ("John Doe";) in a JavaScript program has no side effects. It simply compiles to a non existing variable and dies. So "use strict"; only matters to new compilers that "understand" the meaning of it.</p>
+               <!-- <p class="style-result" id="id_3"></p> -->
+           </div>
+           <div class="block-1">
+               <h2></h2>
+               <p></p>
+               <p class="style-result" id="id_4"></p>
+           </div>
+           <div class="block-1">
+                <h2></h2>
+               <p></p>
+               <p class="style-result" id="id_5"></p>
+           </div>
+       </div>
+   </div>
+    
+</body>
+</html>

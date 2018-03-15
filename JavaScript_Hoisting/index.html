@@ -23,33 +23,24 @@
                 <button type="button" onclick="runHosting_1()">RUN</button>
                 <p id="id_1" class="style result"></p>
             </div>
-        </div>
-        <div class="main">
             <div class="block-1">
-                <h2></h2>
-                <p></p>
+                <h2>JavaScript Initializations are Not Hoisted</h2>
+                <p>JavaScript only hoists declarations, not initializations.</p>
+                <button onclick="runIniNotHosting()">RUN</button>
                 <p id="id_2" class="style result"></p>
             </div>
-        </div>
-        <div class="main">
             <div class="block-1">
                 <h2></h2>
                 <p></p>
                 <p id="id_3" class="style result"></p>
+                <p>Does it make sense that y is undefined!!! 
+                This is because only the declaration, not the initialization is hoisted to the top.
+                Because of hoisting, has been declared before it is used, but because initializations are not hoisted, the value of varible is undefined</p>
             </div>
-        </div>
-        <div class="main">
             <div class="block-1">
-                <h2></h2>
-                <p></p>
-                <p id="id_4" class="style result"></p>
-            </div>
-        </div>
-        <div class="main">
-            <div class="block-1">
-                <h2></h2>
-                <p></p>
-                <p id="id_5" class="style result"></p>
+                <h2>Declare Your Variables At the Top !</h2>
+                <p>Hoisting is (to many developers) an unknown or overlooked behavior of JavaScript. If a developer doesn't understand hoisting, programs may contain bugs (errors). To avoid bugs, always declare all variables at the beginning of every scope.Since this is how JavaScript interprets the code, it is always a good rule.</p>
+                <!--<p id="id_4" class="style result"></p> -->
             </div>
         </div>
     </div>
