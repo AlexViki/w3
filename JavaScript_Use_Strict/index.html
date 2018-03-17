@@ -5,7 +5,8 @@
     <title>JavaScript Use Strict</title>
     <link rel="stylesheet" href="../style/inner_styles.css">
     <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
+    <!-- <script src="main.js" defer></script>
+    -->
 </head>
 <body>
    <div class="container">
@@ -32,7 +33,7 @@
            </div>
            <div class="block-1">
                <h2>Why Strict Mode?</h2>
-               <p>Strict mode makes it easier to write "secure" JavaScript.<br> 
+               <p>Strict mode makes it easier to write "secure" JavaScript.<br>
                Strict mode changes previously accepted "bad syntax" into real errors. As an example, in normal JavaScript, <b>mistyping a variable name creates a new global variable</b>. In strict mode, this will throw an error, making it impossible to accidentally create a global variable. <br>
                In normal JavaScript, a developer will not receive any error feedback assigning values to non-writable properties.<br>
                In strict mode, any assignment to a non-writable property, a getter-only property, a non-existing property, a non-existing variable, or a non-existing object, will throw an error.</p>
@@ -41,11 +42,30 @@
            </div>
            <div class="block-1">
                 <h2>Not Allowed in Strict Mode</h2>
+                <p>Activate debugging (F12) to see the error report.</p>
+               Using a variable:<br>
                <button onclick="f1()">RUN</button>
-               <p class="style-result" id="id_5"></p>
+               <br>
+               Using an object:<br>
+               <button onclick="f2()">RUN</button>
+               <br>
+               Deleting a variable (or object):<br>
+               <button onclick="f3()">RUN</button>
+               <br>
+               Deleting a function: <br>
+               <button onclick="f4()">RUN</button>
+               <br>
+               Duplicating a parameter name:<br>
+               <button onclick="f5()">RUN</button>
+               <br>
+               Octal numeric literals: <br>
+               <button onclick="f6()">RUN</button>
+               <br>
+               <!-- <p class="style-result" id="id_5"></p>
+               -->
            </div>
        </div>
    </div>
-    
+<script src="main.js" ></script>
 </body>
 </html>
