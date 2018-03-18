@@ -1,71 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>JavaScript Use Strict</title>
-    <link rel="stylesheet" href="../style/inner_styles.css">
-    <link rel="stylesheet" href="style.css">
-    <!-- <script src="main.js" defer></script>
-    -->
+	<meta charset="UTF-8">
+	<title>JavaScript Use Strict</title>
+	<link rel="stylesheet" href="../style/inner_styles.css">
+	<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-   <div class="container">
-       <div class="header">
-           <h1>JavaScript Use Strict</h1>
-           <p id="inner-header">"use strict" Defines that JavaScript code should be executed in "strict mode".</p>
-       </div>
-       <div class="main">
-           <div class="block-1">
-               <h2>The "use strict" Directive</h2>
-               <p>The "use strict" directive is new in JavaScript 1.8.5 (ECMAScript version 5). It is not a statement, but a literal expression, ignored by earlier versions of JavaScript. The purpose of "use strict" is to indicate that the code should be executed in "strict mode". With strict mode, you can not, for example, use undeclared variables.</p>
-               <!-- <p class="style-result" id="id_1"></p> -->
-           </div>
-           <div class="block-1">
-               <h2>Declaring Strict Mode</h2>
-               <p>Strict mode is declared by adding "use strict"; to the beginning of a script or a function. Declared at the beginning of a script, it has global scope (all code in the script will execute in strict mode)</p>
-               <button onclick="runStrictModeFun()">RUN</button>
-               <p class="style-result" id="id_2"></p>
-           </div>
-           <div class="block-1">
-               <h2>The "use strict"; Syntax</h2>
-               <p>The syntax, for declaring strict mode, was designed to be compatible with older versions of JavaScript. Compiling a numeric literal (4 + 5;) or a string literal ("John Doe";) in a JavaScript program has no side effects. It simply compiles to a non existing variable and dies. So "use strict"; only matters to new compilers that "understand" the meaning of it.</p>
-               <!-- <p class="style-result" id="id_3"></p> -->
-           </div>
-           <div class="block-1">
-               <h2>Why Strict Mode?</h2>
-               <p>Strict mode makes it easier to write "secure" JavaScript.<br>
-               Strict mode changes previously accepted "bad syntax" into real errors. As an example, in normal JavaScript, <b>mistyping a variable name creates a new global variable</b>. In strict mode, this will throw an error, making it impossible to accidentally create a global variable. <br>
-               In normal JavaScript, a developer will not receive any error feedback assigning values to non-writable properties.<br>
-               In strict mode, any assignment to a non-writable property, a getter-only property, a non-existing property, a non-existing variable, or a non-existing object, will throw an error.</p>
-               <!-- <p class="style-result" id="id_4"></p>
+	<div class="container">
+		<div class="header">
+			<h1>JavaScript Use Strict</h1>
+			<p id="inner-header">"use strict" Defines that JavaScript code should be executed in "strict mode".</p>
+		</div>
+		<div class="main">
+			<div class="block-1">
+				<h2>The "use strict" Directive</h2>
+				<p>The "use strict" directive is new in JavaScript 1.8.5 (ECMAScript version 5). It is not a statement, but a literal expression, ignored by earlier versions of JavaScript. The purpose of "use strict" is to indicate that the code should be executed in "strict mode". With strict mode, you can not, for example, use undeclared variables.</p>
+				<!-- <p class="style-result" id="id_1"></p> -->
+			</div>
+			<div class="block-1">
+				<h2>Declaring Strict Mode</h2>
+				<p>Strict mode is declared by adding "use strict"; to the beginning of a script or a function. Declared at the beginning of a script, it has global scope (all code in the script will execute in strict mode)</p>
+				<script>
+					'use strict';
+					console.log('Declaring Strict Mode');
+					num_1 = 3.14;
+				</script>
+				<script>
+					'use strict';
+					myFun_1();
+					function myFun_1 () {
+						console.log('Declaring Strict Mode in function - 1');
+						innerNum_1 = 10;
+					};
+				</script>
+				<script>
+					globNum = 20;
+					myFun_2();
+					function myFun_2 () {
+						'use strict';
+						console.log('Declaring Strict Mode in function - 2');
+						innerNum_2 = 50;
+					};
+				</script>
+			</div>
+			<div class="block-1">
+				<h2>The "use strict"; Syntax</h2>
+				<p>The syntax, for declaring strict mode, was designed to be compatible with older versions of JavaScript. Compiling a numeric literal (4 + 5;) or a string literal ("John Doe";) in a JavaScript program has no side effects. It simply compiles to a non existing variable and dies. So "use strict"; only matters to new compilers that "understand" the meaning of it.</p>
+				<!-- <p class="style-result" id="id_3"></p> -->
+			</div>
+			<div class="block-1">
+				<h2>Why Strict Mode?</h2>
+				<p>Strict mode makes it easier to write "secure" JavaScript.<br> Strict mode changes previously accepted "bad syntax" into real errors. As an example, in normal JavaScript, <b>mistyping a variable name creates a new global variable</b>. In strict mode, this will throw an error, making it impossible to accidentally create a global variable. <br> In normal JavaScript, a developer will not receive any error feedback assigning values to non-writable properties.<br> In strict mode, any assignment to a non-writable property, a getter-only property, a non-existing property, a non-existing variable, or a non-existing object, will throw an error.</p>
+				<!-- <p class="style-result" id="id_4"></p>
                -->
-           </div>
-           <div class="block-1">
-                <h2>Not Allowed in Strict Mode</h2>
-                <p>Activate debugging (F12) to see the error report.</p>
-               Using a variable:<br>
-               <button onclick="f1()">RUN</button>
-               <br>
-               Using an object:<br>
-               <button onclick="f2()">RUN</button>
-               <br>
-               Deleting a variable (or object):<br>
-               <button onclick="f3()">RUN</button>
-               <br>
-               Deleting a function: <br>
-               <button onclick="f4()">RUN</button>
-               <br>
-               Duplicating a parameter name:<br>
-               <button onclick="f5()">RUN</button>
-               <br>
-               Octal numeric literals: <br>
-               <button onclick="f6()">RUN</button>
-               <br>
-               <!-- <p class="style-result" id="id_5"></p>
-               -->
-           </div>
-       </div>
-   </div>
-<script src="main.js" ></script>
+			</div>
+			<div class="block-1">
+				<h2>Not Allowed in Strict Mode</h2>
+				<p>Using a variable, without declaring it, is not allowed</p>
+				<script>
+					'use strict';
+					console.log('Using a variable, without declaring it, is not allowed');
+					usVarible = 100;
+				</script>
+				<p>Using an object, without declaring it, is not allowed</p>
+				<script>
+					'use strict';
+					console.log('Using an object, without declaring it, is not allowed');
+					usObj = {name: 'Alex', age: 30};
+				</script>
+				<p>Deleting a variable (or object) is not allowed</p>
+				<script>
+					'use strict';
+					console.log('Deleting a variable (or object) is not allowed');
+					var delVarible = 100;
+					delete delVarible;
+				</script>
+				<p>Deleting a function is not allowed</p>
+				<script>
+					'use strict';
+					console.log('Deleting a function is not allowed');
+					function delFun () {};
+					delete delFun;
+				</script>
+				<p>Writing to a read-only property is not allowed</p>
+				<script>
+					'use strict';
+					var objF = {};
+					Object.defineProperty( objF, 'x', {
+						value: 0,writable:false
+					} );
+					objF.x = 10;
+				</script>
+			</div>
+		</div>
+	</div>
 </body>
+
 </html>
