@@ -89,11 +89,71 @@
 				<script>
 					'use strict';
 					var objF = {};
+					console.log('Writing to a read-only property is not allowed');
 					Object.defineProperty( objF, 'x', {
 						value: 0,writable:false
 					} );
 					objF.x = 10;
 				</script>
+				<p>Writing to a get-only property is not allowed</p>
+				<script>
+					'use strict';
+					console.log('Writing to a get-only property is not allowed');
+					var objE = {get x() {return 0} };
+					objF.x = 178;
+				</script>
+				<p>Deleting an undeletable property is not allowed</p>
+				<script>
+					'use strict';
+					console.log('Deleting an undeletable property is not allowed');
+					delete Object.prototype;
+				</script>
+				<p>The string "eval" cannot be used as a variable</p>
+				<script>
+					'use strict';
+					console.log('The string "eval" cannot be used as a variable');
+					var eval = 130;
+				</script>
+				<p>The string "arguments" cannot be used as a variable</p>
+				<script>
+					'use strict';
+					console.log('The string "arguments" cannot be used as a variable');
+					var arguments = 59;
+				</script>
+				<p>The with statement is not allowed</p>
+				<script>
+					'use strict';
+					console.log('The with statement is not allowed');
+					with (Math){x = cos(2)};
+				</script>
+				<p>For security reasons, eval() is not allowed to create variables in the scope from which it was called</p>
+				<script>
+					'use strict';
+					console.log('For security reasons, eval() is not allowed to create variables in the scope from which it was called');
+					eval ('var x = 2');
+					alert (x);
+				</script>
+				<p>In function calls like f(), the <b>this</b> value was the global object. In strict mode, it is now undefined.</p>
+			</div>
+			<div class="block-1">
+				<h2>Future Proof</h2>
+				<p>Future reserved keywords are not allowed in strict mode. These are:</p>
+				<ul>
+					<li>implements</li>
+					<li>interface</li>
+					<li>let</li>
+					<li>package</li>
+					<li>private</li>
+					<li>protected</li>
+					<li>public</li>
+					<li>static</li>
+					<li>yield</li>
+				</ul>
+				<script>
+					'use strict';
+					var public = 368;
+				</script>
+				<p class="important-info"><b>Watch Out!</b> The "use strict" directive is only recognized at the beginning of a script or a function.</p>
 			</div>
 		</div>
 	</div>
