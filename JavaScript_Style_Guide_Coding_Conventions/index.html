@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Style Guide and Coding Conventions</title>
+	<link rel="stylesheet" href="../style/inner_styles.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="main.js" defer></script>
+</head>
+<body>
+
+	<div class="container">
+		<div class="header">
+			<h1>JavaScript Style Guide and Coding Conventions</h1>
+			<p id="inner-header">Always use the same coding conventions for all your JavaScript projects.</p>
+		</div>
+		<div class="main">
+			<div class="block-1">
+				<h2>JavaScript Coding Conventions</h2>
+				<p>Coding conventions are style guidelines for programming. They typically cover:</p>
+				<ul>
+					<li>Naming and declaration rules for variables and functions.</li>
+					<li>Rules for the use of white space, indentation, and comments.</li>
+					<li>Programming practices and principles</li>
+				</ul>
+				<p>Coding conventions secure quality:</p>
+				<ul>
+					<li>Improves code readability</li>
+					<li>Make code maintenance easier</li>
+				</ul>
+				<p>Coding conventions can be documented rules for teams to follow, or just be your individual coding practice.</p>
+				<!--<p class="style-result" id="id_1"></p>
+				-->
+			</div>
+			<div class="block-1">
+				<h2>Variable Names</h2>
+				<p>use <b>camelCase</b> for identifier names (variables and functions).</p>
+				<p>All names start with a <b>letter</b>.</p>
+				<!--<p class="style-result" id="id_2"></p>
+				-->
+				<script>
+					var firstName = "Alex",
+						age = 30;
+					function showResult (arg) {
+						console.log('My name is ' + arg);
+					};
+					showResult(firstName);
+				</script>
+			</div>
+			<div class="block-1">
+				<h2>Spaces Around Operators</h2>
+				<p>Always put spaces around operators ( = + - * / ), and after commas</p>
+				<!--<p class="style-result" id="id_3"></p>
+				-->
+				<script>
+					var orderDisk = 3;
+					var totalDisk = 45 + orderDisk;
+					var valueOfStock = ['Brend A', 'Brend B', 'Brend C'];
+				</script>
+			</div>
+			<div class="block-1">
+				<h2>Code Indentation</h2>
+				<p>Always use 4 spaces for indentation of code blocks</p>
+				<!--<p class="style-result" id="id_4"></p>
+				-->
+			</div>
+			<div class="block-1">
+				<h2>Statement Rules</h2>
+				<p>General rules for simple statements</p>
+				<ul>
+					<li>Always end a simple statement with a semicolon</li>
+				</ul>
+				<script>
+					var nameBank = "AlexBank";
+					var listAccound = [45, 7896, 003, 46697];
+					var person = {
+						name: "Bob",
+						age: 25,
+						id: 45698741
+					};
+				</script>
+				<p>General rules for complex (compound) statements:</p>
+				<ul>
+					<li>Put the opening bracket at the end of the first line.</li>
+					<li>Use one space before the opening bracket.</li>
+					<li>Put the closing bracket on a new line, without leading spaces.</li>
+					<li>Do not end a complex statement with a semicolon.</li>
+				</ul>
+				<script>
+					var numA = 150,
+						numB = 200;
+					// Functions
+					console.log('-------Functions-------');
+					runCalcSum(numA, numB);
+					function runCalcSum (a1, a2) {
+						return console.log("Result: " + (a1 + a2) );
+					}
+
+					// Loops
+					console.log('-------Loops-------');
+					for (var i = 0; i < 3; i++) {
+						console.log("loop: " + i);
+					}
+
+					// Conditionals
+					console.log('-------Conditionals-------');
+					var date = new Date();
+					if (date.getHours() > 12) {
+						console.log('Good afternoon!!!');
+						} else {
+							console.log('Good morning!!!');
+						}
+				</script>
+				<!--<p class="style-result" id="id_5"></p>
+				-->
+			</div><div class="block-1">
+				<h2>Object Rules</h2>
+				<p>General rules for object definitions:</p>
+				<ul>
+					<li>Place the opening bracket on the same line as the object name.</li>
+					<li>Use colon plus one space between each property and its value.</li>
+					<li>Use quotes around string values, not around numeric values.</li>
+					<li>Do not add a comma after the last property-value pair.</li>
+					<li>Place the closing bracket on a new line, without leading spaces.</li>
+					<li>Always end an object definition with a semicolon.</li>
+				</ul>
+				<script>
+					var model = {
+						name: "BMW",
+						engine: "v6",
+						litr: 2,
+						color: "red"
+					};
+				</script>
+				<p>Short objects can be written compressed, on one line, using spaces only between properties. </p>
+				<!--<p class="style-result" id="id_6"></p>
+				-->
+			</div>
+			</div><div class="block-1">
+				<h2>Line Length &gt; 80</h2>
+				<p>For readability, avoid lines longer than 80 characters.</p>
+				<p>If a JavaScript statement does not fit on one line, the best place to break it, is after an operator or a comma.</p>
+				<!--<p class="style-result" id="id_7"></p>
+				-->
+			</div>
+			</div><div class="block-1">
+				<h2></h2>
+				<p></p>
+				<p class="style-result" id="id_7"></p>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
