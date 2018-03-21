@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Best Practices</title>
+	<link rel="stylesheet" href="../style/inner_styles.css">
+	<link rel="stylesheet" href="styles.css">
+	<script src="main.js" defer></script>
+	<script src="main2.js" defer></script>
+</head>
+<body>
+
+<div class="container">
+	<div class="header">
+		<h1>JavaScript Best Practices</h1>
+		<p id="inner-header">Avoid global variables,  avoid new,  avoid  ==,  avoid eval()</p>
+	</div>
+	<div class="main">
+		<div class="block-1">
+			<h2>Avoid Global Variables</h2>
+			<p>Minimize the use of global variables. This includes all data types, objects, and functions.<br>
+			Global variables and functions can be overwritten by other scripts. Use local variables instead.
+			</p>
+			<p id="id_1" class="style-result"></p>
+		</div>
+		<div class="block-1">
+			<h2>Always Declare Local Variables</h2>
+			<p>All variables used in a function should be declared as local variables. <br>
+			Local variables must be declared with the var keyword, otherwise they will become global variables.</p>
+			<p class="important-info">Strict mode does not allow undeclared variables.</p>
+		</div>
+		<div class="block-1">
+			<h2>Declarations on Top</h2>
+			<p>It is a good coding practice to put all declarations at the top of each script or function. <br>
+			This will:</p>
+			<ul>
+				<li>Give cleaner code</li>
+				<li>Provide a single place to look for local variables</li>
+				<li>Make it easier to avoid unwanted (implied) global variables</li>
+				<li>Reduce the possibility of unwanted re-declarations</li>
+			</ul>
+			<p class="important-info">By default, JavaScript moves all declarations to the top (JavaScript Hoisting).</p>
+		</div>
+		<div class="block-1">
+			<h2>Initialize Variables</h2>
+			<p>It is a good coding practice to initialize variables when you declare them. <br>
+			This will:</p>
+			<ul>
+				<li>Give cleaner code</li>
+				<li>Provide a single place to initialize variables</li>
+				<li>Avoid undefined values</li>
+			</ul>
+			<p class="important-info">Initializing variables provides an idea of the intended use (and intended data type).</p>
+		</div>
+		<div class="block-1">
+			<h2>Never Declare Number, String, or Boolean Objects</h2>
+			<p>Always treat numbers, strings, or booleans as primitive values. Not as objects. <br>
+			Declaring these types as objects, slows down execution speed, and produces nasty side effects. </p>
+			<h3>Don't Use new Object()</h3>
+				<ul>
+					<li>Use {} instead of new Object()</li>
+					<li>Use "" instead of new String()</li>
+					<li>Use 0 instead of new Number()</li>
+					<li>Use false instead of new Boolean()</li>
+					<li>Use [] instead of new Array()</li>
+					<li>Use /()/ instead of new RegExp()</li>
+					<li>Use function (){} instead of new Function()</li>
+				</ul>
+		</div>
+		<div class="block-1">
+			<h2>Beware of Automatic Type Conversions</h2>
+			<p>Beware that numbers can accidentally be converted to strings or NaN (Not a Number). <br>
+			JavaScript is loosely typed. A variable can contain different data types, and a variable can change its data type. <br>
+			When doing mathematical operations, JavaScript can convert numbers to strings. <br>
+			Subtracting a string from a string, does not generate an error but returns NaN (Not a Number). <br>
+			Subtracting a string from a string, does not generate an error but returns NaN (Not a Number)</p>
+			<p id="id_2" class="style-result"></p>
+			<script>
+				var doc2 = document.getElementById('id_2');
+				var x1 = 5 + 7,
+					x2 = 5 + "7",
+					x3 = "5" + 7,
+					x4 = 5 - 7,
+					x5 = 5 - "7",
+					x6 = "5" - 7,
+					x7 = 5 - "e",
+					x8 = "e" - 7,
+					x9 = "Alex" - "Ann";
+				doc2.innerHTML = "Type of is: " +
+					"<br>5 + 7 = " + x1 + '; ' + typeof x1 +
+					"<br>5 + '7' = " + x2 + '; ' + typeof x2 +
+					"<br>'5' + 7 = " + x3 + '; ' + typeof x3 +
+					"<br>5 - 7 = " + x4 + '; ' + typeof x4 +
+					"<br>5 - '7' = " + x5 + '; ' + typeof x5 +
+					"<br>'5' - 7 = " + x6 + '; ' + typeof x6 +
+					"<br>5 - 'e' = " + x7 + '; ' + typeof x7 +
+					"<br>'e' - 7 = " + x8 + '; ' + typeof x8 +
+					"<br>'Alex' - 'Ann' = " + x9 + '; ' + typeof x9;
+			</script>
+		</div>
+		<div class="block-1" id="id_3">
+			<h2>Use === Comparison</h2>
+			<p>The <b>==</b> comparison operator always converts (to matching types) before comparison. <br>
+			The <b>===</b> operator forces comparison of values and type</p>
+			<script>
+				var a1 = 0 == "",
+					a2 = 1 == "1",
+					a3 = 1 == true,
+					a4 = 0 === "",
+					a5 = 1 === "1",
+					a6 = 1 === true,
+					a7 = 1 === 1,
+					a8 = '1' === '1';
+				var id3 = document.getElementById('id_3');
+				var p = document.createElement("p");
+				var textOut = "The result is: " +
+					"<br>" + "0 == '' ; " + a1 +
+					"<br>" + "1 == '1' ; " + a2 +
+					"<br>" + "1 == true ; " + a3 +
+					"<br>" +
+					"<br>" + "0 === '' ; " + a4 +
+					"<br>" + "1 === '1' ; " + a5 +
+					"<br>" + "1 === true ; " + a6 +
+					"<br>" + "1 === 1 ; " + a7 +
+					"<br>" + "'1' === '1' ; " + a8;
+				p.innerHTML = textOut;
+				id3.appendChild(p);
+				//console.log( p );
+			</script>
+		</div>
+		<div class="block-1">
+			<h2>Use Parameter Defaults</h2>
+			<p>If a function is called with a missing argument, the value of the missing argument is set to undefined. Undefined values can break your code. It is a good habit to assign default values to arguments.</p>
+			<p id="id_4" class="style-result"></p>
+			<script>
+				var a = 10,
+					b = 200; 
+				runMissingArg(a);
+				runMissingArg(a, b);
+				
+				function runMissingArg (par1, par2) {
+					if (par2 === undefined) {
+						var par2 = 50;
+						document.getElementById('id_4').innerHTML += "missing argument, use defult. " + (par1 + par2);
+					} else {
+						document.getElementById('id_4').innerHTML += "<br>Not missing argument. " + (par1 + par2);
+					}
+				}
+			</script>
+		</div>
+	</div>
+</div>
+	
+</body>
+</html>
