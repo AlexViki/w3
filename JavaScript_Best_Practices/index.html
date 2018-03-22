@@ -113,6 +113,7 @@
 					a8 = '1' === '1';
 				var id3 = document.getElementById('id_3');
 				var p = document.createElement("p");
+                p.setAttribute("class", "style-result");
 				var textOut = "The result is: " +
 					"<br>" + "0 == '' ; " + a1 +
 					"<br>" + "1 == '1' ; " + a2 +
@@ -147,6 +148,61 @@
 					}
 				}
 			</script>
+		</div>
+		<div class="block-1" id="div_4">
+		    <h2>End Your Switches with Defaults</h2>
+            <p>Always end your switch statements with a <b>default</b>. Even if you think there is no need for it.</p>
+            <script>
+                var div4 = document.getElementById('div_4');
+                var p = document.createElement("p");
+                var textOut = "Today is: ";
+                p.setAttribute("class", "style-result");
+                //console.log(p);
+                switch (new Date().getDay()) {
+                    case 0:
+                        day = "Sunday";
+                        break;
+                    case 1:
+                        day = "Monday";
+                        break;
+                    case 2:
+                        day = "Tuesday";
+                        break;
+                    case 3:
+                        day = "Wednesday";
+                        break;
+                    case 4:
+                        day = "Thursday";
+                        break;
+                    case 5:
+                        day = "Friday";
+                        break;
+                    case 6:
+                        day = "Saturday";
+                        break;
+                    default:
+                        day = "Unknown";
+                        break;
+                }
+                textOut = textOut + day;
+                p.innerHTML = textOut;
+                //console.log(p);
+                div4.appendChild(p);
+            </script>
+		</div>
+		<div>
+		    <block-1>
+		        <h2>Avoid Using eval()</h2>
+		        <p>The eval() function is used to run text as code. In almost all cases, it should not be necessary to use it. Because it allows arbitrary code to be run, it also represents a security problem.</p>
+		        <button id="but1">RUN</button>
+		        <script>
+                    var button = document.getElementById("but1");
+                    button.onclick = runEval;
+                    function runEval() {
+                        eval("alert('Hi from eval()')")
+                    }
+                </script>
+		    </block-1>
 		</div>
 	</div>
 </div>
