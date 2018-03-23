@@ -40,21 +40,34 @@
 			</div>
 			<div id="bl2" class="block-1">
 				<h2>Expecting Loose Comparison</h2>
-				<p>In regular comparison, data type does not matter. This if statement returns true</p>
 				<button id="btn1">RUN</button>
 				<button id="btn2">RUN in Strict</button>
 				<!--<p class="style-result" id="id_2"></p>
 				-->
 				<script>
-					var btn1 = document.getElementById)('btn1'),
-						btn2 = document.getElementById)('btn2');
-
-					btn1.onclick = runRegularComp;
-					btn2.onclick = runStrictComp;
-
-					function runRegularComp () {
-						var bl2 =
+                    var btn1 = document.getElementById('btn1');
+                    var	btn2 = document.getElementById('btn2');
+                    var bl2 = document.getElementById('bl2');
+                    var p = document.createElement('p');
+                    var num1 = 100;
+                    var num2 = "100";
+                    
+                    p.setAttribute("class", "style-result");
+                    //console.log(p);
+                    btn1.onclick = runRegularComp;
+                    btn2.onclick = runStrictComp;
+                    
+                    function runRegularComp () {
+                        var textOut = "In regular comparison, data type does not matter. This if statement returns true.";
+                        p.innerHTML = textOut + " Result: " + "<b>" + (num1 == num2) + "</b>";
+                        bl2.appendChild(p);
 					}
+                    function runStrictComp() {
+                        "use strict";
+                        var textOut = "In strict comparison, data type does matter. This if statement returns false.";
+                        p.innerHTML = textOut + " Result: " + "<b>" + (num1 === num2) + "</b>";
+                        bl2.appendChild(p);
+                    }
 				</script>
 			</div>
 			<div class="block-1">
