@@ -3,6 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>JavaScript Common Mistakes</title>
+	<link rel="stylesheet" href="../style/inner_styles.css">
+	<link rel="stylesheet" href="styles.css">
+	<script src="main.js" defer></script>
 </head>
 <body>
 	<div class="container">
@@ -44,36 +47,12 @@
 				<button id="btn2">RUN in Strict</button>
 				<!--<p class="style-result" id="id_2"></p>
 				-->
-				<script>
-                    var btn1 = document.getElementById('btn1');
-                    var	btn2 = document.getElementById('btn2');
-                    var bl2 = document.getElementById('bl2');
-                    var p = document.createElement('p');
-                    var num1 = 100;
-                    var num2 = "100";
-                    
-                    p.setAttribute("class", "style-result");
-                    //console.log(p);
-                    btn1.onclick = runRegularComp;
-                    btn2.onclick = runStrictComp;
-                    
-                    function runRegularComp () {
-                        var textOut = "In regular comparison, data type does not matter. This if statement returns true.";
-                        p.innerHTML = textOut + " Result: " + "<b>" + (num1 == num2) + "</b>";
-                        bl2.appendChild(p);
-					}
-                    function runStrictComp() {
-                        "use strict";
-                        var textOut = "In strict comparison, data type does matter. This if statement returns false.";
-                        p.innerHTML = textOut + " Result: " + "<b>" + (num1 === num2) + "</b>";
-                        bl2.appendChild(p);
-                    }
-				</script>
 			</div>
-			<div class="block-1">
-				<h2></h2>
-				<p></p>
-				<p class="style-result" id="id_3"></p>
+			<div id="bl3" class="block-1">
+				<h2>Misunderstanding Floats</h2>
+				<p>All numbers in JavaScript are stored as 64-bits Floating point numbers (Floats). 
+				All programming languages, including JavaScript, have difficulties with precise floating point values</p>
+				<button id="btn3">RUN</button>
 			</div>
 			<div class="block-1">
 				<h2></h2>
