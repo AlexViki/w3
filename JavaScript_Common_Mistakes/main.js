@@ -43,3 +43,35 @@ function runCalcFloats() {
         " = " + res + "<br>" + textOut3 + "<br>" + textOut + res2;
     bl3.appendChild(p3);
 }
+
+// Breaking a JavaScript String
+runCheckBreaking();
+function runCheckBreaking () {
+    var bl4 = document.getElementById('bl4');
+    var exm1 = document.createElement("p");
+    var exm2 = document.createElement("p");
+    var exm3 = document.createElement("p");
+    var textOutExm1 =
+        "JavaScript will allow you to break a statement into two lines" +
+        "<br>" + "var x = <br>'Hi Alex';";
+    var textOutExm2 =
+        "But, breaking a statement in the middle of a string will not work" + "<br>" + "var x ='Hi <br> Alex';";
+    var textOutExm3 =
+        "You must use a 'backslash' if you must break a statement in a string" + "<br>" + "var x = 'Hi \\<br> Alex';";
+    var atrCls = "class";
+    var atrValue = "style-result";
+    var atrId = "id";
+    var len = bl4.getElementsByTagName("p");
+
+    innerFun (exm1, textOutExm1, bl4);
+    innerFun (exm2, textOutExm2, bl4);
+    innerFun (exm3, textOutExm3, bl4);
+    
+    function innerFun (ar1, ar2, ar3) {
+        ar1.setAttribute(atrCls, atrValue);
+        ar1.innerHTML = ar2;
+        ar3.appendChild(ar1);
+        console.log();
+    }
+
+}
