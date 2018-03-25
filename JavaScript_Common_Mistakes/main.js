@@ -75,3 +75,46 @@ function runCheckBreaking () {
     }
 
 }
+
+// Breaking a Return Statement
+var doc5 = document.getElementById('id_5');
+var text = "My name is ";
+var textInfo1 = "JavaScript will also allow you to break a statement into two lines.";
+var textInfo3 = "what will happen if you break the return statement in two lines. <b>The function will return undefined!</b>";
+var textInfo4 = "If a statement is incomplete " +
+    "JavaScript will try to complete the statement by reading the next line. " +
+    "But since this statement is complete: <b>return</b> " +
+    "JavaScript will automatically close it like this: <b>return;</b> " +
+    "This happens because closing (ending) statements with semicolon is optional in JavaScript." +
+    "JavaScript will close the return statement at the end of the line, because it is a complete statement." + "<br>" +
+    "<b>Never break a return statement.</b>"
+    
+
+textInfo1 = "; " + "<br>" + textInfo1 + "<br><br>";
+textInfo3 = "; " + "<br>" + textInfo3 + "<br><br>";
+
+doc5.innerHTML = runExp1(text, textInfo1) + 
+    runExp2(text) +
+    runExp3(text, textInfo3) +
+    textInfo3 +
+    textInfo4;
+                    
+function runExp1 (text1, text2) {
+    var 
+    name = "Alex"
+    return (text1 + name + text2)
+}
+
+function runExp2 (text1, text2) {
+    var name = "Bob";
+    if (text2 === undefined) {
+        text2 = "<br>" + "With one argument!" + "<br><br>";
+    }
+    return (text1 + name + text2);
+}
+
+function runExp3 (text1, text2) {
+    var name = "Jems";
+    return
+    (text1 + name + text2);
+}

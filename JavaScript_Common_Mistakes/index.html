@@ -58,10 +58,53 @@
 				<h2>Breaking a JavaScript String</h2>
 			</div>
 			<div class="block-1">
-				<h2></h2>
-				<p></p>
-				<p class="style-result" id="id_5"></p>
-			</div>
+                <h2>Breaking a Return Statement</h2>
+                <p>It is a default JavaScript behavior to close a statement automatically at the end of a line.</p>
+                <p class="style-result" id="id_5"></p>
+            </div>
+            <div class="block-1">
+                <h2>Accessing Arrays with Named Indexes</h2>
+                <p>Many programming languages support arrays with named indexes. Arrays with named indexes are called associative arrays (or hashes). <br>
+                JavaScript <b>does not support</b> arrays with named indexes.<br>
+                In JavaScript, arrays use numbered indexes</p>
+                <p>In JavaScript, objects use named indexes. If you use a named index, when accessing an array, JavaScript will <b>redefine</b> the array to a standard object.</p>
+                <p>After the automatic redefinition, array methods and properties will produce undefined or incorrect results.</p>
+                <p class="style-result" id="id_6"></p>
+                    
+                <script>
+                    var doc6 = document.getElementById('id_6');
+                    var persone = [];
+                    
+                    doc6.innerHTML = "Is Array: " + Array.isArray(persone);
+                    persone["firstName"] = "Alex";
+                    persone["lastName"] = "Viki";
+                    persone["age"] = 30;
+                    doc6.innerHTML += "<br>" + persone[0] + "<br>" + 
+                        persone.firstName;
+                </script>
+            </div>
+            <div class="block-1">
+                <h2>Ending Definitions with a Comma</h2>
+                <p>Trailing commas in object and array definition are legal in <b>ECMAScript 5</b>.</p>
+                <p class="important-info">WARNING !! Internet Explorer 8 will crash. JSON does not allow trailing commas.</p>
+            </div>
+            <div class="block-1">
+                <h2>Undefined is Not Null</h2>
+                <p>With JavaScript, <b>null</b> is for objects, <b>undefined</b> is for variables, properties, and methods.</p>
+                <p>To be <b>null</b>, an object has to be <b>defined</b>, otherwise it will be undefined.</p>
+            </div>
+            <div class="block-1">
+                <h2>Expecting Block Level Scope</h2>
+                <p>JavaScript <b>does not create a new scope</b> for each code block. It is true in many programming languages, but not true in JavaScript.</p>
+                <p class="style-result" id="id_7"></p>
+                <script>
+                    var doc7 = document.getElementById('id_7');
+                    for (var i = 0; i < 5; i++) {
+                        console.log(i);
+                    }
+                    doc7.innerHTML = "Result: " + i;
+                </script>
+            </div>
 		</div>
 	</div>
 </body>
