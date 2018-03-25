@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Performance</title>
+    <link rel="stylesheet" href="../style/inner_styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>JavaScript Performance</h1>
+            <p id="inner-header">How to speed up your JavaScript code.</p>
+        </div>
+        <div class="main">
+            <div class="block-1">
+                <h2>Reduce Activity in Loops</h2>
+                <p>Loops are often used in programming. Each statement in a loop, including the for statement, is executed for each iteration of the loop.</p>
+                <p>Statements or assignments that can be placed outside the loop will make the loop run faster.</p>
+                <p>The bad code accesses the length property of an array each time the loop is iterated.</p>
+                <p>The better code accesses the length property outside the loop and makes the loop run faster.</p>
+                <!--<p class="style-result" id="id_1"></p>
+                -->
+                <script>
+                    var p = document.createElement("p");
+                    p.setAttribute("class", "style-result");
+                    
+                    // inside the loop
+                    var t0 = performance.now();
+                    var i;
+                    var num1 = [2,3,4,5,6,7,8,9];
+                    for (i = 0; i < num1.length; i++) {
+                        console.log(i * i);
+                    }
+                    var t1 = performance.now();
+                    console.log(t1 - t0);
+                    
+                    // outside the loop
+                    var tm0 = performance.now();
+                    var i;
+                    var num1 = [2,3,4,5,6,7,8,9];
+                    var l = num1.length
+                    for (i = 0; i < l; i++) {
+                        console.log(i * i);
+                    }
+                    var tm1 = performance.now();
+                    console.log(tm1 - tm0);
+                </script>
+            </div>
+            <div class="block-1">
+                <h2>Reduce DOM Access</h2>
+                <p>Accessing the HTML DOM is very slow, compared to other JavaScript statements. If you expect to access a DOM element several times, access it once, and use it as a local variable</p>
+                <!--<p class="style-result" id="id_2"></p>
+                -->
+            </div>
+            <div class="block-1">
+                <h2>Reduce DOM Size</h2>
+                <p>Keep the number of elements in the HTML DOM small.This will always improve page loading, and speed up rendering (page display), especially on smaller devices.</p>
+                <p>Every attempt to search the DOM (like getElementsByTagName) will benefit from a smaller DOM.</p>
+                <!--<p class="style-result" id="id_3"></p>
+                -->
+            </div>
+            <div class="block-1">
+                <h2>Avoid Unnecessary Variables</h2>
+                <p>Don't create new variables if you don't plan to save values</p>
+                <!--<p class="style-result" id="id_4"></p>
+                -->
+            </div>
+            <div id="div1" class="block-1">
+                <h2>Delay JavaScript Loading</h2>
+                <p>Putting your scripts at the bottom of the page body lets the browser load the page first.</p>
+                <p>While a script is downloading, the browser will not start any other downloads. In addition all parsing and rendering activity might be blocked.</p>
+                <p>An alternative is to use defer="true" in the script tag. The defer attribute specifies that the script should be executed after the page has finished parsing, but it only works for <b>external scripts</b>.</p>
+                <button onclick="runAlert()">Alert</button>
+                <p class="important-info">The HTTP specification defines that browsers should not download more than two components in parallel.</p>
+                
+                <script>
+                    window.onload = function() {
+                    var elemScript = document.createElement("script");
+                    elemScript.src = "main2.js";
+                    document.getElementById("div1").appendChild(elemScript);
+                    }
+                </script>
+            </div>
+            <div class="block-1">
+                <h2>Avoid Using with</h2>
+                <p>Avoid using the <b>with keyword</b>. It has a negative effect on speed. It also clutters up JavaScript scopes.</p>
+                <p>The with keyword <b>is not allowed in strict mode</b>.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
