@@ -64,8 +64,16 @@
             <div class="block-1">
                 <h2>Avoid Unnecessary Variables</h2>
                 <p>Don't create new variables if you don't plan to save values</p>
-                <!--<p class="style-result" id="id_4"></p>
-                -->
+                <p class="stule-result" id="id_5"></p>
+                <script>
+                    var fName = "Alex",
+                        sName = "Vik";
+                    var allName = fName + " " + sName;
+                    var doc5 = document.getElementById('id_5');
+                    doc5.innerHTML = allName;
+                    doc5.innerHTML += "<br>" + fName + " " + sName;  
+                </script>
+            
             </div>
             <div id="div1" class="block-1">
                 <h2>Delay JavaScript Loading</h2>
@@ -74,14 +82,6 @@
                 <p>An alternative is to use defer="true" in the script tag. The defer attribute specifies that the script should be executed after the page has finished parsing, but it only works for <b>external scripts</b>.</p>
                 <button onclick="runAlert()">Alert</button>
                 <p class="important-info">The HTTP specification defines that browsers should not download more than two components in parallel.</p>
-                
-                <script>
-                    window.onload = function() {
-                    var elemScript = document.createElement("script");
-                    elemScript.src = "main2.js";
-                    document.getElementById("div1").appendChild(elemScript);
-                    }
-                </script>
             </div>
             <div class="block-1">
                 <h2>Avoid Using with</h2>
@@ -90,5 +90,12 @@
             </div>
         </div>
     </div>
+    
+    <script>
+        //Delay JavaScript Loading
+        window.onload = function (arguments) {
+            alert("Was run after loading page");
+        }
+    </script>
 </body>
 </html>
