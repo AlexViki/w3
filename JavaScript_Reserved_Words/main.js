@@ -8,8 +8,8 @@ function createTable () {
     var table = document.createElement("table");
     var i,j,e;
     var len = arrayReservWords.length;
-    var rows = 4; // строки
-    var colums = Math.ceil(len/rows); // столбец
+    var colums = 4 // столбец
+	var rows = Math.ceil(len / colums); // строки
     console.log(colums);
     var tr = "";
     var td  = "";
@@ -21,20 +21,5 @@ function createTable () {
     for (e in arrayReservWords) {
     text = document.createTextNode( arrayReservWords[e] );
     console.log(text);
-    }
-    //
-
-    for (e = 0; e < len; e++) {
-        text = document.createTextNode( arrayReservWords[e] );
-        for (i = 0; i < rows; i++) {
-            tr = document.createElement("tr"); // строка
-            for (j = 0; j < colums; j++) {
-                td = document.createElement("td")// столбец
-                td.appendChild(text);
-                tr.appendChild(td);
-            }
-        }
-        table.appendChild(tr);
-        console.log(tr);
-    }
+	}
 }
