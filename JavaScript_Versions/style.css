@@ -1,0 +1,13 @@
+#inner-header {
+    display: inline-block;
+    border-bottom: 1px solid #34b53e;
+    padding: 5px;
+    margin-left: 20px;
+    margin-top: 10px;
+    color: #969696; 
+}
+table, tr, td {
+    border-collapse: collapse;
+    border: 1px solid #34b53e;
+    padding: 5px;
+}
