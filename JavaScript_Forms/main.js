@@ -1,3 +1,4 @@
+// JavaScript Form Validation
 document.getElementById('submit').onclick = function(event) {
 	validForm();
 }
@@ -11,6 +12,7 @@ function validForm () {
 	}
 }
 
+// JavaScript Can Validate Numeric Input
 var bl2 = document.getElementById("bl2");
 var btn = document.getElementById("btn2");
 var p = document.createElement("p");
@@ -31,3 +33,4 @@ function valinInputFild () {
 	bl2.appendChild(p);
 }
 
+// 
