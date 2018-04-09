@@ -106,3 +106,8 @@ input {
     margin-top: 10px;
     color: #969696;
 }
+
+th, td  {
+    border: 1px solid grey;
+    padding: 5px;
+}
