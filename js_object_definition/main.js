@@ -31,3 +31,22 @@ function runObjectMethod (value) {
     // console.log(textOut);
     bl1.appendChild(p);
 }
+
+// Using the JavaScript Keyword new
+window.onload = runCreateObject();
+function runCreateObject () {
+    var doc6 = document.getElementById('id_5');
+    var mainperson = new Object;
+    var tmp;
+    
+    mainperson.fName = 'Bob';
+    mainperson.sName = 'Rtyu';
+    mainperson.idName = 'main';
+    mainperson.age = 30;
+    console.log(mainperson);
+    
+    for (tmp in mainperson) {
+        console.log(tmp);
+    doc6.innerHTML += mainperson[tmp] + ';<br>';
+    }
+}

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>JavaScript Objects</title>
+    <title>JS Object Definition</title>
     
     <link rel="stylesheet" href="../style/inner_styles.css">
     <link rel="stylesheet" href="style.css">
@@ -11,7 +11,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>JavaScript Objects</h1>
+            <h1>JS Object Definition</h1>
             <p id="inner-header">In JavaScript, objects are king. If you understand objects, you understand JavaScript.</p>
         </div>
         <div class="main">
@@ -95,9 +95,38 @@
                 <p class="important-info">JavaScript objects are containers for named values, called properties and methods.</p>
             </div>
             <div class="block-1">
+                <h2>Creating a JavaScript Object</h2>
+                <p>With JavaScript, you can define and create your own objects.</p>
+                <p>There are different ways to create new objects:</p>
+                <ul>
+                    <li>Define and create a single object, using an <b>object literal</b>.</li>
+                    <li>Define and create a single object, with the <b>keyword new</b>.</li>
+                    <li>Define an object constructor, and then <b>create objects of the constructed type</b>.</li>
+                </ul>
+                <p class="important-info">In ECMAScript 5, an object can also be created with the function Object.create().</p>
+                <h3>Using an Object Literal</h3>
+                    <p>This is the easiest way to create a JavaScript Object.</p>
+                    <p>Using an object literal, you both define and create an object in one statement.</p>
+                    <p>An object literal is a list of name:value pairs (like age:50) inside curly braces {}.</p>
+                    <code>var person = {firstName:"Alex", lastName:"Viki", age:30, eyeColor:"blue"};</code>
+                    <p>Spaces and line breaks are not important. An object definition can span multiple lines</p>
+                    <pre> <code>
+     var person = {
+         firstName:"Alex",
+         lastName:"Viki",
+         age:30,
+         eyeColor:"blue"
+         };     </code> </pre>
+            
+                    <h3>Using the JavaScript Keyword new</h3>
+                    <p class="style-result" id="id_5"></p>
+                    <p class="important-info">The two examples above do exactly the same. There is no need to use new Object(). For simplicity, readability and execution speed, use the first one (the object literal method).</p>
+                
+            </div>
+            <div class="block-1">
                 <h2></h2>
                 <p></p>
-                <p class="style-result" id="id_5"></p>
+                <p class="style-result" id="id_6"></p>
             </div>
         </div>
     </div>
