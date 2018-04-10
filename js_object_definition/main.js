@@ -36,6 +36,7 @@ function runObjectMethod (value) {
 window.onload = runCreateObject();
 function runCreateObject () {
     var doc6 = document.getElementById('id_5');
+	var btn = document.getElementById('btnMutable');
     var mainperson = new Object;
     var tmp;
     
@@ -48,5 +49,17 @@ function runCreateObject () {
     for (tmp in mainperson) {
         console.log(tmp);
     doc6.innerHTML += mainperson[tmp] + ';<br>';
+    }
+
+	btn.onclick = f1;
+    function f1() {
+        var doc7 = document.getElementById('id_7');
+		var inpMutable = document.getElementById('inpMutable').value;
+        mainperson.age = inpMutable;
+        doc7.innerHTML = '';
+		for (tmp in mainperson) {
+        	doc7.innerHTML += mainperson[tmp] + ';<br>';
+        }
+		console.log(inpMutable);
     }
 }
