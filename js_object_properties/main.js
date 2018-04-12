@@ -41,14 +41,20 @@ function runLoopFor () {
 AddNewProperty();
 function AddNewProperty() {
 	var bl4 = document.getElementById('bl4');
+	var bl5 = document.getElementById('bl5');
 	var bntAddPr = document.createElement('button');
 	var bntCurent = document.createElement('button');
+	var btnDel = document.createElement('button');
 	var inpAddPr = document.createElement('input');
 	var inpAddPrValue = document.createElement('input');
+	var inpDelProp = document.createElement('input');
 	var span1 = document.createElement('span');
 	var span2 = document.createElement('span');
+	var span3 = document.createElement('span');
 	var p = document.createElement('p');
 	var p2 = document.createElement('p');
+	var p3 = document.createElement('p');
+	var p4 = document.createElement('p');
 	var person = {
 		fName: 'Alex',
 		sName: 'Viki'
@@ -56,14 +62,21 @@ function AddNewProperty() {
 
 	span1.innerHTML = 'Add new name of property:';
 	span2.innerHTML = 'Add new value of property:';
+	span3.innerHTML = 'Del any of property:';
 
 	p.setAttribute('class', 'style-result');
 	p2.setAttribute('class', 'style-result');
+	p3.setAttribute('class', 'style-result');
+	p4.setAttribute('class', 'style-result');
 	p2.setAttribute('id', 'p2');
 
 	inpAddPr.setAttribute('id','inpAddPr');
 	inpAddPr.setAttribute('type','text');
 	inpAddPr.setAttribute('value','');
+    
+    inpDelProp.setAttribute('id','inpDelProp');
+    inpDelProp.setAttribute('type','text');
+    inpDelProp.setAttribute('value','');
 
 	inpAddPrValue.setAttribute('id','inpAddPrValue');
 	inpAddPrValue.setAttribute('value','');
@@ -72,6 +85,7 @@ function AddNewProperty() {
 
 	bntAddPr.innerHTML = 'Add';
 	bntCurent.innerHTML = 'Show Curent';
+	btnDel.innerHTML = 'Del Property';
 
 	bl4.appendChild(bntCurent);
 
@@ -80,21 +94,29 @@ function AddNewProperty() {
 
 	bl4.appendChild(span2);
 	bl4.appendChild(inpAddPrValue);
+    
+    bl4.appendChild(bntAddPr);
 
-	bl4.appendChild(bntAddPr);
-
-	bntCurent.onclick = showCupentObj;
-	function showCupentObj () {
+    bl5.appendChild(span3);
+    bl5.appendChild(inpDelProp);
+    bl5.appendChild(btnDel);
+    
+	bntCurent.onclick = showCurentObj;
+	function showCurentObj () {
 		var tmp;
 		p.innerHTML = 'Curent:' + '<br>';
+		p3.innerHTML = 'Curent:' + '<br>';
 		for (tmp in person) {
 			p.innerHTML += person[tmp] + '<br>';
+			p3.innerHTML += person[tmp] + '<br>';
 		}
-		bl4.appendChild(p);
+        bl4.appendChild(p);
+        bl5.appendChild(p3);
 	}
 
-	bntAddPr.onclick = f1;
-	function f1 () {
+	bntAddPr.onclick = showNewObj;
+	function showNewObj() {
+        var tmp;
 		var pr = document.getElementById('inpAddPr').value;
 		var pr2 = document.getElementById('inpAddPrValue').value;
 		console.log(pr + ' - ' + pr2);
@@ -105,7 +127,19 @@ function AddNewProperty() {
 			p2.innerHTML += person[tmp] + '<br>';
 		}
 		bl4.appendChild(p2);
-
 	}
-
+    
+    // Deleting Properties
+    btnDel.onclick = delAnyProperty;
+    function delAnyProperty () {
+        var tmp;
+        var inpDelPropValue = document.getElementById('inpDelProp').value;
+        delete person[inpDelPropValue];
+        p4.innerHTML = 'Deleted property:' + '<br>';
+        for (tmp in person) {
+            p4.innerHTML += person[tmp] + '<br>'; 
+        }
+        bl5.innerHTML(p4);
+        
+    }
 }
