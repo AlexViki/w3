@@ -41,9 +41,27 @@
 			</div>
 			<div id="bl5" class="block-1">
 				<h2>Deleting Properties</h2>
-				<p></p>
+				<p>The delete keyword deletes both the value of the property and the property itself.</p>
+				<p>After deletion, the property cannot be used before it is added back again.</p>
+				<p>The delete operator is designed to be used on object properties. It has <b>no effect</b> on variables or functions.</p>
+				<p>The delete operator should not be used on predefined JavaScript object properties. It can crash your application.</p>
 			</div>
+			<div class="block-1">Property Attributes</div>
+			<p>All properties have a name. In addition they also have a value.</p>
+			<p>The value is one of the property's attributes.</p>
+			<p>Other attributes are:</p>
+			<ul>
+				<li>enumerable</li>
+				<li>configurable</li>
+				<li>writable</li>
+			</ul>
+			<P>These attributes define how the property can be accessed (is it readable?, is it writable?)</P>
+			<p>In JavaScript, all attributes can be read, but only the value attribute can be changed (and only if the property is writable).</p>
+			<p>( ECMAScript 5 has methods for both getting and setting all property attributes)</p>
 		</div>
+		<div class="block-1">Prototype Properties</div>
+		<p>JavaScript objects inherit the properties of their prototype.</p>
+		<p>The delete keyword does not delete inherited properties, but if you delete a prototype property, it will affect all objects inherited from the prototype.</p>
 	</div>
 </body>
 </html>
