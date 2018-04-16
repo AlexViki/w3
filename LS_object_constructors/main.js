@@ -17,6 +17,16 @@ function createElemInBl_1() {
 	var tmp;
 	var val1, val2, val3;
 
+	var p1 = document.createElement("p");
+	var p2 = document.createElement("p");
+	var p3 = document.createElement("p");
+	var p4 = document.createElement("p");
+
+	p1.innerHTML = 'Sometimes we need a "blueprint" for creating many objects of the same "type".';
+	p2.innerHTML = 'The way to create an "object type", is to use an object constructor function.';
+	p3.innerHTML = "In this example, function Person() is an object constructor function.";
+	p4.innerHTML = "Objects of the same type are created by calling the constructor function with the new keyword";
+
 	addTagsToPage = [btn1, span1, inp1, span2, inp2, span3, inp3];
 
 	p.setAttribute("class","style-result");
@@ -46,18 +56,27 @@ function createElemInBl_1() {
 	btn1.addEventListener("click", f1);
 
 	function f1 () {
-		val1 = inp1.value;
-		val2 = inp2.value;
-		val3 = inp3.value;
-		function CreateConstr (ar1, ar2, ar3) {
+		var innerArr = [];
+		function Person (ar1, ar2, ar3) {
 			this.fNmae = ar1;
 			this.sNmae = ar2;
 			this.age = ar3;
 		}
-		var newPerson = new CreateConstr(val1, val2, val3);
-		p.innerHTML = "This is a new person: " + "<br>" +
+		var newPerson2;
+		var newPerson;
+		val1 = inp1.value;
+		val2 = inp2.value;
+		val3 = inp3.value;
+		newPerson = new Person(val1, val2, val3);
+		newPerson.id = '47';
+		newPerson2 = new Person("Alex", "Viki", 30);
+		newPerson2.height = 172;
+		p.innerHTML += "This is a new person: " + "<br>" +
 			"My name is: " + newPerson.fNmae + "<br>" +
-			"My age is: " + newPerson.age;
-		bl1.appendChild(p);
+			"My age is: " + newPerson.age + "<br>" +
+			newPerson.id + "<br>";
+		console.log(newPerson2);
+		innerArr = [p,p1,p2,p3,p3];
+		f2(bl1, innerArr);
 	}
 }
