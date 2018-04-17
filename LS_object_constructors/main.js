@@ -21,11 +21,13 @@ function createElemInBl_1() {
 	var p2 = document.createElement("p");
 	var p3 = document.createElement("p");
 	var p4 = document.createElement("p");
+	var p5 = document.createElement("p");
 
 	p1.innerHTML = 'Sometimes we need a "blueprint" for creating many objects of the same "type".';
 	p2.innerHTML = 'The way to create an "object type", is to use an object constructor function.';
 	p3.innerHTML = "In this example, function Person() is an object constructor function.";
 	p4.innerHTML = "Objects of the same type are created by calling the constructor function with the new keyword";
+	p5.innerHTML = "You cannot add a new method to an object constructor the same way you add a new method to an existing object.<b> Adding methods to an object must be done inside the constructor function</b>";
 
 	addTagsToPage = [btn1, span1, inp1, span2, inp2, span3, inp3];
 
@@ -54,13 +56,23 @@ function createElemInBl_1() {
 	}
 
 	btn1.addEventListener("click", f1);
-
 	function f1 () {
 		var innerArr = [];
 		function Person (ar1, ar2, ar3) {
 			this.fNmae = ar1;
-			this.sNmae = ar2;
+			this.sName = ar2;
 			this.age = ar3;
+			this.national = "Adding a Property to a Constructor. " +
+				"To add a new property to a constructor, must add it to the constructor function, like this one";
+			this.yearBorn = function () {
+				var text = "(constructor function can also define methods)"
+				var y = new Date();
+				var res = (y.getFullYear() - this.age);
+				return "Yor was born in: <b>" + res + "</b>; " + text;
+			}
+			this.editlName = function (name) {
+				this.sName	= name;
+			}
 		}
 		var newPerson2;
 		var newPerson;
@@ -68,15 +80,33 @@ function createElemInBl_1() {
 		val2 = inp2.value;
 		val3 = inp3.value;
 		newPerson = new Person(val1, val2, val3);
-		newPerson.id = '47';
+		newPerson.id = '0547';
+		newPerson.showN = f3;
+
 		newPerson2 = new Person("Alex", "Viki", 30);
 		newPerson2.height = 172;
+		// вставити сюди п
+		console.log(newPerson2);
+		newPerson2.editlName("Korolov");
+		// вставити сюди п
+		console.log(newPerson2);
+
 		p.innerHTML += "This is a new person: " + "<br>" +
 			"My name is: " + newPerson.fNmae + "<br>" +
 			"My age is: " + newPerson.age + "<br>" +
-			newPerson.id + "<br>";
-		console.log(newPerson2);
-		innerArr = [p,p1,p2,p3,p3];
+			"ID: " + newPerson.id + "<br>" +
+			newPerson.showN() + "<br>" +
+			newPerson.national + "<br>" +
+			newPerson.yearBorn();
+
+		innerArr = [p,p1,p2,p3,p3,p5];
 		f2(bl1, innerArr);
 	}
+	//Adding a Method to an Object
+	function f3() {
+		return "Adding a Method to an Object" + "<br>" +
+		"I'm a new method. Can show name too: " + this.fNmae;
+		//console.log('wwwwwwwwwwwwww');
+	};
+
 }
