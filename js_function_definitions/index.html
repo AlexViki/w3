@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Function Definitions</title>
+
+	<link rel="stylesheet" href="../style/inner_styles.css">
+	<link rel="stylesheet" href="styles.css">
+	<script src="main.js" defer></script>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1>JS Function Definitions</h1>
+			<p id="inner-header">JavaScript functions are defined with the function keyword.<br>
+			You can use a function declaration or a function expression.
+			</p>
+		</div>
+		<div class="main">
+			<div class="block-1">
+				<h2>Function Declarations</h2>
+				<p>functions are declared with the following syntax:</p>
+				<code>
+					function functionName(parameters) {<br>
+					code to be executed<br>
+					}
+				</code>
+				<p>Declared functions are not executed immediately. They are "saved for later use", and will be executed later, when they are invoked (called upon).</p>
+				<p id="id_1"></p>
+				<p class="important-info">Semicolons are used to separate executable JavaScript statements.<br>
+				Since a function declaration is not an executable statement, it is not common to end it with a semicolon.
+				</p>
+			</div>
+			<div class="block-1">
+				<h2>Function Expressions</h2>
+				<p>A JavaScript function can also be defined using an expression.</p>
+				<p>A function expression can be stored in a variable.</p>
+				<p id="id_2"></p>
+				<p>Functions stored in variables do not need function names. They are always invoked (called) using the variable name.</p>
+				<p class="important-info">The function above ends with a semicolon because it is a part of an executable statement.</p>
+			</div>
+			<div class="block-1">
+				<h2>The Function() Constructor</h2>
+				<p>As you have seen in the previous examples, JavaScript functions are defined with the <b>function keyword</b>.</p>
+				<p>Functions can also be defined with a built-in JavaScript function constructor called Function().</p>
+				<p>You actually don't have to use the function constructor.</p>
+				<p class="important-info">Most of the time, you can avoid using the new keyword in JavaScript.</p>
+			</div>
+			<div class="block-1">
+				<h2>Function Hoisting</h2>
+				<p>Hoisting is JavaScript's default behavior of moving declarations to the top of the current scope.</p>
+				<p>Hoisting applies to variable declarations and to function declarations.</p>
+				<p>Because of this, JavaScript functions can be called before they are declared:</p>
+				<code>
+				myFunction(5);<br><br>
+
+				function myFunction(y) {<br>
+    			return y * y;<br>
+				}
+
+				</code>
+				<p>Functions defined using an expression are not hoisted.</p>
+			</div>
+			<div class="block-1">
+				<h2>Self-Invoking Functions</h2>
+				<p>Function expressions can be made "self-invoking".</p>
+				<p>A self-invoking expression is invoked (started) automatically, without being called.</p>
+				<p>Function expressions will execute automatically if the expression is followed by ().</p>
+				<p>You have to <b>add parentheses around the function</b> to indicate that it is a function expression</p>
+				<button id="btn5">RUN</button>
+				<p id="id_5"></p>
+				<p class="important-info">You cannot self-invoke a function declaration.</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
