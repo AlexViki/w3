@@ -28,3 +28,39 @@ btn5.addEventListener('click',function () {
 			"<br>" + "This function is actually an anonymous self-invoking function (function without name).";
 	})();
 });
+
+// Functions Can Be Used as Values
+window.onload = useFunValue();
+function useFunValue() {
+	var doc6 = document.getElementById('id_6');
+	var tOut = "JavaScript functions can be used as values";
+
+	function f1(doc, text) {
+		this.d = doc;
+		this.t = text;
+		d.setAttribute("class", "style-result");
+		return d.innerHTML = t;
+	}
+	var f_1 = f1(doc6, tOut);
+	f_1;
+}
+
+// Functions are Objects
+window.onload = runFunctionOfObject();
+function runFunctionOfObject() {
+	var doc7 = document.getElementById('id_7');
+	var lengthOfFun,
+		txtOfFunction;
+
+	doc7.setAttribute("class", "style-result")
+
+	function f1(x, y) {
+		return arguments.length;
+	}
+
+	lengthOfFun = f1(2, 2);
+	txtOfFunction = f1.toString();
+	doc7.innerHTML = "The length of function is: " + lengthOfFun +
+		"<br>" + "The toString() method returns the function as a string: " +
+		"<br><code>" + txtOfFunction + "</code>";
+}
