@@ -1,0 +1,9 @@
+#param_rules {
+    background: rgba(255, 131, 131, 0.44);
+    padding: 5px;
+}
+
+input {
+    display: block;
+    margin: 5px;
+}

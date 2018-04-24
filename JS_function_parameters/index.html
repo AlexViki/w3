@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Function Parameters</title>
+    
+    <link rel="stylesheet" href="../style/inner_styles.css">
+    <link rel="stylesheet" href="styles.css">
+    
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>JS Function Parameters</h1>
+            <p id="inner-header">A JavaScript function does not perform any checking on parameter values (arguments).</p>
+        </div>
+        <div class="main">
+            <div class="block-1">
+                <h2>Function Parameters and Arguments</h2>
+                <p>Functions can have parameters</p>
+                <code>
+                functionName(parameter1, parameter2, parameter3) {
+                <br>code to be executed
+                <br>}
+                </code>
+                <p>Function parameters are the names listed in the function definition.</p>
+                <p>Function arguments are the real values passed to (and received by) the function.</p>
+            </div>
+            <div class="block-1">
+                <h2>Parameter Rules</h2>
+                <p id="param_rules">JavaScript function definitions do not specify data types for parameters.<br>
+                JavaScript functions do not perform type checking on the passed arguments.<br>
+                JavaScript functions do not check the number of arguments received.
+                </p>
+            </div>
+            <div class="block-1">
+                <h2>Parameter Defaults</h2>
+                <p>If a function is called with missing arguments (less than declared), the missing values are set to: undefined</p>
+                <p>Sometimes this is acceptable, but sometimes it is better to assign a default value to the parameter</p>
+                <p>If a function is called with too many arguments (more than declared), these arguments can be reached using <b>the arguments object</b>.</p>
+                Input - 1: <input type="text" value="" id="inp1">
+                Input - 2: <input type="text" value="" id="inp2">
+                <button id="btn1">RUN</button>
+                <p id="id_3"></p>
+            </div>
+            <div class="block-1">
+                <h2>The Arguments Object</h2>
+                <p>JavaScript functions have a built-in object called the arguments object.</p>
+                <p>The argument object contains an array of the arguments used when the function was called (invoked).</p>
+                <p class="style-result" id="id_4"></p>
+            </div>
+            <div class="block-1">
+                <h2></h2>
+                <p></p>
+                <p class="style-result" id="id_5"></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
