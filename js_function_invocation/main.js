@@ -53,3 +53,21 @@ var localObject = {
 		}
 }
 localObject.run();
+
+// Invoking a Function with a Function Constructor
+runFunConstructor();
+function runFunConstructor() {
+	var id5 = document.getElementById('id_5');
+	// a function constructor
+	function FunConstructor(ar1, ar2) {
+		this.name = ar1;
+		this.age = ar2;
+	}
+		// create ne object
+	var personUser = new FunConstructor('Alex', 30);
+	var personAdmin = new FunConstructor('Bob', 35);
+
+	id5.innerHTML = 'First name in object: ' + personUser.name + '<br>' +
+		'Second name in another object: ' + personAdmin.name + '<br>' +
+		'A constructor invocation creates a new object. The new object inherits the properties and methods from its constructor.';
+}
