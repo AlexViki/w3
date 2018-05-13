@@ -49,5 +49,39 @@ function runFunCounterDilemma() {
 	for ( x in arr) {
 		bl3.appendChild(arr[x]);
 	}
-
 }
+
+// JavaScript Closures
+window.onload = runFunClosure();
+function runFunClosure() {
+	var bl4 = document.getElementById('bl4');
+	var p_res = document.createElement('p');
+	var p = document.createElement('p');
+	//var bt = document.createElement('button');
+	var arrOfElem = [];
+	var text = 'Here we use self-invoking functions.';
+	var x;
+	var bt4 = document.getElementById('bt4');
+
+	var add = ( function() {
+		var ct = 1;
+		return function() { return ct++; }
+	} )();
+
+	p.innerHTML = text;
+	//bt.innerHTML = 'Run';
+	//bt.setAttribute("id", "bt4")
+	//arrOfElem = [p, bt, p_res];
+
+	bl4.appendChild(p);
+	//bl4.appendChild(bt);
+
+	//bt.addEventListener("click", runBtn());
+	bt4.addEventListener = alert('Hi');
+
+	function runBtn() {
+		p_res.innerHTML = add() + '; ' + add() + '; ' + add();
+		bl4.appendChild(p_res);
+	};
+};
+
