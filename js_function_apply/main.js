@@ -31,3 +31,17 @@ function funApllyMethod() {
 		bl1.appendChild(arrayOfItem[item]);
 	}
 }
+
+// The Difference Between call() and apply()
+funDifference();
+function funDifference() {
+	var id2 = document.getElementById('id_2');
+	var ar1 = [18,305,8,10]
+
+	id2.innerHTML = 'This is an arrray: ' + ar1 +
+		'<br>' + 'Use apply(), the largest: ' +
+		Math.max.apply(null, ar1) +
+		'<br>' + 'Another example: ' +
+		Math.max.apply(' ', ar1);
+
+}
