@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Closures</title>
+	<link rel="stylesheet" href="/style/inner_styles.css">
+	<link rel="stylesheet" href="styles.css">
+	<script src="main.js" defer></script>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1>JS Closures</h1>
+			<p id="inner-header">
+				JavaScript variables can belong to the local or global scope.<br>
+				Global variables can be made local (private) with closures.
+			</p>
+		</div>
+		<div class="main">
+			<div class="block-1">
+				<h2>Global Variables</h2>
+				<p>A function can access all variables defined inside the function.</p>
+				<p>A function can also access variables defined outside the function, this is a global variable.</p>
+				<p>In a web page, global variables belong to the window object.</p>
+				<p>Global variables can be used (and changed) by all scripts in the page (and in the window).</p>
+				<p>A local variable can only be used inside the function where it is defined. It is hidden from other functions and other scripting code.</p>
+				<p>Global and local variables with the same name are different variables. Modifying one, does not modify the other.</p>
+				<p class="important-info ">Global and local variables with the same name are different variables. Modifying one, does not modify the other.</p>
+				<p class="style-result" id="id_1"></p>
+			</div>
+			<div class="block-1" id="bl2"></div>
+			<div class="block-1" id="bl3"></div>
+			<div class="block-1">
+				<h2></h2>
+				<p></p>
+				<p class="style-result" id="id_4"></p>
+			</div>
+			<div class="block-1">
+				<h2></h2>
+				<p></p>
+				<p class="style-result" id="id_5"></p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
