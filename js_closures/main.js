@@ -89,3 +89,26 @@ function runFunClosure() {
 		bl4.appendChild(p_res);
 	};
 };
+
+function counter() {
+	var a = 1;
+	return function() {
+		var b = 5;
+		a++;
+		console.log('run: ' + ( a + b));
+	}
+}
+
+var myF1 = counter();
+myF1();
+console.log('--------');
+var myF2 = counter();
+myF2();
+myF2();
+myF2();
+myF2();
+console.log('--------');
+myF1();
+myF1();
+myF1();
+myF1();
