@@ -15,7 +15,6 @@ function runVaribleLIfeTime() {
 	for (x in arrOfElem) {
 		bl2.appendChild(arrOfElem[x]);
 	};
-
 };
 
 // A Counter Dilemma
@@ -30,7 +29,7 @@ function runFunCounterDilemma() {
 	var t1 = 'The problem is, that any script on the page can change the counter, without calling your varible. If I declare the counter inside the function, nobody will be able to change it without calling';
 	var count = 0;
 
-	function f1 () { return count++; };
+	function f1() { return count++; };
 	function f2() { var count = 0; return count++; };
 
 	p.innerHTML = t1;
@@ -51,37 +50,42 @@ function runFunCounterDilemma() {
 	}
 }
 
-// JavaScript Closures
-window.onload = runFunClosure();
+runFunClosure();
 function runFunClosure() {
+	var btn4 = document.getElementById('btn4');
 	var bl4 = document.getElementById('bl4');
 	var p_res = document.createElement('p');
 	var p = document.createElement('p');
-	//var bt = document.createElement('button');
+	var p2 = document.createElement('p');
 	var arrOfElem = [];
 	var text = 'Here we use self-invoking functions.';
+	var text2 = 'A closure is a function having access to the parent scope, even after the parent function has closed.';
 	var x;
-	var bt4 = document.getElementById('bt4');
-
+		// Closure
 	var add = ( function() {
 		var ct = 1;
 		return function() { return ct++; }
 	} )();
 
 	p.innerHTML = text;
-	//bt.innerHTML = 'Run';
-	//bt.setAttribute("id", "bt4")
-	//arrOfElem = [p, bt, p_res];
-
+	p2.innerHTML = text2;
+	p2.setAttribute("class", "important-info");
 	bl4.appendChild(p);
-	//bl4.appendChild(bt);
+	bl4.appendChild(p2);
 
-	//bt.addEventListener("click", runBtn());
-	bt4.addEventListener = alert('Hi');
+	btn4.addEventListener("click", runBtn);
+	//btn4.onclick = runBtn;
 
 	function runBtn() {
-		p_res.innerHTML = add() + '; ' + add() + '; ' + add();
+		p_res.setAttribute("class", "style-result");
+		p_res.innerHTML =  'The variable is assigned the return value of a self-invoking function: ' +
+			add() + '; ' +
+			add() + '; ' +
+			add() + '<br>' +
+			'The self-invoking function only runs once. It sets the counter to zero (0), and returns a function expression.' + '<br>' +
+			'This way add becomes a function. The "wonderful" part is that it can access the counter in the parent scope.' + '<br>' +
+			'This is called a JavaScript closure. It makes it possible for a function to have "private" variables.' + '<br>' +
+			'The counter is protected by the scope of the anonymous function, and can only be changed using the add function.';
 		bl4.appendChild(p_res);
 	};
 };
-
